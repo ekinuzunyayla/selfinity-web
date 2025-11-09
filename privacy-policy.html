@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfinity - Gizlilik Politikası</title>
+    <style>
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B7280;
+            --accent-start: #667eea;
+            --accent-end: #764ba2;
+            --border-color: #E5E7EB;
+            --highlight-bg: #FFF3CD;
+            --highlight-border: #FFC107;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --border-color: #334155;
+            --highlight-bg: #422006;
+            --highlight-border: #FFC107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .content {
+            background: var(--bg-primary);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            color: var(--accent-start);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-start);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-end);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 15px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--accent-start);
+            border-radius: 8px;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--highlight-border);
+        }
+
+        .highlight-box p {
+            margin: 10px 0;
+            color: var(--text-primary);
+        }
+
+        .highlight-box strong {
+            color: var(--text-primary);
+        }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            border-left: 5px solid var(--accent-start);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        a {
+            color: var(--accent-start);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 10px 24px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .theme-toggle,
+            .lang-switcher {
+                top: 10px;
+            }
+
+            .theme-toggle {
+                left: 10px;
+            }
+
+            .lang-switcher {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="lang-switcher">
+        <a href="privacy-policy-en.html">English</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Gizlilik Politikası</h1>
+            <p class="subtitle">Verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz</p>
+        </div>
+
+        <div class="content">
+            <div class="last-updated">
+                <strong>Son güncelleme:</strong> 9 Ocak 2025
+            </div>
+
+            <h2>1. Giriş</h2>
+            <p>
+                <strong>Mindoria Studio</strong>, Selfinity mobil uygulamasının geliştiricisi olarak
+                kullanıcılarımızın gizliliğini ciddiye alıyoruz. Selfinity, kullanıcıların ruh hallerini
+                izlemelerine, günlüklerini tutmalarına, alışkanlıklarını yönetmelerine ve genel sağlıkları
+                için kişiselleştirilmiş öneriler almalarına yardımcı olan kapsamlı bir kişisel gelişim
+                platformudur.
+            </p>
+            <p>
+                Bu Gizlilik Politikası, uygulamamızı kullanırken hangi bilgilerin toplandığını, bunların
+                nasıl kullanıldığını, saklandığını ve korunduğunu açıklamaktadır. Selfinity'yi kullanarak
+                bu politikada açıklanan uygulamaları kabul etmiş olursunuz.
+            </p>
+
+            <h2>2. Topladığımız Bilgiler</h2>
+
+            <h3>2.1 Hesap Bilgileri</h3>
+            <p>Hesap oluşturduğunuzda şunları topluyoruz:</p>
+            <ul>
+                <li><strong>E-posta ve Şifre:</strong> E-posta/şifre kaydı yoluyla kayıt olursanız</li>
+                <li><strong>Google OAuth Bilgileri:</strong> Google ile Giriş Yap kullanırsanız (isim, e-posta, profil resmi)</li>
+                <li><strong>Kullanıcı Adı:</strong> Profilinizde görünen isim</li>
+                <li><strong>Profil Bilgileri:</strong> Kişiselleştirme için isteğe bağlı bilgiler (avatar, arka plan tercihleri)</li>
+            </ul>
+
+            <h3>2.2 Kullanıcı Tarafından Oluşturulan İçerik</h3>
+            <p>Uygulama deneyiminizin bir parçası olarak şunları saklıyoruz:</p>
+            <ul>
+                <li><strong>Günlük Girişleri:</strong> Zihinsel sağlık günlükleriniz, duygu günlükleri ve düşünce kayıtları</li>
+                <li><strong>Görevler ve Hedefler:</strong> Günlük/haftalık görevler, uzun vadeli hedefler ve alışkanlık izleyiciler</li>
+                <li><strong>Ruh Hali Kayıtları:</strong> Zaman içindeki ruh hali girişleri ve duygu verileri</li>
+                <li><strong>Vizyon Panoları:</strong> Görseller, notlar ve motivasyon içeriği</li>
+                <li><strong>Afirmasyonlar ve Minnettarlık Günlükleri:</strong> Kişisel düşünce ve yansıma girişleri</li>
+                <li><strong>Uyku ve Su Takibi:</strong> Uyku kalitesi ve günlük hidrasyon kayıtları</li>
+            </ul>
+
+            <h3>2.3 Teknik ve Kullanım Verileri</h3>
+            <p>Hizmetimizi iyileştirmek için şunları topluyoruz:</p>
+            <ul>
+                <li><strong>Cihaz Bilgileri:</strong> Cihaz türü, işletim sistemi versiyonu ve donanım özellikleri</li>
+                <li><strong>IP Adresi:</strong> Genel konum ve ağ bilgileri için</li>
+                <li><strong>Uygulama Kullanım İstatistikleri:</strong> Hangi özellikleri kullandığınız, oturum süresi ve sıklığı</li>
+                <li><strong>Firebase Analytics:</strong> Uygulama performansı ve kullanıcı etkileşim metrikleri</li>
+                <li><strong>Firebase Crashlytics:</strong> Çöküş raporları ve hata günlükleri (uygulamayı istikrarlı tutmak için)</li>
+            </ul>
+
+            <h3>2.4 Reklam Verileri (Ücretsiz Kullanıcılar)</h3>
+            <ul>
+                <li><strong>Google AdMob:</strong> Kişiselleştirilmiş reklamlar göstermek için reklam tanımlayıcıları (Google Reklam Kimliği)</li>
+                <li><strong>Onay Durumu:</strong> Reklam kişiselleştirme tercihleri (GDPR/CCPA uyumluluğu için)</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Not:</strong> Gizlilik haklarınızı korumak için kişiselleştirilmiş reklamları devre dışı bırakabilirsiniz. Premium'a geçin ve tüm reklamları tamamen kaldırın.</p>
+            </div>
+
+            <h3>2.5 Sağlık ve Fitness Verileri</h3>
+            <ul>
+                <li><strong>Google Health Connect Entegrasyonu:</strong> İzin verirseniz adım sayısı ve fiziksel aktivite verilerini okuyabiliriz</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Önemli:</strong> Sağlık verilerini yalnızca siz açıkça izin verirseniz topluyoruz. İstediğiniz zaman bu izni iptal edebilirsiniz.</p>
+            </div>
+
+            <h2>3. Bilgilerinizi Nasıl Kullanıyoruz</h2>
+            <p>Topladığımız bilgileri şu amaçlarla kullanırız:</p>
+            <ul>
+                <li><strong>Temel Özellikler:</strong> Hesap kimlik doğrulaması, günlük girişleri, görev yönetimi ve ilerleme takibi</li>
+                <li><strong>Kişiselleştirilmiş Deneyim:</strong> Yapay zeka destekli içgörüler (Google Gemini API aracılığıyla) ruh hali trendlerine, alışkanlık geliştirmeye ve kişiselleştirilmiş motivasyona dayalı olarak</li>
+                <li><strong>Analitik ve İyileştirme:</strong> Firebase Analytics ile kullanıcı deneyimini anlamak ve optimize etmek</li>
+                <li><strong>Reklam (Ücretsiz Seviye):</strong> Google AdMob aracılığıyla alakalı reklamlar göstermek</li>
+                <li><strong>Müşteri Desteği:</strong> Sorunları gidermek ve teknik yardım sağlamak</li>
+                <li><strong>Faturalama ve Abonelikler:</strong> Google Play Faturalama aracılığıyla ödemeleri işlemek</li>
+                <li><strong>Yasal Uyumluluk:</strong> Yürürlükteki yasalara ve düzenlemelere uymak</li>
+            </ul>
+
+            <h2>4. Üçüncü Taraf Hizmetleri</h2>
+
+            <h3>4.1 Supabase (Backend ve Veritabanı)</h3>
+            <p>
+                Kimlik doğrulama, veri depolama ve gerçek zamanlı senkronizasyon için Supabase kullanıyoruz.
+                Tüm kullanıcı verileri Supabase'in altyapısında saklanır (AWS üzerinde barındırılır).
+            </p>
+            <ul>
+                <li><strong>Barındırma Konumu:</strong> Amazon Web Services (AWS)</li>
+                <li><strong>Veri Şifreleme:</strong> Aktarım sırasında HTTPS/TLS, beklemede şifreleme</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></li>
+            </ul>
+
+            <h3>4.2 Firebase (Google Analytics ve Crashlytics)</h3>
+            <p>
+                Uygulama performansı ve çöküş raporlaması için Google Firebase kullanıyoruz:
+            </p>
+            <ul>
+                <li><strong>Firebase Analytics:</strong> Kullanıcı etkileşimi ve uygulama kullanım metrikleri</li>
+                <li><strong>Firebase Crashlytics:</strong> Uygulama çöküşlerini ve hataları tespit etmek için otomatik raporlama</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+            </ul>
+
+            <h3>4.3 Google AdMob (Reklam Gösterimi)</h3>
+            <p>
+                Ücretsiz seviye kullanıcılar için reklam gösteriyoruz:
+            </p>
+            <ul>
+                <li><strong>Reklam Kişiselleştirme:</strong> Google, ilgi alanlarınıza dayalı reklamlar göstermek için reklam tanımlayıcılarını kullanır</li>
+                <li><strong>Devre Dışı Bırakma Hakkı:</strong> Ayarlar → Gizlilik'ten reklam kişiselleştirmeyi devre dışı bırakabilirsiniz</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a></li>
+            </ul>
+
+            <h3>4.4 Google AI (Gemini API)</h3>
+            <p>
+                Kişiselleştirilmiş öneriler ve içgörüler sağlamak için Google'ın Gemini AI'sını kullanıyoruz:
+            </p>
+            <ul>
+                <li><strong>Yapay Zeka Destekli Özellikler:</strong> Ruh hali analizi, günlük önerileri ve motivasyon mesajları</li>
+                <li><strong>Veri Gönderimi:</strong> Sadece anonim/toplanmış ruh hali ve günlük özetleri AI'ya gönderilir</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://ai.google/responsibility/principles/" target="_blank">https://ai.google/responsibility/principles/</a></li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Önemli:</strong> Ham günlük girişleriniz veya kişisel bilgileriniz Google AI'ya GÖNDERİLMEZ. Sadece AI tarafından işlenmek üzere toplanmış/anonim trendler paylaşılır.</p>
+            </div>
+
+            <h3>4.5 Google Health Connect</h3>
+            <p>
+                İzin verirseniz, adım takibi için Health Connect ile entegre oluruz:
+            </p>
+            <ul>
+                <li><strong>İzinler:</strong> Sadece adım sayısı verilerini okuruz (veri yazılmaz)</li>
+                <li><strong>Veri Kullanımı:</strong> Adımlar günlük fitness hedefleriniz için uygulama içinde gösterilir</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://support.google.com/googleplay/answer/9888358" target="_blank">https://support.google.com/googleplay/answer/9888358</a></li>
+            </ul>
+
+            <h3>4.6 Google Play Faturalama</h3>
+            <p>
+                Abonelik ödemeleri Google Play Faturalama aracılığıyla işlenir:
+            </p>
+            <ul>
+                <li><strong>Ödeme İşleme:</strong> Tüm kredi kartı/ödeme işlemleri Google tarafından yönetilir</li>
+                <li><strong>Saklanan Bilgiler:</strong> Abonelik durumunuz, satın alma geçmişi ve fatura token'ları</li>
+                <li><strong>Gizlilik Politikası:</strong> <a href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice&ldl=tr" target="_blank">Google Payments Gizlilik Bildirimi</a></li>
+            </ul>
+
+            <h2>5. Veri Güvenliği</h2>
+            <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri uyguluyoruz:</p>
+            <ul>
+                <li><strong>HTTPS/TLS Şifreleme:</strong> Tüm veri aktarımları şifreli kanallar üzerinden yapılır</li>
+                <li><strong>Şifre Hash'leme:</strong> Şifreler bcrypt veya Supabase'in güvenli kimlik doğrulama sistemi kullanılarak hash'lenir</li>
+                <li><strong>AWS Barındırma:</strong> Veriler çoklu güvenlik katmanlarına sahip güvenli AWS sunucularında saklanır</li>
+                <li><strong>Erişim Kontrolü:</strong> Sıkı kimlik doğrulama ve rol tabanlı erişim izinleri</li>
+                <li><strong>Düzenli Güvenlik Denetimleri:</strong> Güvenlik açıklarını belirlemek ve düzeltmek için periyodik incelemeler</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Not:</strong> İnternette veri aktarımının %100 güvenli olduğunu garanti edemesek de, bilgilerinizi korumak için ticari olarak kabul edilebilir araçları kullanıyoruz.</p>
+            </div>
+
+            <h2>6. Veri Saklama ve Silme</h2>
+            <ul>
+                <li><strong>Saklama Süresi:</strong> Hesabınız aktif olduğu sürece verilerinizi saklarız</li>
+                <li><strong>Hesap Silme:</strong> Hesabınızı uygulama içinden silebilirsiniz (Ayarlar → Hesap → Hesabı Sil)</li>
+                <li><strong>Veri Silme Talebi:</strong> Tüm verilerinizin silinmesini isteyebilirsiniz:
+                    <ul>
+                        <li><strong>E-posta:</strong> hello@getselfinity.com</li>
+                        <li><strong>Konu:</strong> "Veri Silme Talebi"</li>
+                        <li><strong>İçerik:</strong> Kayıtlı e-posta adresinizi ve kullanıcı kimliğinizi (varsa) belirtin</li>
+                    </ul>
+                </li>
+                <li><strong>İşlem Süresi:</strong> Veri silme talepleri 30 gün içinde işlenir</li>
+                <li><strong>Yedek Verileri:</strong> Yedeklerden silme işlemi 90 güne kadar sürebilir</li>
+            </ul>
+
+            <h2>7. Çocukların Gizliliği</h2>
+            <p>
+                Selfinity 13 yaşın altındaki çocuklar için tasarlanmamıştır. 13 yaşından küçük
+                kullanıcılardan bilerek kişisel bilgi toplamıyoruz. Eğer bir ebeveyn veya vasi
+                iseniz ve çocuğunuzun bize kişisel bilgi sağladığını fark ederseniz, lütfen
+                hello@getselfinity.com adresinden bizimle iletişime geçin.
+            </p>
+
+            <h2>8. Gizlilik Haklarınız</h2>
+            <p>Yasalar uyarınca (GDPR, CCPA, KVKK) aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li><strong>Erişim Hakkı:</strong> Hakkınızda sakladığımız kişisel verilerin bir kopyasını talep edin</li>
+                <li><strong>Düzeltme Hakkı:</strong> Yanlış veya eksik bilgilerin güncellenmesini isteyin</li>
+                <li><strong>Silme Hakkı:</strong> Kişisel verilerinizin silinmesini talep edin ("unutulma hakkı")</li>
+                <li><strong>İşlemeyi Kısıtlama Hakkı:</strong> Kişisel verilerinizin kullanımını sınırlayın</li>
+                <li><strong>Veri Taşınabilirliği:</strong> Yapılandırılmış, makine tarafından okunabilir formatta verilerinizi alın</li>
+                <li><strong>İtiraz Hakkı:</strong> Profillemeler dahil veri işlemeye itiraz edin</li>
+            </ul>
+            <p>
+                Bu haklardan herhangi birini kullanmak için hello@getselfinity.com adresinden
+                bizimle iletişime geçin.
+            </p>
+
+            <h2>9. Uluslararası Veri Transferleri</h2>
+            <p>
+                Verileriniz, veri koruma yasalarının sizin ülkenizdekinden farklı olabileceği
+                ülkelerde bulunan sunucularda işlenebilir ve saklanabilir. Verilerinizi uluslararası
+                olarak aktararak, bu tür transferlere onay vermiş olursunuz. Verilerinizin bu
+                Gizlilik Politikası'na uygun olarak korunmasını sağlamak için adımlar atıyoruz.
+            </p>
+
+            <h2>10. Politika Değişiklikleri</h2>
+            <p>
+                Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Önemli değişiklikler
+                olduğunda şu yollarla sizi bilgilendireceğiz:
+            </p>
+            <ul>
+                <li>Uygulama içi bildirim</li>
+                <li>E-posta bildirimi (kayıtlı e-postanıza)</li>
+                <li>Güncellenmiş "Son güncelleme" tarihi</li>
+            </ul>
+            <p>
+                Güncellemeleri düzenli olarak gözden geçirmenizi öneririz. Bu politikadaki
+                değişiklikler yayınlandıktan sonra uygulamayı kullanmaya devam etmek,
+                değişiklikleri kabul ettiğiniz anlamına gelir.
+            </p>
+
+            <div class="contact-box">
+                <h2>11. İletişim Bilgileri</h2>
+                <p>
+                    Bu Gizlilik Politikası hakkında sorularınız, endişeleriniz veya talepleriniz
+                    varsa, lütfen bizimle iletişime geçin:
+                </p>
+                <p>
+                    <strong>Geliştirici:</strong> Mindoria Studio<br>
+                    <strong>Uygulama:</strong> Selfinity<br>
+                    <strong>E-posta:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
+                    <strong>Web Sitesi:</strong> <a href="https://getselfinity.com" target="_blank">https://getselfinity.com</a><br>
+                    <strong>Yanıt Süresi:</strong> 48 saat içinde
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Son Hatırlatma:</strong></p>
+                <p>
+                    Selfinity'yi kullanarak, bu Gizlilik Politikası'nda açıklanan kişisel bilgilerinizin
+                    toplanmasını, kullanılmasını ve saklanmasını kabul edersiniz. Verilerinizi korumaya
+                    ve şeffaf olmaya kararlıyız.
+                </p>
+            </div>
+
+            <a href="index-tr.html" class="back-link">← Ana Sayfaya Dön</a>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+</html>
