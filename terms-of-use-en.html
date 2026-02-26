@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfinity - Terms of Use</title>
+    <style>
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B7280;
+            --accent-start: #667eea;
+            --accent-end: #764ba2;
+            --border-color: #E5E7EB;
+            --highlight-bg: #FFF3CD;
+            --highlight-border: #FFC107;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --text-primary: #F8FAFC;
+            --text-secondary: #E2E8F0;
+            /* Brighter, almost white for better readability in dark mode */
+            --border-color: #334155;
+            --highlight-bg: #422006;
+            --highlight-border: #FFC107;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header,
+        header {
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            color: white;
+        }
+
+        header .last-updated {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+            margin-top: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .content {
+            background: var(--bg-primary);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            color: var(--accent-start);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-start);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-end);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 15px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--accent-start);
+            border-radius: 8px;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--highlight-border);
+        }
+
+        .highlight-box p {
+            margin: 10px 0;
+            color: var(--text-primary);
+        }
+
+        .highlight-box strong {
+            color: var(--text-primary);
+        }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            border-left: 5px solid var(--accent-start);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        a {
+            color: var(--accent-start);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 10px 24px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Fixed Back Button */
+        .back-btn-fixed {
+            position: fixed;
+            top: 20px;
+            left: 80px;
+            /* offset from theme toggle */
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .back-btn-fixed {
+                top: 10px;
+                left: 70px;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header,
+            header {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .theme-toggle,
+            .lang-switcher {
+                top: 10px;
+            }
+
+            .theme-toggle {
+                left: 10px;
+            }
+
+            .lang-switcher {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index-en.html" class="back-btn-fixed" aria-label="Go Back">←</a>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="lang-switcher">
+        <a href="terms-of-use.html">Türkçe</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Terms of Use</h1>
+            <p class="subtitle">Please read these terms carefully before using Selfinity</p>
+        </div>
+
+        <div class="content">
+            <div class="last-updated">
+                <strong>Effective Date:</strong> January 9, 2025
+            </div>
+
+            <h2>1. Introduction and Acceptance</h2>
+            <p>
+                Welcome to <strong>Selfinity</strong>, a personal development mobile application developed
+                by <strong>Mindoria Studio</strong>. By downloading, installing, or using Selfinity, you
+                agree to be bound by these Terms of Use (the "Terms"). If you do not agree with these Terms,
+                please do not use the app.
+            </p>
+            <p>
+                These Terms constitute a legal agreement between you (the "User") and Mindoria Studio
+                (the "Company," "we," "us," or "our"). We reserve the right to update these Terms at any
+                time, and continued use of the app after changes are posted constitutes acceptance of the
+                modified Terms.
+            </p>
+
+            <h2>2. Description of Services</h2>
+            <p>
+                Selfinity is a comprehensive personal development platform that provides the following features:
+            </p>
+            <ul>
+                <li><strong>Habit Tracking:</strong> Monitor and build positive daily habits with streak tracking and
+                    reminders</li>
+                <li><strong>Mental Wellness Exercises:</strong> Access meditation sessions, breathing exercises, and
+                    mindfulness activities</li>
+                <li><strong>Journaling and Thought Records:</strong> Keep private journals, mood logs, and cognitive
+                    behavioral therapy (CBT) thought records</li>
+                <li><strong>AI-Powered Guidance:</strong> Receive personalized insights and motivational messages
+                    powered by Google Gemini AI</li>
+                <li><strong>Gamification Features:</strong> Earn rewards, unlock achievements, and level up through
+                    consistent engagement</li>
+                <li><strong>Vision Boards:</strong> Create visual representations of goals and aspirations</li>
+                <li><strong>Sleep and Water Tracking:</strong> Monitor sleep quality and daily hydration</li>
+                <li><strong>Google Health Connect Integration:</strong> Sync step count data (optional)</li>
+                <li><strong>Premium Content:</strong> Access exclusive features through subscription</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>Important Medical Disclaimer:</strong></p>
+                <p>
+                    Selfinity is NOT a medical device and does NOT provide professional medical or psychological
+                    advice, diagnosis, or treatment. The app is intended for general wellness and personal
+                    development purposes only. If you are experiencing serious mental health issues, please
+                    consult a qualified healthcare professional.
+                </p>
+            </div>
+
+            <h2>3. User Accounts</h2>
+
+            <h3>3.1 Account Creation</h3>
+            <p>To use Selfinity, you must create an account by:</p>
+            <ul>
+                <li>Providing a valid email address and password, OR</li>
+                <li>Signing in with Google OAuth (Sign in with Google)</li>
+            </ul>
+
+            <h3>3.2 Account Eligibility</h3>
+            <ul>
+                <li>You must be at least 13 years old to create an account</li>
+                <li>Users under 18 require parental or guardian consent</li>
+                <li>You must provide accurate and truthful information</li>
+                <li>You are responsible for maintaining the confidentiality of your password</li>
+            </ul>
+
+            <h3>3.3 Account Responsibility</h3>
+            <p>
+                You are solely responsible for all activities conducted under your account. If you suspect
+                unauthorized access to your account, you must immediately notify us at hello@getselfinity.com
+                and change your password.
+            </p>
+
+            <h2>4. User-Generated Content</h2>
+
+            <h3>4.1 Content Ownership</h3>
+            <p>
+                You retain full ownership of all content you create within the app, including:
+            </p>
+            <ul>
+                <li>Journal entries and thought records</li>
+                <li>Notes, affirmations, and gratitude logs</li>
+                <li>Vision board images and captions</li>
+                <li>Personal goals and habit trackers</li>
+                <li>Mood logs and sleep data</li>
+            </ul>
+
+            <h3>4.2 License Grant to Selfinity</h3>
+            <p>
+                By creating content in Selfinity, you grant us a <strong>worldwide, non-exclusive, royalty-free
+                    license</strong> to host, store, process, and display your content for the sole purpose of
+                providing the app's services. This includes:
+            </p>
+            <ul>
+                <li>Storing your data on our servers (Supabase/AWS)</li>
+                <li>Processing your content with AI services (Google Gemini) to generate personalized insights</li>
+                <li>Synchronizing your data across your devices</li>
+            </ul>
+            <p>
+                <strong>This license terminates when you delete your content or close your account.</strong>
+                We do not share your personal content with third parties for advertising or marketing purposes.
+            </p>
+
+            <h3>4.3 Content Standards</h3>
+            <p>While your content is private, you agree not to upload content that:</p>
+            <ul>
+                <li>Violates any laws or regulations</li>
+                <li>Contains malware, viruses, or harmful code</li>
+                <li>Infringes on others' intellectual property rights</li>
+                <li>Contains personal information of others without consent</li>
+            </ul>
+
+            <h2>5. Subscriptions and Payments</h2>
+
+            <h3>5.1 Free and Premium Tiers</h3>
+            <p>
+                Selfinity offers both free and premium (paid) subscription tiers:
+            </p>
+            <ul>
+                <li><strong>Free Tier:</strong> Access to basic features with advertisements</li>
+                <li><strong>Premium Tier:</strong> Ad-free experience with exclusive features (meditation libraries,
+                    advanced analytics, unlimited AI insights)</li>
+            </ul>
+
+            <h3>5.2 Subscription Billing</h3>
+            <ul>
+                <li>Premium subscriptions are billed monthly or annually through Google Play Billing</li>
+                <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless canceled at least 24 hours
+                    before the renewal date</li>
+                <li>You can manage or cancel your subscription anytime in Google Play Store settings</li>
+                <li>Canceling a subscription stops future charges but does not refund the current billing period</li>
+            </ul>
+
+            <h3>5.3 Free Trial</h3>
+            <p>
+                We may offer free trials for Premium features. If you do not cancel before the trial ends,
+                your subscription will automatically convert to a paid plan at the regular price.
+            </p>
+
+            <h3>5.4 Refund Policy</h3>
+            <p>
+                Payments are generally <strong>non-refundable</strong> except as required by law or Google Play
+                Store policies. For refund requests, please contact Google Play Store support or
+                hello@getselfinity.com within 7 days of purchase.
+            </p>
+
+            <h3>5.5 Price Changes</h3>
+            <p>
+                We reserve the right to change subscription prices at any time. If prices increase, we will
+                notify you at least 30 days in advance. Continued use after a price change constitutes
+                acceptance of the new pricing.
+            </p>
+
+            <h2>6. Intellectual Property Rights</h2>
+
+            <h3>6.1 Company-Owned Content</h3>
+            <p>
+                All materials provided within Selfinity—including but not limited to the app design, code,
+                graphics, logos, meditation audio, guided exercises, and educational content—are owned by
+                Mindoria Studio and protected by copyright, trademark, and other intellectual property laws.
+            </p>
+
+            <h3>6.2 Restrictions on Use</h3>
+            <p>You may NOT:</p>
+            <ul>
+                <li>Copy, distribute, or reproduce app content for commercial purposes</li>
+                <li>Reverse-engineer, decompile, or disassemble the app's source code</li>
+                <li>Remove copyright notices or branding from the app</li>
+                <li>Create derivative works based on Selfinity's intellectual property</li>
+                <li>Use automated tools (bots, scrapers) to extract data from the app</li>
+            </ul>
+
+            <h2>7. Prohibited Conduct</h2>
+            <p>When using Selfinity, you agree NOT to:</p>
+            <ul>
+                <li><strong>Illegal Activities:</strong> Use the app for unlawful purposes or to promote illegal
+                    activities</li>
+                <li><strong>Harassment:</strong> Harass, threaten, or impersonate others (if social features are
+                    enabled)</li>
+                <li><strong>Security Exploits:</strong> Attempt to hack, exploit vulnerabilities, or gain unauthorized
+                    access to other users' accounts or our servers</li>
+                <li><strong>Malware Distribution:</strong> Upload viruses, malware, or malicious code</li>
+                <li><strong>Data Mining:</strong> Use automated systems to scrape or collect data from the app</li>
+                <li><strong>Account Sharing:</strong> Share your account credentials with others or create multiple
+                    accounts</li>
+            </ul>
+            <p>
+                Violation of these rules may result in immediate account suspension or termination without refund.
+            </p>
+
+            <h2>8. Third-Party Integrations</h2>
+
+            <h3>8.1 Google Health Connect</h3>
+            <p>
+                If you grant permission, Selfinity can read step count data from Google Health Connect.
+                You can revoke this permission at any time in your device settings. We do not write or
+                modify Health Connect data.
+            </p>
+
+            <h3>8.2 Google AI (Gemini API)</h3>
+            <p>
+                Our AI-powered features use Google Gemini API to generate personalized insights. Only
+                anonymized/aggregated data is sent to Google AI—your raw journal entries and personal
+                details are NOT shared.
+            </p>
+
+            <h3>8.3 Third-Party Links</h3>
+            <p>
+                Selfinity may contain links to third-party websites or services. We are not responsible
+                for the content, privacy policies, or practices of external sites.
+            </p>
+
+            <h2>9. Limitation of Liability</h2>
+
+            <h3>9.1 "As Is" Service</h3>
+            <p>
+                Selfinity is provided <strong>"as is"</strong> and <strong>"as available"</strong> without
+                warranties of any kind, either express or implied. We do not guarantee that:
+            </p>
+            <ul>
+                <li>The app will be error-free or uninterrupted</li>
+                <li>Defects will be corrected immediately</li>
+                <li>The app will meet your specific requirements</li>
+                <li>Data will never be lost (though we implement backup systems)</li>
+            </ul>
+
+            <h3>9.2 Limitation of Damages</h3>
+            <p>
+                To the fullest extent permitted by law, Mindoria Studio shall NOT be liable for:
+            </p>
+            <ul>
+                <li>Indirect, incidental, or consequential damages arising from app use</li>
+                <li>Loss of data, profits, or business opportunities</li>
+                <li>Damages resulting from unauthorized access to your account</li>
+                <li>Technical failures, server downtime, or third-party service interruptions</li>
+            </ul>
+            <p>
+                Our total liability to you for any claims related to Selfinity is limited to the amount
+                you paid for your subscription in the 12 months preceding the claim.
+            </p>
+
+            <h2>10. Indemnification</h2>
+            <p>
+                You agree to indemnify, defend, and hold harmless Mindoria Studio, its employees, and
+                affiliates from any claims, liabilities, damages, or expenses (including legal fees)
+                arising from:
+            </p>
+            <ul>
+                <li>Your violation of these Terms</li>
+                <li>Your misuse of the app</li>
+                <li>Your violation of any third-party rights</li>
+                <li>Any content you upload to the app</li>
+            </ul>
+
+            <h2>11. Account Termination</h2>
+
+            <h3>11.1 Termination by User</h3>
+            <p>
+                You may delete your account at any time through the app settings (Settings → Account →
+                Delete Account). Upon deletion:
+            </p>
+            <ul>
+                <li>Your personal data will be permanently deleted within 30 days</li>
+                <li>Active subscriptions will be canceled (no refunds for partial periods)</li>
+                <li>Backup data will be removed within 90 days</li>
+            </ul>
+
+            <h3>11.2 Termination by Company</h3>
+            <p>
+                We reserve the right to suspend or terminate your account if:
+            </p>
+            <ul>
+                <li>You violate these Terms</li>
+                <li>We suspect fraudulent activity or payment disputes</li>
+                <li>You engage in prohibited conduct</li>
+                <li>Your account has been inactive for over 2 years</li>
+            </ul>
+
+            <h2>12. Privacy and Data Protection</h2>
+            <p>
+                Your use of Selfinity is also governed by our <a href="privacy-policy-en.html">Privacy Policy</a>,
+                which explains how we collect, use, and protect your personal information. By using the app,
+                you consent to the practices described in the Privacy Policy.
+            </p>
+
+            <h2>13. Changes to Terms</h2>
+            <p>
+                We may update these Terms from time to time. When changes are made, we will:
+            </p>
+            <ul>
+                <li>Update the "Effective Date" at the top of this document</li>
+                <li>Notify you via in-app notification for significant changes</li>
+                <li>Send an email notification (if applicable)</li>
+            </ul>
+            <p>
+                Continued use of the app after changes are posted means you accept the revised Terms.
+                If you do not agree with the new Terms, please stop using the app and delete your account.
+            </p>
+
+            <h2>14. Governing Law and Dispute Resolution</h2>
+            <ul>
+                <li><strong>Governing Law:</strong> These Terms are governed by the laws of the Republic of Turkey</li>
+                <li><strong>Jurisdiction:</strong> Any disputes will be resolved in the courts of Turkey</li>
+                <li><strong>Informal Resolution:</strong> Before filing a lawsuit, please contact us at
+                    hello@getselfinity.com to attempt informal resolution</li>
+            </ul>
+
+            <h2>15. Severability</h2>
+            <p>
+                If any provision of these Terms is found to be invalid or unenforceable, the remaining
+                provisions will continue in full force and effect.
+            </p>
+
+            <h2>16. Entire Agreement</h2>
+            <p>
+                These Terms, together with our Privacy Policy, constitute the entire agreement between you
+                and Mindoria Studio regarding the use of Selfinity. They supersede any prior agreements or
+                understandings.
+            </p>
+
+            <div class="contact-box">
+                <h2>17. Contact Information</h2>
+                <p>
+                    If you have questions, concerns, or feedback about these Terms of Use, please contact us:
+                </p>
+                <p>
+                    <strong>Developer:</strong> Mindoria Studio<br>
+                    <strong>App:</strong> Selfinity<br>
+                    <strong>Email:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
+                    <strong>Website:</strong> <a href="https://getselfinity.com"
+                        target="_blank">https://getselfinity.com</a><br>
+                    <strong>Response Time:</strong> Within 48 hours
+                </p>
+            </div>
+
+            <div class="highlight-box">
+                <p><strong>Final Acknowledgment:</strong></p>
+                <p>
+                    By using Selfinity, you acknowledge that you have read, understood, and agree to be bound
+                    by these Terms of Use. Thank you for choosing Selfinity for your personal development journey!
+                </p>
+            </div>
+
+            <a href="index-en.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to 'light'
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'light');
+        }
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+
+</html>
