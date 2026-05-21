@@ -1,0 +1,22 @@
+# ads.txt — Authorized Digital Sellers (IAB Tech Lab spec)
+# https://iabtechlab.com/wp-content/uploads/2022/04/Ads.txt-1.1.pdf
+#
+# Replace the line below with your real AdMob publisher line once your
+# AdMob account is approved. Format:
+#
+#   google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+#
+# You can copy this exact line from:
+#   AdMob → Apps → ads.txt → "Update your ads.txt file"
+#
+# Until you have a real publisher ID, AdMob may flag this file as
+# unconfigured but will not block site verification — the file simply
+# needs to be accessible at https://yourdomain/ads.txt with HTTP 200.
+#
+# NOT: Lotus Blocks bir mobil uygulama olduğu için AdMob crawler'ı asıl
+# `app-ads.txt` dosyasını kullanır (App Store / Google Play developer URL'i
+# üzerinden). Bu `ads.txt` dosyası yalnızca web display ads içindir;
+# Mindoria şu an web reklamı satmıyor, bu dosya defansif olarak duruyor
+# (bazı validator'lar her iki dosyayı da kontrol eder).
+
+google.com, pub-3834148733890519, DIRECT, f08c47fec0942fa0

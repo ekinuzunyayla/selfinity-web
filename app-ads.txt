@@ -1,1 +1,17 @@
+# app-ads.txt — Authorized Sellers for Apps (IAB Tech Lab spec)
+# https://iabtechlab.com/wp-content/uploads/2022/04/App-ads.txt-1.1.pdf
+#
+# Bu dosya Lotus Blocks mobil uygulamasının (iOS + Android) reklam envanterini
+# satmaya yetkili demand source'larını beyan eder. AdMob crawler 24 saat içinde
+# App Store / Google Play'deki "developer website" URL'sinden bu dosyayı çeker
+# ve uygulamayı "Authorized" olarak işaretler. Yokluğunda premium ad demand
+# (Google ADX'in büyük kısmı) envanteri reddeder → eCPM ~%20-30 düşer.
+#
+# Eklemek için sıra:
+#   1. App Store Connect → App Information → Marketing URL
+#      = https://ekinuzunyayla.github.io/lotusblocks/  (veya custom domain)
+#   2. Google Play Console → Store Listing → Website
+#      = aynı URL
+#   3. AdMob Console → Apps → her app için app-ads.txt tab → "Verified" 24h içinde
+
 google.com, pub-3834148733890519, DIRECT, f08c47fec0942fa0

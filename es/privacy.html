@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBF3DF">
+<title>Política de Privacidad — Lotus Blocks</title>
+<meta name="description" content="Política de privacidad del juego móvil Lotus Blocks.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./"><img src="../assets/img/logo/icon-192.png" alt="" width="32" height="32"><span>Lotus Blocks</span></a>
+    <nav class="lang-switcher" aria-label="Idioma">
+      <a href="../privacy.html" data-lang="en">EN</a>
+      <a href="../tr/privacy.html" data-lang="tr">TR</a>
+      <a href="privacy.html" class="current" data-lang="es">ES</a>
+      <a href="../ja/privacy.html" data-lang="ja">JA</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc-page">
+  <h1>Política de Privacidad</h1>
+  <p class="updated">Última actualización: <strong>20 de mayo de 2026</strong></p>
+
+  <h2>1. Quiénes somos</h2>
+  <p>Lotus Blocks (el "Juego", la "App") es desarrollado y publicado por Mindoria ("nosotros", "nuestro"). Para cualquier consulta relacionada con la privacidad puede contactarnos en <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a>.</p>
+
+  <h2>2. Alcance</h2>
+  <p>Esta Política de Privacidad describe cómo recopilamos, usamos y compartimos información cuando usted utiliza Lotus Blocks en iOS o Android, o visita este sitio web (ekinuzunyayla.github.io/lotusblocks). Al usar el Juego, acepta las prácticas aquí descritas.</p>
+
+  <h2>3. Información que recopilamos</h2>
+  <p>Lotus Blocks está diseñado para recopilar los datos mínimos necesarios para operar el juego, entregar publicidad y mejorar el equilibrio de la jugabilidad. Las categorías siguientes cubren todo lo que realmente recopilamos:</p>
+
+  <p><strong>(a) Identificador de usuario anónimo</strong> — cuando usted abre el Juego por primera vez, nuestro backend (Supabase) genera automáticamente un UUID anónimo que se almacena localmente en el almacenamiento seguro del dispositivo (iOS Keychain / Android EncryptedSharedPreferences). Este UUID se usa únicamente para asociar la telemetría de juego con su instalación. No está vinculado a ninguna información personal como su nombre, correo electrónico, número de teléfono o identificador publicitario del dispositivo (IDFA/AAID). Usted no crea ni ve este identificador.</p>
+
+  <p><strong>(b) Identificador publicitario</strong> — IDFA de Apple en iOS y Android Advertising ID (AAID) en Android, utilizados únicamente con su consentimiento. En iOS solicitamos consentimiento mediante el aviso estándar de App Tracking Transparency (ATT) antes de habilitar cualquier publicidad personalizada basada en seguimiento. Si usted declina, seguirá viendo anuncios, pero no serán personalizados.</p>
+
+  <p><strong>(c) Telemetría de juego</strong> — un conjunto reducido de eventos no personales (temporización de colocación de piezas, uso de habilidades, duración de la partida, nivel de maestría alcanzado, finalización del tutorial, visualizaciones de anuncios con recompensa) se transmite a nuestro backend de Supabase para ayudarnos a ajustar la dificultad y detectar problemas de equilibrio. Los eventos nunca incluyen información de identificación personal; se asocian con el UUID anónimo descrito en el apartado (a).</p>
+
+  <p><strong>(d) Diagnóstico de fallos (Firebase Crashlytics)</strong> — cuando el Juego se cierra inesperadamente, se envían automáticamente informes de fallo anonimizados a Firebase Crashlytics para que podamos identificar y corregir errores. Los informes contienen modelo de dispositivo, versión del sistema operativo, versión de la aplicación y trazas de pila. No incluyen información de identificación personal. La recopilación de fallos se asocia con un identificador de instalación anónimo gestionado por Firebase, no con su IDFA/AAID ni con ninguna cuenta.</p>
+
+  <p><strong>(e) Analítica anónima (Firebase Analytics)</strong> — <em>opcional, desactivada por defecto.</em> Cuando habilita "Analítica" en Ajustes → Privacidad, un pequeño conjunto de eventos anónimos (vistas de pantalla, uso de habilidades, visitas a la tienda, desbloqueo de logros, finalización de compras) se envía a Firebase Analytics para ayudarnos a entender qué funciones utilizan realmente los jugadores. Los eventos se asocian con el identificador de instalación anónimo de Firebase y no incluyen información personal. Puede revocar el consentimiento en cualquier momento desde Ajustes; la transmisión de eventos se detiene de inmediato.</p>
+
+  <p><strong>(f) Registros de compra (RevenueCat)</strong> — cuando realiza una compra dentro de la aplicación, la transacción (identificador de producto, fecha de compra, entorno de la tienda, precio formateado localmente, identificador anónimo de cliente RevenueCat) se procesa mediante RevenueCat para validar el recibo con Apple App Store o Google Play y acreditar las Gemas adquiridas en su monedero del juego. El identificador de cliente RevenueCat es anónimo y está vinculado únicamente a su instalación; no se asocia con su nombre, correo electrónico, datos de pago ni ningún otro identificador personal. Los datos de pago en sí (números de tarjeta de crédito, direcciones de facturación) son tratados exclusivamente por Apple o Google y nunca llegan a nuestros servidores.</p>
+
+  <h2>4. Datos que permanecen en su dispositivo</h2>
+  <p>Los siguientes datos se almacenan localmente y <strong>nunca se transmiten a nuestros servidores</strong>: su progresión de jugador, balances de Gemas y Estrellas, propiedad de temas y avatares, estado del árbol de habilidades, colección de sellos, preferencias de audio y háptica, e idioma elegido. Estos datos residen en la base de datos SQLDelight de su dispositivo y en las preferencias de AndroidX DataStore, y se eliminan cuando desinstala el Juego.</p>
+
+  <h2>5. No se requiere registro</h2>
+  <p>Lotus Blocks no requiere que usted cree una cuenta, inicie sesión ni proporcione ningún identificador personal como correo electrónico, número de teléfono o nombre para jugar. El Juego usa el UUID anónimo descrito en la Sección 3(a) únicamente con fines técnicos — no existe perfil, no hay funciones sociales y no tenemos forma de identificarle como persona.</p>
+
+  <h2>6. Servicios de terceros</h2>
+  <p>El Juego integra los siguientes servicios de terceros. Cada proveedor procesa datos bajo su propia política de privacidad:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — entrega y medición de publicidad (<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>)</li>
+    <li><strong>Supabase</strong> — backend anónimo que aloja la telemetría de juego descrita en la Sección 3(c) (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>)</li>
+    <li><strong>Firebase (Google LLC)</strong> — diagnóstico de fallos (Crashlytics) y analítica anónima opcional (Analytics) descritos en las Secciones 3(d) y 3(e) (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>)</li>
+    <li><strong>RevenueCat</strong> — validación de recibos de compras dentro de la aplicación y gestión de derechos descrita en la Sección 3(f) (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">www.revenuecat.com/privacy</a>)</li>
+    <li><strong>Apple App Store / Google Play</strong> — distribución de la aplicación, procesamiento de pagos y servicios de plataforma bajo sus respectivas políticas</li>
+  </ul>
+
+  <h2>7. Niños y menores</h2>
+  <p>Lotus Blocks está clasificado para una audiencia general y no se dirige a niños menores de 13 años (o la edad equivalente en su jurisdicción). No recopilamos a sabiendas información personal de niños. La publicidad entregada dentro del Juego se configura para cumplir con las etiquetas TFCD (tratamiento dirigido a niños) y TFUA (usuarios por debajo de la edad de consentimiento) de Google AdMob cuando sea aplicable. Si usted es padre, madre o tutor y cree que su hijo o hija nos ha proporcionado información, por favor contáctenos para que podamos eliminarla.</p>
+
+  <h2>8. Consentimiento publicitario</h2>
+  <p>Los anuncios son entregados por Google AdMob. En iOS siempre mostramos el aviso de App Tracking Transparency antes de habilitar cualquier publicidad personalizada basada en seguimiento. Si usted declina el seguimiento, seguirá viendo anuncios, pero no serán personalizados. La recogida de consentimiento RGPD para usuarios de la UE/EEE/Reino Unido a través de la Plataforma de Mensajería de Usuario (UMP) de Google se añadirá en una versión futura; hasta entonces, los anuncios servidos en estas regiones serán no personalizados de forma predeterminada.</p>
+
+  <h2>9. Sus derechos</h2>
+  <p>Dependiendo de su jurisdicción, usted puede tener los siguientes derechos respecto a sus datos personales:</p>
+  <ul>
+    <li><strong>Acceso</strong> — solicitar una copia de los datos que tenemos sobre usted</li>
+    <li><strong>Supresión</strong> — solicitar que eliminemos sus datos, incluido el UUID anónimo y cualquier fila de telemetría asociada en nuestro backend de Supabase</li>
+    <li><strong>Portabilidad</strong> — recibir sus datos en formato legible por máquina</li>
+    <li><strong>Oposición / exclusión</strong> — excluirse de la publicidad personalizada, de la venta de información personal (CCPA) u otros tratamientos</li>
+    <li><strong>Retirar el consentimiento</strong> — cambiar sus opciones de consentimiento en cualquier momento desde la configuración del dispositivo</li>
+  </ul>
+  <p>Para ejercer cualquiera de estos derechos, envíe un correo a <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a> con una descripción de su solicitud. Dado que no conservamos información de identificación personal, le pediremos que facilite el UUID anónimo que aparece en la pantalla Ajustes → Acerca de del juego para poder localizar las filas de telemetría correspondientes. Responderemos dentro del plazo requerido por la ley aplicable (normalmente 30 días bajo RGPD/KVKK).</p>
+
+  <h2>10. Retención de datos</h2>
+  <p>Las filas de telemetría de juego en nuestro backend de Supabase se conservan durante 12 meses desde su recopilación, tras lo cual se agregan en estadísticas anónimas y los registros a nivel de fila se eliminan. Firebase Crashlytics conserva los informes de fallo anonimizados durante 90 días (valor por defecto de Google). Firebase Analytics conserva los registros de eventos anónimos durante 14 meses (ventana de retención por defecto de GA4). RevenueCat conserva los recibos de compra durante toda la vida del identificador anónimo de cliente, lo cual es necesario para validar las compras y restaurar los derechos no consumibles entre reinstalaciones; los artículos consumibles como las Gemas no se restauran según la Directriz 3.1.1 de revisión de la App Store de Apple. El UUID anónimo se conserva mientras el Juego permanezca instalado en su dispositivo; desinstalarlo elimina el UUID local, y usted también puede solicitar la eliminación del servidor tal como se describe en la Sección 9. La progresión almacenada localmente (incluidas las Gemas y Estrellas no gastadas) permanece en su dispositivo hasta que desinstale el Juego.</p>
+
+  <h2>11. Transferencias internacionales</h2>
+  <p>Dado que usamos servicios en la nube de Google y Apple, sus datos pueden ser procesados en países distintos al suyo, incluyendo centros de datos ubicados en la Unión Europea y los Estados Unidos. Cuando proceda, las transferencias desde la UE/EEE se basan en Cláusulas Contractuales Tipo (SCC) proporcionadas por nuestros proveedores de servicios.</p>
+
+  <h2>12. Cambios en esta política</h2>
+  <p>Podemos actualizar esta Política de Privacidad de vez en cuando. Los cambios materiales se anunciarán dentro del Juego y se reflejarán mediante una fecha de "Última actualización" actualizada arriba. El uso continuado del Juego tras un cambio indica la aceptación de la Política actualizada.</p>
+
+  <h2>13. Contacto</h2>
+  <p>Preguntas, solicitudes o quejas relacionadas con esta Política de Privacidad: <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a>.</p>
+
+  <p style="margin-top:48px"><a href="./">← Volver al inicio</a></p>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <img src="../assets/img/logo/icon-192.png" alt="Lotus Blocks">
+      <p>Un puzle de bloques sereno con estética Komorebi-Bungu. Próximamente en iOS y Android.</p>
+    </div>
+    <div><h4>Sitio</h4><a href="privacy.html">Política de Privacidad</a><a href="terms.html">Términos de Servicio</a><a href="mailto:ekinnuzunyayla@gmail.com">Contacto</a></div>
+    <div><h4>Idiomas</h4><a href="../">English</a><a href="../tr/">Türkçe</a><a href="./">Español</a><a href="../ja/">日本語</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Lotus Blocks. Todos los derechos reservados.</span><span>Hecho con cariño en Turquía.</span></div>
+</footer>
+
+</body>
+</html>

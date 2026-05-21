@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBF3DF">
+<title>Gizlilik Politikası — Lotus Blocks</title>
+<meta name="description" content="Lotus Blocks mobil oyunu için gizlilik politikası.">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./"><img src="../assets/img/logo/icon-192.png" alt="" width="32" height="32"><span>Lotus Blocks</span></a>
+    <nav class="lang-switcher" aria-label="Dil">
+      <a href="../privacy.html" data-lang="en">EN</a>
+      <a href="privacy.html" class="current" data-lang="tr">TR</a>
+      <a href="../es/privacy.html" data-lang="es">ES</a>
+      <a href="../ja/privacy.html" data-lang="ja">JA</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc-page">
+  <h1>Gizlilik Politikası</h1>
+  <p class="updated">Son güncelleme: <strong>20 Mayıs 2026</strong></p>
+
+  <h2>1. Hakkımızda</h2>
+  <p>Lotus Blocks ("Oyun", "Uygulama") Mindoria ("biz", "bizim") tarafından geliştirilir ve yayımlanır. Gizlilikle ilgili her türlü soru için bize <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a> adresinden ulaşabilirsiniz.</p>
+
+  <h2>2. Kapsam</h2>
+  <p>Bu Gizlilik Politikası, Lotus Blocks'u iOS veya Android'de kullandığınızda ya da bu web sitesini (ekinuzunyayla.github.io/lotusblocks) ziyaret ettiğinizde bilgilerinizi nasıl topladığımızı, kullandığımızı ve paylaştığımızı açıklar. Oyunu kullanarak burada açıklanan uygulamaları kabul etmiş sayılırsınız.</p>
+
+  <h2>3. Topladığımız Bilgiler</h2>
+  <p>Lotus Blocks, oyunu çalıştırmak, reklam yayınlamak ve oyun dengesini iyileştirmek için gereken asgari veriyi toplamak üzere tasarlanmıştır. Aşağıdaki kategoriler gerçekte topladığımız her şeyi kapsar:</p>
+
+  <p><strong>(a) Anonim kimlik</strong> — Oyunu ilk açtığınızda arka uç sistemimiz (Supabase) otomatik olarak anonim bir UUID oluşturur; bu kimlik cihazın güvenli depolama alanında (iOS Keychain / Android EncryptedSharedPreferences) saklanır. UUID yalnızca oyun telemetrisini ilgili kurulumla ilişkilendirmek amacıyla kullanılır; adınız, e-posta adresiniz, telefon numaranız veya cihaz reklam tanımlayıcılarınız (IDFA/AAID) gibi hiçbir kişisel bilgiyle bağlantılandırılmaz. Bu kimliği siz oluşturmaz ve görmezsiniz.</p>
+
+  <p><strong>(b) Reklam tanımlayıcısı</strong> — iOS'ta Apple IDFA, Android'de Reklam Kimliği (AAID). Yalnızca izninizle kullanılır. iOS'ta kişiselleştirilmiş reklam etkinleştirilmeden önce standart App Tracking Transparency (ATT) talebi gösterilir. İzin vermezseniz reklamları görmeye devam edersiniz ancak bunlar kişiselleştirilmemiş olur.</p>
+
+  <p><strong>(c) Oyun telemetrisi</strong> — kişisel olmayan bir dizi olay (parça yerleştirme zamanlaması, yetenek kullanımı, oyun süresi, ulaşılan ustalık seviyesi, öğretici tamamlama, ödüllü reklam izlemeleri) güçlük dengesini ayarlamak ve denge sorunlarını tespit etmek amacıyla Supabase arka ucumuza iletilir. Olaylar hiçbir zaman kişisel olarak tanımlayıcı bilgi içermez; (a) maddesinde açıklanan anonim kimlikle ilişkilendirilir.</p>
+
+  <p><strong>(d) Çökme tanılaması (Firebase Crashlytics)</strong> — Oyun çöktüğünde, hataları tespit edip düzeltebilmek için anonimleştirilmiş çökme raporları otomatik olarak Firebase Crashlytics'e iletilir. Raporlar cihaz modeli, işletim sistemi sürümü, uygulama sürümü ve yığın izleme (stack trace) bilgilerini içerir. Kişisel olarak tanımlayıcı hiçbir bilgi içermez. Çökme toplama, Firebase tarafından yönetilen anonim bir Installation ID'ye bağlanır; IDFA/AAID veya herhangi bir hesabınızla ilişkilendirilmez.</p>
+
+  <p><strong>(e) Anonim analitik (Firebase Analytics)</strong> — <em>opsiyonel, varsayılan olarak kapalı.</em> Ayarlar → Gizlilik bölümünden "Analitik"i etkinleştirdiğinizde küçük bir anonim olay kümesi (ekran görüntülemeleri, yetenek kullanımları, mağaza ziyaretleri, başarım açılışları, satın alma tamamlama) Firebase Analytics'e iletilir; bu sayede hangi özelliklerin gerçekten kullanıldığını anlamak istiyoruz. Olaylar anonim Firebase Installation ID'sine bağlanır ve kişisel olarak tanımlayıcı bilgi içermez. Ayarlar üzerinden onayınızı istediğiniz zaman geri alabilirsiniz; olay iletimi anında durur.</p>
+
+  <p><strong>(f) Satın alma kayıtları (RevenueCat)</strong> — uygulama içi bir satın alma yaptığınızda, işlem (ürün kimliği, satın alma tarihi, mağaza ortamı, yerel para birimine biçimlendirilmiş fiyat, anonim RevenueCat müşteri kimliği) makbuzun Apple App Store veya Google Play tarafında doğrulanması ve satın aldığınız Mücevherlerin oyun içi cüzdanınıza eklenmesi için RevenueCat tarafından işlenir. RevenueCat müşteri kimliği anonimdir ve yalnızca cihaz kurulumunuza bağlıdır; adınız, e-posta adresiniz, ödeme bilgileriniz veya başka bir kişisel tanımlayıcıyla ilişkilendirilmez. Ödeme verilerinin kendisi (kredi kartı numaraları, fatura adresi) yalnızca Apple veya Google tarafından işlenir ve sunucularımıza hiçbir zaman ulaşmaz.</p>
+
+  <h2>4. Cihazınızda Kalan Bilgiler</h2>
+  <p>Aşağıdaki veriler yerel olarak depolanır ve <strong>sunucularımıza asla iletilmez</strong>: oyuncu ilerlemeniz, Mücevher ve Yıldız bakiyeleriniz, tema ve avatar sahipliği, yetenek ağacı durumu, pul koleksiyonu, ses/dokunsal tercihler ve seçilen dil. Bu veriler cihazınızın SQLDelight veritabanında ve AndroidX DataStore tercihlerinde yaşar ve Oyunu kaldırdığınızda silinir.</p>
+
+  <h2>5. Kayıt Gerekmez</h2>
+  <p>Lotus Blocks oyun oynamak için hesap oluşturmanızı, oturum açmanızı veya e-posta, telefon numarası ya da isim gibi kişisel tanımlayıcı sağlamanızı gerektirmez. Oyun, 3. bölüm (a) maddesinde açıklanan anonim kimliği yalnızca teknik amaçlarla kullanır — herhangi bir profil ya da sosyal özellik bulunmaz ve sizi bir birey olarak tanımlamamız mümkün değildir.</p>
+
+  <h2>6. Üçüncü Taraf Hizmetleri</h2>
+  <p>Oyun aşağıdaki üçüncü taraf hizmetleri entegre eder. Her sağlayıcı verileri kendi gizlilik politikası altında işler:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — reklam yayını ve ölçümü (<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>)</li>
+    <li><strong>Supabase</strong> — 3. bölüm (c) maddesinde açıklanan oyun telemetrisine ev sahipliği yapan anonim arka uç (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>)</li>
+    <li><strong>Firebase (Google LLC)</strong> — 3. bölüm (d) ve (e) maddelerinde açıklanan çökme tanılaması (Crashlytics) ve opsiyonel anonim analitik (Analytics) (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>)</li>
+    <li><strong>RevenueCat</strong> — 3. bölüm (f) maddesinde açıklanan uygulama içi satın alma makbuzu doğrulama ve hak yönetimi (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">www.revenuecat.com/privacy</a>)</li>
+    <li><strong>Apple App Store / Google Play</strong> — uygulama dağıtımı, ödeme işleme ve platform hizmetleri; kendi politikalarına tabidir</li>
+  </ul>
+
+  <h2>7. Çocuklar</h2>
+  <p>Lotus Blocks genel izleyici kitlesi için derecelendirilmiştir ve 13 yaşın altındaki çocuklara (veya bulunduğunuz yargı bölgesindeki eşdeğer yaşa sahip kişilere) yönelik değildir. Çocuklardan bilerek kişisel bilgi toplamayız. Oyun içinde sunulan reklamlar, geçerli olduğunda Google AdMob'un çocuğa yönelik işlem etiketi (TFCD) ve rıza yaşı altı kullanıcı etiketi (TFUA) ile uyumlu yapılandırılmıştır. Bir ebeveyn veya vasi iseniz ve çocuğunuzun bize bilgi sağladığına inanıyorsanız, silebilmemiz için lütfen bize ulaşın.</p>
+
+  <h2>8. Reklam Rızası</h2>
+  <p>Reklamlar Google AdMob tarafından yayınlanır. iOS'ta izleme tabanlı kişiselleştirilmiş reklam etkinleştirilmeden önce her zaman App Tracking Transparency talebi gösterilir. İzlemeyi reddederseniz reklamları görmeye devam edersiniz ancak bunlar kişiselleştirilmemiş olur. AB/AEA/Birleşik Krallık kullanıcıları için Google'ın User Messaging Platform (UMP) aracılığıyla GDPR rıza toplama özelliği ilerleyen bir sürümde eklenecektir; bu tarihe kadar söz konusu bölgelere yayınlanan reklamlar varsayılan olarak kişiselleştirilmemiş kalır.</p>
+
+  <h2>9. Haklarınız (KVKK / GDPR / CCPA)</h2>
+  <p>Yargı bölgenize bağlı olarak kişisel verileriniz konusunda aşağıdaki haklara sahip olabilirsiniz:</p>
+  <ul>
+    <li><strong>Erişim</strong> — hakkınızda tuttuğumuz verilerin bir kopyasını talep etme</li>
+    <li><strong>Silme</strong> — anonim kimliğiniz ve Supabase arka ucundaki ilişkili telemetri kayıtları dahil olmak üzere verilerinizi silmemizi talep etme</li>
+    <li><strong>Taşınabilirlik</strong> — verilerinizi makine tarafından okunabilir bir biçimde alma</li>
+    <li><strong>İtiraz / vazgeçme</strong> — kişiselleştirilmiş reklamcılıktan, kişisel bilgi satışından (CCPA) veya diğer işlemelerden vazgeçme</li>
+    <li><strong>Rızayı geri çekme</strong> — cihaz ayarlarınız aracılığıyla istediğiniz zaman onay seçimlerinizi değiştirme</li>
+  </ul>
+  <p>Bu haklardan herhangi birini kullanmak için <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a> adresine açıklamalı bir e-posta gönderin. Kişisel olarak tanımlayıcı hiçbir bilgi tutmadığımızdan, ilgili telemetri kayıtlarını bulabilmek için oyun içi Ayarlar → Hakkında ekranındaki anonim kimliği iletmenizi isteyeceğiz. Geçerli yasanın gerektirdiği süre içinde (GDPR/KVKK kapsamında genellikle 30 gün) yanıt verilecektir.</p>
+
+  <h2>10. Veri Saklama</h2>
+  <p>Supabase arka ucumuzdaki oyun telemetrisi kayıtları, toplanmadan itibaren 12 ay saklanır; bu süre sonunda anonim istatistiklere dönüştürülür ve satır düzeyindeki kayıtlar silinir. Firebase Crashlytics anonimleştirilmiş çökme raporlarını 90 gün boyunca tutar (Google varsayılanı). Firebase Analytics anonim olay düzeyindeki kayıtları 14 ay tutar (GA4 varsayılan saklama penceresi). RevenueCat satın alma makbuzlarını anonim müşteri kimliğinin ömrü boyunca saklar; bu, yeniden yüklemelerde tüketilebilir olmayan hakları doğrulamak ve geri yüklemek için gereklidir. Tüketilebilir öğeler — örneğin Mücevherler — Apple App Store İnceleme Kılavuzu 3.1.1 maddesi uyarınca geri yüklenmez. Anonim kimlik, Oyun cihazınızda kurulu kaldığı sürece saklanır; Oyunu kaldırmak yerel kimliği de siler. Sunucu tarafındaki silme için 9. bölüm kapsamında talepte bulunabilirsiniz. Yerel olarak depolanan ilerleme (harcanmamış Mücevherler ve Yıldızlar dahil), Oyunu kaldırana kadar cihazınızda kalır.</p>
+
+  <h2>11. Uluslararası Aktarımlar</h2>
+  <p>Google ve Apple bulut hizmetlerini kullandığımız için verileriniz, Avrupa Birliği ve Amerika Birleşik Devletleri'nde bulunan veri merkezleri dahil olmak üzere kendi ülkeniz dışındaki ülkelerde işlenebilir. AB/AEA'dan yapılan aktarımlar geçerli olduğunda, hizmet sağlayıcılarımızın sunduğu Standart Sözleşme Hükümlerine (SCC) dayanır.</p>
+
+  <h2>12. Bu Politikadaki Değişiklikler</h2>
+  <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Önemli değişiklikler Oyun içinde duyurulur ve yukarıdaki "Son güncelleme" tarihiyle yansıtılır. Değişiklikten sonra Oyunu kullanmaya devam etmek, güncellenmiş Politikanın kabul edildiğini gösterir.</p>
+
+  <h2>13. İletişim</h2>
+  <p>Bu Gizlilik Politikasıyla ilgili sorular, talepler veya şikayetler: <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a>.</p>
+
+  <p style="margin-top:48px"><a href="./">← Ana sayfaya dön</a></p>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <img src="../assets/img/logo/icon-192.png" alt="Lotus Blocks">
+      <p>Komorebi-Bungu estetiğinde sakin bir blok bulmacası. iOS ve Android'de yakında.</p>
+    </div>
+    <div><h4>Site</h4><a href="privacy.html">Gizlilik Politikası</a><a href="terms.html">Kullanım Şartları</a><a href="mailto:ekinnuzunyayla@gmail.com">İletişim</a></div>
+    <div><h4>Diller</h4><a href="../">English</a><a href="./">Türkçe</a><a href="../es/">Español</a><a href="../ja/">日本語</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Lotus Blocks. Tüm hakları saklıdır.</span><span>Türkiye'de özenle yapıldı.</span></div>
+</footer>
+
+</body>
+</html>

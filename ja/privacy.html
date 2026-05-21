@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FBF3DF">
+<title>プライバシーポリシー — Lotus Blocks</title>
+<meta name="description" content="Lotus Blocksモバイルゲームのプライバシーポリシー。">
+<meta name="robots" content="index,follow">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/logo/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/img/logo/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./"><img src="../assets/img/logo/icon-192.png" alt="" width="32" height="32"><span>Lotus Blocks</span></a>
+    <nav class="lang-switcher" aria-label="言語">
+      <a href="../privacy.html" data-lang="en">EN</a>
+      <a href="../tr/privacy.html" data-lang="tr">TR</a>
+      <a href="../es/privacy.html" data-lang="es">ES</a>
+      <a href="privacy.html" class="current" data-lang="ja">JA</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc-page">
+  <h1>プライバシーポリシー</h1>
+  <p class="updated">最終更新日: <strong>2026年5月20日</strong></p>
+
+  <h2>1. 当社について</h2>
+  <p>Lotus Blocks(以下「本ゲーム」)はMindoriaが開発・提供しています。プライバシーに関するお問い合わせは <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a> までご連絡ください。</p>
+
+  <h2>2. 範囲</h2>
+  <p>本プライバシーポリシーは、iOSもしくはAndroidでLotus Blocksをご利用になる際、または当ウェブサイト(ekinuzunyayla.github.io/lotusblocks)をご訪問になる際に、情報をどのように収集・使用・共有するかを説明します。本ゲームをご利用になることで、ここに記載された取扱いに同意したものとみなします。</p>
+
+  <h2>3. 当社が収集する情報</h2>
+  <p>Lotus Blocksは、ゲームの運営、広告配信、ゲームバランスの改善に必要な最小限のデータのみを収集するよう設計されています。以下のカテゴリが当社が実際に収集するすべてを網羅しています。</p>
+
+  <p><strong>(a) 匿名ユーザー識別子</strong> — 本ゲームを初めて起動すると、バックエンド(Supabase)が自動的に匿名のUUIDを発行し、端末のセキュアなストレージ(iOS Keychain / Android EncryptedSharedPreferences)にローカル保存されます。このUUIDは、ゲームテレメトリをインストールに紐付けるためにのみ使用されます。お名前、メールアドレス、電話番号、デバイス識別子(IDFA/AAID)などの個人情報とは一切関連付けられません。お客様がこの識別子を作成したり目にしたりすることはありません。</p>
+
+  <p><strong>(b) 広告識別子</strong> — iOSではApple IDFA、AndroidではAndroid Advertising ID(AAID)を、お客様の同意がある場合にのみ使用します。iOSでは、追跡に基づくパーソナライズ広告を有効にする前に、標準のApp Tracking Transparency(ATT)プロンプトで同意を取得します。拒否された場合でも広告は表示されますが、パーソナライズはされません。</p>
+
+  <p><strong>(c) ゲームテレメトリ</strong> — ピース配置のタイミング、アビリティ使用、プレイ時間、到達した熟達レベル、チュートリアル完了、リワード広告視聴といった非個人イベントの小さなセットを、難易度調整やバランス問題の検出のためにSupabaseバックエンドへ送信します。イベントには個人を特定する情報は含まれず、(a)で説明した匿名UUIDに紐付けられます。</p>
+
+  <p><strong>(d) クラッシュ診断 (Firebase Crashlytics)</strong> — 本ゲームがクラッシュした際、不具合の特定と修正のため、匿名化されたクラッシュレポートが自動的にFirebase Crashlyticsへ送信されます。レポートには端末モデル、OSバージョン、アプリバージョン、スタックトレースが含まれます。個人を特定する情報は含まれません。クラッシュ収集はFirebaseが管理する匿名のInstallation IDに紐付けられ、IDFA/AAIDやお客様のアカウントとは関連付けられません。</p>
+
+  <p><strong>(e) 匿名分析 (Firebase Analytics)</strong> — <em>オプトイン、既定では無効。</em>「設定 → プライバシー」で「分析」を有効にすると、画面表示、アビリティ使用、ストア訪問、実績解除、購入完了といった少量の匿名イベントがFirebase Analyticsへ送信され、どの機能が実際に利用されているかの把握に役立てられます。イベントは匿名のFirebase Installation IDに紐付けられ、個人を特定する情報は含まれません。同意はいつでも設定から取り消すことができ、取り消すとイベント送信は直ちに停止します。</p>
+
+  <p><strong>(f) 購入記録 (RevenueCat)</strong> — アプリ内購入を行うと、取引情報(製品ID、購入日、ストア環境、ロケール形式の価格、匿名のRevenueCatカスタマーID)がRevenueCatによって処理され、Apple App StoreまたはGoogle Playのレシートを検証し、購入したジェムがゲーム内ウォレットに加算されます。RevenueCatカスタマーIDは匿名であり、お客様の端末インストールにのみ紐付きます。お名前、メールアドレス、決済情報、その他の個人識別子とは一切関連付けられません。決済データそのもの(クレジットカード番号、請求先住所)はAppleまたはGoogleのみが取り扱い、当社サーバーに到達することは決してありません。</p>
+
+  <h2>4. 端末上に保持されるデータ</h2>
+  <p>以下のデータはローカルに保存され、<strong>当社のサーバーには送信されません</strong>: プレイヤーの進行状況、ジェムとスターの残高、テーマとアバターの所有権、スキルツリーの状態、切手コレクション、音声/触覚の設定、選択した言語。これらは端末のSQLDelightデータベースおよびAndroidX DataStoreの設定に保持され、本ゲームをアンインストールすると削除されます。</p>
+
+  <h2>5. 登録不要</h2>
+  <p>Lotus Blocksをプレイするためにアカウントの作成、ログイン、メールアドレス・電話番号・氏名等の個人情報の提供は一切必要ありません。本ゲームは第3条(a)で説明した匿名UUIDを技術的な目的にのみ使用します — プロフィール機能やソーシャル機能は存在せず、当社がお客様個人を特定する手段はありません。</p>
+
+  <h2>6. 第三者サービス</h2>
+  <p>本ゲームは以下の第三者サービスを組み込んでいます。各プロバイダは独自のプライバシーポリシーに基づいてデータを処理します。</p>
+  <ul>
+    <li><strong>Google AdMob</strong> — 広告配信と計測 (<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">policies.google.com/technologies/ads</a>)</li>
+    <li><strong>Supabase</strong> — 第3条(c)で説明したゲームテレメトリをホストする匿名バックエンド (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>)</li>
+    <li><strong>Firebase (Google LLC)</strong> — 第3条(d)・(e)で説明したクラッシュ診断(Crashlytics)およびオプトイン匿名分析(Analytics) (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">firebase.google.com/support/privacy</a>)</li>
+    <li><strong>RevenueCat</strong> — 第3条(f)で説明したアプリ内購入レシートの検証および権利管理 (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">www.revenuecat.com/privacy</a>)</li>
+    <li><strong>Apple App Store / Google Play</strong> — アプリ配信、決済処理、および各プラットフォームポリシーに基づくプラットフォームサービス</li>
+  </ul>
+
+  <h2>7. お子様について</h2>
+  <p>Lotus Blocksは一般向けに分類されており、13歳未満(またはお住まいの管轄区域の同等年齢未満)のお子様を対象としていません。お子様から故意に個人情報を収集することはありません。本ゲーム内で配信される広告は、適用される場合、Google AdMobの「子ども対象処理(TFCD)」および「同意年齢未満ユーザー(TFUA)」タグに準拠して設定されています。保護者の方でお子様が当社に情報を提供したとお考えの場合は、削除のためにご連絡ください。</p>
+
+  <h2>8. 広告の同意</h2>
+  <p>広告はGoogle AdMobによって配信されます。iOSでは、追跡に基づくパーソナライズ広告を有効にする前に、必ずApp Tracking Transparencyプロンプトを表示します。追跡を拒否しても広告は表示されますが、パーソナライズされない広告のみとなります。EU/EEA/英国のお客様向けのGoogle User Messaging Platform(UMP)を通じたGDPR同意収集機能は将来のバージョンで追加される予定です。それまでの間、これらの地域に配信される広告はデフォルトで非パーソナライズとなります。</p>
+
+  <h2>9. お客様の権利</h2>
+  <p>管轄区域に応じて、個人データに関して以下の権利を有する場合があります。</p>
+  <ul>
+    <li><strong>アクセス権</strong> — 当社が保持するデータのコピーを請求する</li>
+    <li><strong>削除権</strong> — 匿名UUIDおよびSupabaseバックエンドの関連テレメトリ行を含むデータの削除を請求する</li>
+    <li><strong>ポータビリティ</strong> — 機械可読形式でデータを受け取る</li>
+    <li><strong>異議申立て/オプトアウト</strong> — パーソナライズ広告、個人情報の販売(CCPA)、その他の処理から除外する</li>
+    <li><strong>同意の撤回</strong> — 端末設定からいつでも同意選択を変更する</li>
+  </ul>
+  <p>これらの権利を行使するには、リクエストの内容を記載の上 <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a> へご連絡ください。当社は個人を特定できる情報を保有していないため、該当するテレメトリ行を検索するため、ゲーム内の設定 → このアプリについて画面に表示される匿名UUIDをお知らせいただくようお願いする場合があります。適用法が要求する期間内(GDPRでは通常30日)に対応いたします。</p>
+
+  <h2>10. データ保持</h2>
+  <p>Supabaseバックエンドのゲームテレメトリ行は収集から12か月間保持され、その後は匿名の統計として集計され、行レベルのデータは削除されます。Firebase Crashlyticsは匿名化されたクラッシュレポートを90日間保持します(Googleの既定値)。Firebase Analyticsは匿名のイベントレベル記録を14か月間保持します(GA4の既定保持期間)。RevenueCatは購入レシートを匿名カスタマーIDの存続期間中保持します。これは購入の検証と再インストール時の非消耗型権利の復元に必要です。ジェムなどの消耗型アイテムはApple App Storeレビューガイドライン3.1.1の規定により復元されません。匿名UUIDは本ゲームが端末にインストールされている期間中保持されます。アンインストールするとローカルのUUIDも削除され、第9条の手続きに従いサーバー側の削除もリクエストできます。ローカルに保存された進行状況(未使用のジェムやスターを含む)はアンインストールするまで端末に残ります。</p>
+
+  <h2>11. 国際的なデータ移転</h2>
+  <p>当社はGoogleおよびAppleのクラウドサービスを利用するため、お客様のデータはEUおよび米国のデータセンターを含む、お住まいの国以外の国で処理される場合があります。該当する場合、EU/EEAからの移転はサービスプロバイダが提供する標準契約条項(SCC)に基づきます。</p>
+
+  <h2>12. 本ポリシーの変更</h2>
+  <p>当社は本プライバシーポリシーを随時更新する場合があります。重要な変更はアプリ内で告知し、上記の「最終更新日」を更新して反映します。変更後も本ゲームのご利用を継続された場合は、更新されたポリシーへの同意とみなします。</p>
+
+  <h2>13. お問い合わせ</h2>
+  <p>本プライバシーポリシーに関するご質問、ご請求、苦情: <a href="mailto:ekinnuzunyayla@gmail.com">ekinnuzunyayla@gmail.com</a></p>
+
+  <p style="margin-top:48px"><a href="./">← トップに戻る</a></p>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">
+      <img src="../assets/img/logo/icon-192.png" alt="Lotus Blocks">
+      <p>木漏れ日・文具の美学が織りなす穏やかなブロックパズル。iOSとAndroidに近日登場。</p>
+    </div>
+    <div><h4>サイト</h4><a href="privacy.html">プライバシーポリシー</a><a href="terms.html">利用規約</a><a href="mailto:ekinnuzunyayla@gmail.com">お問い合わせ</a></div>
+    <div><h4>言語</h4><a href="../">English</a><a href="../tr/">Türkçe</a><a href="../es/">Español</a><a href="./">日本語</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Lotus Blocks. 全権利所有。</span><span>トルコにて丁寧に制作。</span></div>
+</footer>
+
+</body>
+</html>
