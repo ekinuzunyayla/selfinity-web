@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,8 +21,9 @@
             --bg-primary: #0F172A;
             --bg-secondary: #1E293B;
             --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
-            --text-tertiary: #64748B;
+            --text-secondary: #E2E8F0;
+            /* Brighter, almost white for better readability in dark mode */
+            --text-tertiary: #CBD5E1;
             --border-color: #334155;
         }
 
@@ -45,143 +47,296 @@
             padding: 40px 20px;
         }
 
+        .header,
         header {
-            background: var(--bg-primary);
-            padding: 2rem;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            padding: 60px 40px;
             border-radius: 16px;
-            margin-bottom: 2rem;
+            margin-bottom: 40px;
             text-align: center;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         h1 {
-            font-size: clamp(2rem, 4vw, 2.5rem);
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
         }
 
-        .last-updated {
-            color: var(--text-secondary);
-            font-size: 0.875rem;
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            color: white;
+        }
+
+        header .last-updated {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+            margin-top: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
         }
 
         .content {
             background: var(--bg-primary);
-            padding: 3rem 2.5rem;
+            padding: 50px;
             border-radius: 16px;
-            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: background-color 0.3s ease;
         }
 
         h2 {
-            color: var(--text-primary);
-            font-size: 1.75rem;
-            margin: 2.5rem 0 1rem 0;
-            padding-top: 1rem;
+            color: var(--accent-start);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-start);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
         }
 
         h3 {
-            color: var(--text-primary);
-            font-size: 1.25rem;
-            margin: 1.5rem 0 0.75rem 0;
+            color: var(--accent-end);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
         }
 
         p {
-            margin-bottom: 1rem;
+            margin: 15px 0;
             color: var(--text-secondary);
+            font-size: 1.05em;
         }
 
-        ul, ol {
-            margin: 1rem 0 1rem 1.5rem;
+        .last-updated {
             color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--accent-start);
+            border-radius: 8px;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
         }
 
         li {
-            margin-bottom: 0.5rem;
+            margin: 12px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--highlight-border);
+        }
+
+        .highlight-box p {
+            margin: 10px 0;
+            color: var(--text-primary);
+        }
+
+        .highlight-box strong {
+            color: var(--text-primary);
+        }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            border-left: 5px solid var(--accent-start);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            border-bottom: none;
         }
 
         a {
             color: var(--accent-start);
             text-decoration: none;
-            transition: color 0.2s;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
         }
 
         a:hover {
-            color: var(--accent-end);
+            opacity: 0.8;
             text-decoration: underline;
         }
 
-        .highlight-box {
-            background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--accent-start);
-            margin: 1.5rem 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .nav-links a {
-            padding: 0.75rem 1.5rem;
-            background: var(--bg-secondary);
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .nav-links a:hover {
-            background: var(--accent-start);
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
             color: white;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 10px 24px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1;
         }
 
         .theme-toggle {
             position: fixed;
             top: 20px;
-            right: 20px;
+            left: 20px;
+            z-index: 1000;
             background: var(--bg-primary);
             border: 2px solid var(--border-color);
+            border-radius: 50%;
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            cursor: pointer;
+            font-size: 1.5em;
             transition: all 0.3s ease;
-            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         .theme-toggle:hover {
-            transform: rotate(20deg);
-            border-color: var(--accent-start);
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Fixed Back Button */
+        .back-btn-fixed {
+            position: fixed;
+            top: 20px;
+            left: 80px;
+            /* offset from theme toggle */
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         @media (max-width: 768px) {
+            .back-btn-fixed {
+                top: 10px;
+                left: 70px;
+            }
+
             .container {
                 padding: 20px 15px;
             }
 
+            .header,
+            header {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
             .content {
-                padding: 2rem 1.5rem;
+                padding: 30px 25px;
             }
 
             h2 {
-                font-size: 1.5rem;
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .theme-toggle,
+            .lang-switcher {
+                top: 10px;
+            }
+
+            .theme-toggle {
+                left: 10px;
+            }
+
+            .lang-switcher {
+                right: 10px;
             }
         }
     </style>
 </head>
+
 <body>
+    <a href="index-en.html" class="back-btn-fixed" aria-label="Go Back">←</a>
+
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
         <span id="themeIcon">🌙</span>
     </button>
@@ -209,7 +364,8 @@
 
             <h3>2.1 Account Information</h3>
             <ul>
-                <li><strong>Email address</strong> and <strong>name</strong> when you create an account via Google OAuth or email/password authentication</li>
+                <li><strong>Email address</strong> and <strong>name</strong> when you create an account via Google OAuth
+                    or email/password authentication</li>
                 <li><strong>Profile information</strong> including optional profile picture</li>
                 <li><strong>Authentication credentials</strong> securely managed through Supabase</li>
             </ul>
@@ -270,7 +426,8 @@
             <div class="highlight-box">
                 <p><strong>AI-Driven Analysis:</strong></p>
                 <p>
-                    We use <strong>Google AI services (Gemini)</strong> to provide personalized insights and recommendations
+                    We use <strong>Google AI services (Gemini)</strong> to provide personalized insights and
+                    recommendations
                     based on your journal entries, mood logs, and activity data. This includes:
                 </p>
                 <ul>
@@ -281,7 +438,8 @@
                 </ul>
                 <p>
                     <strong>Privacy Note:</strong> AI processing is done securely, and your data is not used to train
-                    Google's general AI models. The analysis is specific to your account and not shared with other users.
+                    Google's general AI models. The analysis is specific to your account and not shared with other
+                    users.
                 </p>
             </div>
 
@@ -322,21 +480,24 @@
             <p>
                 <strong>Purpose:</strong> User authentication, database storage, backend API<br>
                 <strong>Data shared:</strong> Account information, user-generated content, app usage data<br>
-                <strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>
+                <strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy"
+                    target="_blank">supabase.com/privacy</a>
             </p>
 
             <h3>4.2 Firebase (Google)</h3>
             <p>
                 <strong>Purpose:</strong> Analytics, crash reporting, performance monitoring<br>
                 <strong>Data shared:</strong> Device info, usage statistics, crash logs (anonymized)<br>
-                <strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a>
+                <strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy"
+                    target="_blank">firebase.google.com/support/privacy</a>
             </p>
 
             <h3>4.3 Google AdMob</h3>
             <p>
                 <strong>Purpose:</strong> Displaying advertisements<br>
                 <strong>Data shared:</strong> Advertising identifiers, device info, usage patterns<br>
-                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a><br>
+                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
                 <strong>Opt-out:</strong> You can disable personalized ads in your device settings
             </p>
 
@@ -344,7 +505,8 @@
             <p>
                 <strong>Purpose:</strong> AI-powered personalized analysis and insights<br>
                 <strong>Data shared:</strong> Journal entries, mood logs (only when you use AI features)<br>
-                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a><br>
+                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
                 <strong>Note:</strong> Data is processed securely and not used to train general AI models
             </p>
 
@@ -352,7 +514,8 @@
             <p>
                 <strong>Purpose:</strong> Step count and physical activity tracking<br>
                 <strong>Data shared:</strong> Step count data (with explicit permission only)<br>
-                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a><br>
+                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
                 <strong>Control:</strong> Manage permissions through Health Connect app settings
             </p>
 
@@ -360,7 +523,9 @@
             <p>
                 <strong>Purpose:</strong> Processing subscription and in-app purchases<br>
                 <strong>Data shared:</strong> Purchase history, payment information (handled by Google Play)<br>
-                <strong>Privacy Policy:</strong> <a href="https://payments.google.com/payments/apis-secure/get_legal_document" target="_blank">Google Play Privacy</a>
+                <strong>Privacy Policy:</strong> <a
+                    href="https://payments.google.com/payments/apis-secure/get_legal_document" target="_blank">Google
+                    Play Privacy</a>
             </p>
 
             <h2>5. Data Security and Storage</h2>
@@ -368,7 +533,8 @@
             <h3>5.1 Security Measures</h3>
             <p>We implement industry-standard security measures to protect your data:</p>
             <ul>
-                <li><strong>Encryption:</strong> All data transmitted between your device and our servers is encrypted using HTTPS/TLS</li>
+                <li><strong>Encryption:</strong> All data transmitted between your device and our servers is encrypted
+                    using HTTPS/TLS</li>
                 <li><strong>Secure authentication:</strong> Passwords are hashed and never stored in plain text</li>
                 <li><strong>Access controls:</strong> Strict access limitations to your personal data</li>
                 <li><strong>Regular audits:</strong> Security reviews and vulnerability assessments</li>
@@ -376,7 +542,8 @@
 
             <h3>5.2 Data Storage</h3>
             <p>
-                Your data is stored on <strong>Supabase servers</strong> (hosted on AWS) with redundancy and backup systems.
+                Your data is stored on <strong>Supabase servers</strong> (hosted on AWS) with redundancy and backup
+                systems.
                 Some data is also stored locally on your device for offline access and faster performance.
             </p>
 
@@ -394,8 +561,10 @@
             <h3>6.1 How Long We Keep Your Data</h3>
             <ul>
                 <li><strong>Active accounts:</strong> Data is retained as long as your account is active</li>
-                <li><strong>Inactive accounts:</strong> Accounts inactive for 2+ years may be deleted after notification</li>
-                <li><strong>Deleted accounts:</strong> Data is permanently deleted within 30 days of account deletion</li>
+                <li><strong>Inactive accounts:</strong> Accounts inactive for 2+ years may be deleted after notification
+                </li>
+                <li><strong>Deleted accounts:</strong> Data is permanently deleted within 30 days of account deletion
+                </li>
                 <li><strong>Legal obligations:</strong> Some data may be retained longer if required by law</li>
             </ul>
 
@@ -410,13 +579,15 @@
                     <li>We will process your request within 30 days</li>
                     <li>You will receive confirmation once deletion is complete</li>
                 </ol>
-                <p><strong>Note:</strong> This action is permanent and cannot be undone. All your data, including journal entries, progress, and achievements, will be permanently deleted.</p>
+                <p><strong>Note:</strong> This action is permanent and cannot be undone. All your data, including
+                    journal entries, progress, and achievements, will be permanently deleted.</p>
             </div>
 
             <h2>7. Children's Privacy</h2>
 
             <p>
-                Selfinity is <strong>not directed to children under 13 years of age</strong>. We do not knowingly collect
+                Selfinity is <strong>not directed to children under 13 years of age</strong>. We do not knowingly
+                collect
                 personal information from children under 13.
             </p>
             <p>
@@ -497,6 +668,10 @@
         const themeIcon = document.getElementById('themeIcon');
         const html = document.documentElement;
 
+        // Check for saved theme preference or default to 'light'
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'light');
+        }
         const currentTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', currentTheme);
         themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
@@ -509,4 +684,5 @@
         });
     </script>
 </body>
+
 </html>

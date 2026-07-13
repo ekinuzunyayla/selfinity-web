@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,8 @@
             --bg-primary: #0F172A;
             --bg-secondary: #1E293B;
             --text-primary: #F8FAFC;
-            --text-secondary: #94A3B8;
+            --text-secondary: #E2E8F0;
+            /* Brighter, almost white for better readability in dark mode */
             --border-color: #334155;
             --highlight-bg: #422006;
             --highlight-border: #FFC107;
@@ -47,7 +49,8 @@
             padding: 40px 20px;
         }
 
-        .header {
+        .header,
+        header {
             background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
             color: white;
             padding: 60px 40px;
@@ -61,11 +64,24 @@
             font-size: 3em;
             font-weight: 700;
             margin-bottom: 10px;
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.95;
+            color: white;
+        }
+
+        header .last-updated {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+            margin-top: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
         }
 
         .content {
@@ -242,12 +258,45 @@
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
+        /* Fixed Back Button */
+        .back-btn-fixed {
+            position: fixed;
+            top: 20px;
+            left: 80px;
+            /* offset from theme toggle */
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
         @media (max-width: 768px) {
+            .back-btn-fixed {
+                top: 10px;
+                left: 70px;
+            }
+
             .container {
                 padding: 20px 15px;
             }
 
-            .header {
+            .header,
+            header {
                 padding: 40px 30px;
             }
 
@@ -286,7 +335,10 @@
         }
     </style>
 </head>
+
 <body>
+    <a href="index-tr.html" class="back-btn-fixed" aria-label="Geri Dön">←</a>
+
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span id="themeIcon">🌙</span>
     </button>
@@ -325,14 +377,20 @@
                 Selfinity, aşağıdaki özellikleri sağlayan kapsamlı bir kişisel gelişim platformudur:
             </p>
             <ul>
-                <li><strong>Alışkanlık Takibi:</strong> Seri takibi ve hatırlatıcılarla günlük pozitif alışkanlıkları izleyin ve oluşturun</li>
-                <li><strong>Zihinsel Sağlık Egzersizleri:</strong> Meditasyon seansları, nefes egzersizleri ve farkındalık aktivitelerine erişin</li>
-                <li><strong>Günlük ve Düşünce Kayıtları:</strong> Özel günlükler, ruh hali kayıtları ve bilişsel davranışçı terapi (BDT) düşünce kayıtları tutun</li>
-                <li><strong>Yapay Zeka Destekli Rehberlik:</strong> Google Gemini AI destekli kişiselleştirilmiş içgörüler ve motivasyon mesajları alın</li>
-                <li><strong>Oyunlaştırma Özellikleri:</strong> Tutarlı katılım yoluyla ödüller kazanın, başarıların kilidini açın ve seviye atlayın</li>
+                <li><strong>Alışkanlık Takibi:</strong> Seri takibi ve hatırlatıcılarla günlük pozitif alışkanlıkları
+                    izleyin ve oluşturun</li>
+                <li><strong>Zihinsel Sağlık Egzersizleri:</strong> Meditasyon seansları, nefes egzersizleri ve
+                    farkındalık aktivitelerine erişin</li>
+                <li><strong>Günlük ve Düşünce Kayıtları:</strong> Özel günlükler, ruh hali kayıtları ve bilişsel
+                    davranışçı terapi (BDT) düşünce kayıtları tutun</li>
+                <li><strong>Yapay Zeka Destekli Rehberlik:</strong> Google Gemini AI destekli kişiselleştirilmiş
+                    içgörüler ve motivasyon mesajları alın</li>
+                <li><strong>Oyunlaştırma Özellikleri:</strong> Tutarlı katılım yoluyla ödüller kazanın, başarıların
+                    kilidini açın ve seviye atlayın</li>
                 <li><strong>Vizyon Panoları:</strong> Hedef ve özlemlerin görsel temsillerini oluşturun</li>
                 <li><strong>Uyku ve Su Takibi:</strong> Uyku kalitesini ve günlük hidrasyonu izleyin</li>
-                <li><strong>Google Health Connect Entegrasyonu:</strong> Adım sayısı verilerini senkronize edin (isteğe bağlı)</li>
+                <li><strong>Google Health Connect Entegrasyonu:</strong> Adım sayısı verilerini senkronize edin (isteğe
+                    bağlı)</li>
                 <li><strong>Premium İçerik:</strong> Abonelik yoluyla özel özelliklere erişin</li>
             </ul>
 
@@ -388,7 +446,8 @@
             <p>
                 Selfinity'de içerik oluşturarak, bize yalnızca uygulamanın hizmetlerini sağlamak amacıyla
                 içeriğinizi barındırmak, saklamak, işlemek ve görüntülemek için <strong>dünya çapında,
-                münhasır olmayan, telif ücreti gerektirmeyen bir lisans</strong> vermiş olursunuz. Bu şunları içerir:
+                    münhasır olmayan, telif ücreti gerektirmeyen bir lisans</strong> vermiş olursunuz. Bu şunları
+                içerir:
             </p>
             <ul>
                 <li>Verilerinizi sunucularımızda (Supabase/AWS) saklamak</li>
@@ -417,14 +476,18 @@
             </p>
             <ul>
                 <li><strong>Ücretsiz Seviye:</strong> Reklamlarla birlikte temel özelliklere erişim</li>
-                <li><strong>Premium Seviye:</strong> Özel özelliklerle (meditasyon kütüphaneleri, gelişmiş analizler, sınırsız AI içgörüleri) reklamsız deneyim</li>
+                <li><strong>Premium Seviye:</strong> Özel özelliklerle (meditasyon kütüphaneleri, gelişmiş analizler,
+                    sınırsız AI içgörüleri) reklamsız deneyim</li>
             </ul>
 
             <h3>5.2 Abonelik Faturalandırması</h3>
             <ul>
-                <li>Premium abonelikler, Google Play Faturalama aracılığıyla aylık veya yıllık olarak faturalandırılır</li>
-                <li><strong>Otomatik Yenileme:</strong> Abonelikler, yenileme tarihinden en az 24 saat önce iptal edilmedikçe otomatik olarak yenilenir</li>
-                <li>Aboneliğinizi istediğiniz zaman Google Play Store ayarlarından yönetebilir veya iptal edebilirsiniz</li>
+                <li>Premium abonelikler, Google Play Faturalama aracılığıyla aylık veya yıllık olarak faturalandırılır
+                </li>
+                <li><strong>Otomatik Yenileme:</strong> Abonelikler, yenileme tarihinden en az 24 saat önce iptal
+                    edilmedikçe otomatik olarak yenilenir</li>
+                <li>Aboneliğinizi istediğiniz zaman Google Play Store ayarlarından yönetebilir veya iptal edebilirsiniz
+                </li>
                 <li>Aboneliği iptal etmek gelecek ödemeleri durdurur ancak mevcut faturalama dönemini iade etmez</li>
             </ul>
 
@@ -472,12 +535,17 @@
             <h2>7. Yasaklı Davranışlar</h2>
             <p>Selfinity'yi kullanırken şunları YAPMAMAYIT kabul edersiniz:</p>
             <ul>
-                <li><strong>Yasadışı Aktiviteler:</strong> Uygulamayı yasadışı amaçlarla veya yasadışı faaliyetleri teşvik etmek için kullanma</li>
-                <li><strong>Taciz:</strong> Başkalarını taciz etme, tehdit etme veya taklit etme (sosyal özellikler etkinse)</li>
-                <li><strong>Güvenlik İstismarı:</strong> Güvenlik açıklarından yararlanmaya, diğer kullanıcıların hesaplarına veya sunucularımıza yetkisiz erişim elde etmeye çalışma</li>
+                <li><strong>Yasadışı Aktiviteler:</strong> Uygulamayı yasadışı amaçlarla veya yasadışı faaliyetleri
+                    teşvik etmek için kullanma</li>
+                <li><strong>Taciz:</strong> Başkalarını taciz etme, tehdit etme veya taklit etme (sosyal özellikler
+                    etkinse)</li>
+                <li><strong>Güvenlik İstismarı:</strong> Güvenlik açıklarından yararlanmaya, diğer kullanıcıların
+                    hesaplarına veya sunucularımıza yetkisiz erişim elde etmeye çalışma</li>
                 <li><strong>Zararlı Yazılım Dağıtımı:</strong> Virüs, zararlı yazılım veya kötü amaçlı kod yükleme</li>
-                <li><strong>Veri Madenciliği:</strong> Uygulamadan veri toplamak veya kazımak için otomatik sistemler kullanma</li>
-                <li><strong>Hesap Paylaşımı:</strong> Hesap kimlik bilgilerinizi başkalarıyla paylaşma veya birden fazla hesap oluşturma</li>
+                <li><strong>Veri Madenciliği:</strong> Uygulamadan veri toplamak veya kazımak için otomatik sistemler
+                    kullanma</li>
+                <li><strong>Hesap Paylaşımı:</strong> Hesap kimlik bilgilerinizi başkalarıyla paylaşma veya birden fazla
+                    hesap oluşturma</li>
             </ul>
             <p>
                 Bu kuralları ihlal etmek, iade yapılmaksızın derhal hesap askıya alınmasına veya sonlandırılmasına
@@ -599,7 +667,8 @@
             <ul>
                 <li><strong>Geçerli Hukuk:</strong> Bu Koşullar Türkiye Cumhuriyeti yasalarına tabidir</li>
                 <li><strong>Yargı Yetkisi:</strong> Herhangi bir uyuşmazlık Türkiye mahkemelerinde çözülecektir</li>
-                <li><strong>Gayri Resmi Çözüm:</strong> Dava açmadan önce, lütfen gayri resmi çözüm denemek için hello@getselfinity.com adresinden bizimle iletişime geçin</li>
+                <li><strong>Gayri Resmi Çözüm:</strong> Dava açmadan önce, lütfen gayri resmi çözüm denemek için
+                    hello@getselfinity.com adresinden bizimle iletişime geçin</li>
             </ul>
 
             <h2>15. Bölünebilirlik</h2>
@@ -625,7 +694,8 @@
                     <strong>Geliştirici:</strong> Mindoria Studio<br>
                     <strong>Uygulama:</strong> Selfinity<br>
                     <strong>E-posta:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
-                    <strong>Web Sitesi:</strong> <a href="https://getselfinity.com" target="_blank">https://getselfinity.com</a><br>
+                    <strong>Web Sitesi:</strong> <a href="https://getselfinity.com"
+                        target="_blank">https://getselfinity.com</a><br>
                     <strong>Yanıt Süresi:</strong> 48 saat içinde
                 </p>
             </div>
@@ -650,6 +720,9 @@
         const html = document.documentElement;
 
         // Check for saved theme preference or default to 'light'
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'light');
+        }
         const currentTheme = localStorage.getItem('theme') || 'light';
         html.setAttribute('data-theme', currentTheme);
         themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
@@ -662,4 +735,5 @@
         });
     </script>
 </body>
+
 </html>

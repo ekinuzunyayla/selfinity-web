@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfinity - Política de Privacidad</title>
+    <style>
+        :root {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F8F9FA;
+            --text-primary: #1A1A1A;
+            --text-secondary: #6B7280;
+            --text-tertiary: #9CA3AF;
+            --accent-start: #667eea;
+            --accent-end: #764ba2;
+            --border-color: #E5E7EB;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --text-primary: #F8FAFC;
+            --text-secondary: #E2E8F0;
+            /* Más brillante, casi blanco para mejor lectura en modo oscuro */
+            --text-tertiary: #CBD5E1;
+            --border-color: #334155;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header,
+        header {
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+            background: none;
+            -webkit-text-fill-color: white;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            color: white;
+        }
+
+        header .last-updated {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9em;
+            margin-top: 10px;
+            background: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .content {
+            background: var(--bg-primary);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            color: var(--accent-start);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--accent-start);
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        h3 {
+            color: var(--accent-end);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 15px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-left: 5px solid var(--accent-start);
+            border-radius: 8px;
+            font-size: 1.05em;
+        }
+
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin: 12px 0;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid var(--highlight-border);
+        }
+
+        .highlight-box p {
+            margin: 10px 0;
+            color: var(--text-primary);
+        }
+
+        .highlight-box strong {
+            color: var(--text-primary);
+        }
+
+        .contact-box {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 50px;
+            border-left: 5px solid var(--accent-start);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+        }
+
+        a {
+            color: var(--accent-start);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 10px 24px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Botón de retroceso fijo */
+        .back-btn-fixed {
+            position: fixed;
+            top: 20px;
+            left: 80px;
+            /* offset from theme toggle */
+            z-index: 1000;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .back-btn-fixed:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .back-btn-fixed {
+                top: 10px;
+                left: 70px;
+            }
+
+            .container {
+                padding: 20px 15px;
+            }
+
+            .header,
+            header {
+                padding: 40px 30px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            h3 {
+                font-size: 1.3em;
+            }
+
+            .theme-toggle,
+            .lang-switcher {
+                top: 10px;
+            }
+
+            .theme-toggle {
+                left: 10px;
+            }
+
+            .lang-switcher {
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index-es.html" class="back-btn-fixed" aria-label="Volver">←</a>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="lang-switcher">
+        <a href="privacy-policy-en.html">English</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Política de Privacidad</h1>
+            <p class="last-updated">Última actualización: 15 de septiembre de 2025</p>
+        </header>
+
+        <div class="content">
+            <h2>1. Introducción</h2>
+            <p>
+                Bienvenido a Selfinity: Mind & Development ("nosotros", "nuestro" o "nos"), desarrollado por Mindoria
+                Studio.
+                Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos su información
+                cuando
+                utiliza nuestra aplicación móvil y servicios relacionados.
+            </p>
+            <p>
+                Selfinity es una plataforma de desarrollo personal y productividad que le ayuda a registrar hábitos,
+                practicar el mindfulness, escribir sus pensamientos en un diario y alcanzar sus metas a través de
+                orientación
+                impulsada por inteligencia artificial y funciones de gamificación.
+            </p>
+
+            <h2>2. Información que Recopilamos</h2>
+
+            <h3>2.1 Información de la Cuenta</h3>
+            <ul>
+                <li><strong>Dirección de correo electrónico</strong> y <strong>nombre</strong> cuando crea una cuenta a
+                    través de Google OAuth
+                    o autenticación de correo electrónico/contraseña</li>
+                <li><strong>Información del perfil</strong>, incluyendo la foto de perfil opcional</li>
+                <li><strong>Credenciales de autenticación</strong> gestionadas de forma segura a través de Supabase</li>
+            </ul>
+
+            <h3>2.2 Contenido Generado por el Usuario</h3>
+            <p>Recopilamos y almacenamos el contenido que usted crea dentro de la aplicación, incluyendo:</p>
+            <ul>
+                <li><strong>Entradas de diario</strong> y registros de pensamientos</li>
+                <li><strong>Tareas, metas y listas de cosas por hacer</strong></li>
+                <li><strong>Datos de seguimiento de hábitos</strong> y registros de finalización</li>
+                <li><strong>Registros de actividad</strong> (seguimiento del estado de ánimo, entradas de gratitud,
+                    sesiones de meditación)</li>
+                <li><strong>Tableros de visión</strong> e imágenes subidas</li>
+                <li><strong>Afirmaciones</strong> y notas personales</li>
+                <li><strong>Registros de sueño, ingesta de agua y datos de nutrición</strong></li>
+            </ul>
+
+            <h3>2.3 Datos Técnicos Automáticos</h3>
+            <p>Recopilamos automáticamente cierta información técnica cuando utiliza la aplicación:</p>
+            <ul>
+                <li><strong>Información del dispositivo:</strong> Tipo de dispositivo, versión del sistema operativo,
+                    identificadores del dispositivo</li>
+                <li><strong>Dirección IP</strong> y ubicación general (nivel de país/región)</li>
+                <li><strong>Estadísticas de uso:</strong> Funciones de la aplicación utilizadas, duración de la sesión,
+                    vistas de pantalla</li>
+                <li><strong>Registros de errores e informes de fallos</strong> a través de Firebase Crashlytics</li>
+                <li><strong>Datos analíticos</strong> a través de Firebase Analytics (patrones de uso anonimizados)</li>
+            </ul>
+
+            <h3>2.4 Identificadores de Publicidad</h3>
+            <p>
+                Con su consentimiento, recopilamos identificadores de publicidad a través de <strong>Google
+                    AdMob</strong> para mostrar
+                anuncios personalizados. Puede optar por no recibir anuncios personalizados en la configuración de su
+                dispositivo.
+            </p>
+
+            <h3>2.5 Datos de Salud y Condición Física</h3>
+            <p>
+                Con su permiso explícito, accedemos a <strong>datos del recuento de pasos</strong> a través de
+                <strong>Google Health Connect</strong> para proporcionar funciones de seguimiento de actividad. Estos
+                datos:
+            </p>
+            <ul>
+                <li>Requieren su permiso por separado</li>
+                <li>Se almacenan localmente y se sincronizan con nuestros servidores solo con su consentimiento</li>
+                <li>Se pueden desconectar en cualquier momento a través de la configuración de Health Connect</li>
+                <li>Nunca se comparten con terceros con fines publicitarios</li>
+            </ul>
+
+            <h2>3. Cómo Utilizamos Su Información</h2>
+
+            <p>Utilizamos la información recopilada para los siguientes propósitos:</p>
+
+            <h3>3.1 Funciones Principales de la Aplicación</h3>
+            <ul>
+                <li>Proporcionar y mantener la funcionalidad de la aplicación (seguimiento de hábitos, diario,
+                    meditación, etc.)</li>
+                <li>Almacenar y sincronizar sus datos en todos sus dispositivos</li>
+                <li>Mostrar su progreso, estadísticas y logros</li>
+                <li>Habilitar notificaciones de recordatorios y tareas programadas</li>
+            </ul>
+
+            <h3>3.2 Personalización Impulsada por IA</h3>
+            <div class="highlight-box">
+                <p><strong>Análisis Impulsado por IA:</strong></p>
+                <p>
+                    Utilizamos <strong>servicios de IA de Google (Gemini)</strong> para proporcionar percepciones
+                    personalizadas y
+                    recomendaciones
+                    basadas en sus entradas de diario, registros de estado de ánimo y datos de actividad. Esto incluye:
+                </p>
+                <ul>
+                    <li>Analizar sentimientos y patrones en sus entradas de diario</li>
+                    <li>Generar afirmaciones peronalizadas y contenido motivacional</li>
+                    <li>Proporcionar percepciones sobre las tendencias de su estado de ánimo y hábitos</li>
+                    <li>Sugerir actividades y metas basadas en sus patrones de uso</li>
+                </ul>
+                <p>
+                    <strong>Nota de Privacidad:</strong> El procesamiento de IA se realiza de forma segura, y sus datos
+                    no se utilizan para entrenar
+                    los modelos generales de IA de Google. El análisis es específico para su cuenta y no se comparte con
+                    otros
+                    usuarios.
+                </p>
+            </div>
+
+            <h3>3.3 Mejora y Análisis de la Aplicación</h3>
+            <ul>
+                <li>Monitorizar el rendimiento de la aplicación y solucionar problemas técnicos</li>
+                <li>Analizar patrones de uso para mejorar las funciones (a través de Firebase Analytics)</li>
+                <li>Realizar pruebas A/B para nuevas funciones</li>
+                <li>Comprender las preferencias del usuario y optimizar la experiencia de usuario</li>
+            </ul>
+
+            <h3>3.4 Publicidad</h3>
+            <ul>
+                <li>Mostrar anuncios relevantes a través de Google AdMob</li>
+                <li>Mostrar anuncios personalizados basados en sus intereses (con consentimiento)</li>
+                <li>Medir el rendimiento y la efectividad de los anuncios</li>
+            </ul>
+
+            <h3>3.5 Comunicación y Soporte</h3>
+            <ul>
+                <li>Responder a sus solicitudes de soporte y consultas</li>
+                <li>Enviar actualizaciones importantes sobre la aplicación o su cuenta</li>
+                <li>Notificarle sobre nuevas funciones (si opta por recibirlas)</li>
+            </ul>
+
+            <h3>3.6 Procesamiento de Transacciones</h3>
+            <ul>
+                <li>Procesar las compras de suscripción a través de Google Play Billing</li>
+                <li>Gestionar su estado de membresía premium</li>
+                <li>Gestionar solicitudes de reembolso y problemas de facturación</li>
+            </ul>
+
+            <h2>4. Proveedores de Servicios de Terceros</h2>
+
+            <p>Nos integramos con los siguientes servicios de terceros para proporcionar la funcionalidad de la
+                aplicación:</p>
+
+            <h3>4.1 Supabase (Backend y Base de Datos)</h3>
+            <p>
+                <strong>Propósito:</strong> Autenticación de usuarios, almacenamiento en base de datos, API de
+                backend<br>
+                <strong>Datos compartidos:</strong> Información de la cuenta, contenido generado por el usuario, datos
+                de uso de la aplicación<br>
+                <strong>Política de Privacidad:</strong> <a href="https://supabase.com/privacy"
+                    target="_blank">supabase.com/privacy</a>
+            </p>
+
+            <h3>4.2 Firebase (Google)</h3>
+            <p>
+                <strong>Propósito:</strong> Analítica, informes de fallos, monitorización de rendimiento<br>
+                <strong>Datos compartidos:</strong> Información del dispositivo, estadísticas de uso, registros de
+                fallos (anonimizados)<br>
+                <strong>Política de Privacidad:</strong> <a href="https://firebase.google.com/support/privacy"
+                    target="_blank">firebase.google.com/support/privacy</a>
+            </p>
+
+            <h3>4.3 Google AdMob</h3>
+            <p>
+                <strong>Propósito:</strong> Visualización de anuncios<br>
+                <strong>Datos compartidos:</strong> Identificadores de publicidad, información del dispositivo, patrones
+                de uso<br>
+                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
+                <strong>Opt-out (exclusión):</strong> Puede desactivar los anuncios personalizados en la configuración
+                de su dispositivo
+            </p>
+
+            <h3>4.4 Servicios de IA de Google (Gemini)</h3>
+            <p>
+                <strong>Propósito:</strong> Análisis y percepciones personalizadas impulsadas por IA<br>
+                <strong>Datos compartidos:</strong> Entradas de diario, registros de estado de ánimo (solo cuando
+                utiliza funciones de IA)<br>
+                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
+                <strong>Nota:</strong> Los datos se procesan de forma segura y no se utilizan para entrenar modelos de
+                IA generales
+            </p>
+
+            <h3>4.5 Google Health Connect</h3>
+            <p>
+                <strong>Propósito:</strong> Recuento de pasos y seguimiento de actividad física<br>
+                <strong>Datos compartidos:</strong> Datos del recuento de pasos (solo con permiso explícito)<br>
+                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
+                    target="_blank">policies.google.com/privacy</a><br>
+                <strong>Control:</strong> Administre los permisos a través de la configuración de la aplicación Health
+                Connect
+            </p>
+
+            <h3>4.6 Google Play Billing</h3>
+            <p>
+                <strong>Propósito:</strong> Procesamiento de compras dentro de la aplicación y suscripciones<br>
+                <strong>Datos compartidos:</strong> Historial de compras, información de pago (gestionado por Google
+                Play)<br>
+                <strong>Política de Privacidad:</strong> <a
+                    href="https://payments.google.com/payments/apis-secure/get_legal_document"
+                    target="_blank">Privacidad de Google Play</a>
+            </p>
+
+            <h2>5. Seguridad y Almacenamiento de Datos</h2>
+
+            <h3>5.1 Medidas de Seguridad</h3>
+            <p>Implementamos medidas de seguridad estándar de la industria para proteger sus datos:</p>
+            <ul>
+                <li><strong>Cifrado:</strong> Todos los datos transmitidos entre su dispositivo y nuestros servidores
+                    están cifrados
+                    usando HTTPS/TLS</li>
+                <li><strong>Autenticación segura:</strong> Las contraseñas se codifican mediante hash y nunca se
+                    almacenan en texto plano</li>
+                <li><strong>Controles de acceso:</strong> Estrictas limitaciones de acceso a sus datos personales</li>
+                <li><strong>Auditorías regulares:</strong> Revisiones de seguridad y evaluaciones de vulnerabilidad</li>
+            </ul>
+
+            <h3>5.2 Almacenamiento de Datos</h3>
+            <p>
+                Sus datos se almacenan en <strong>servidores de Supabase</strong> (alojados en AWS) con redundancia y
+                sistemas de
+                copia de seguridad.
+                Algunos datos también se almacenan localmente en su dispositivo para el acceso offline y un rendimiento
+                más rápido.
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>Aviso Importante:</strong></p>
+                <p>
+                    A pesar de que implementamos sólidas medidas de seguridad, ningún sistema de almacenamiento
+                    electrónico es 100% seguro.
+                    No podemos garantizar una seguridad absoluta frente a accesos no autorizados, fallos de hardware u
+                    otras
+                    circunstancias imprevistas.
+                </p>
+            </div>
+
+            <h2>6. Retención y Eliminación de Datos</h2>
+
+            <h3>6.1 Cuánto Tiempo Conservamos Sus Datos</h3>
+            <ul>
+                <li><strong>Cuentas activas:</strong> Los datos se conservan mientras su cuenta esté activa</li>
+                <li><strong>Cuentas inactivas:</strong> Las cuentas inactivas durante más de 2 años pueden eliminarse
+                    previa notificación
+                </li>
+                <li><strong>Cuentas eliminadas:</strong> Los datos se eliminan de forma permanente en un plazo de 30
+                    días posteriores a la eliminación de la cuenta
+                </li>
+                <li><strong>Obligaciones legales:</strong> Algunos datos pueden conservarse por más tiempo si lo exige
+                    la ley</li>
+            </ul>
+
+            <h3>6.2 Cómo Solicitar la Eliminación de Datos</h3>
+            <p>Tiene derecho a solicitar la eliminación de su cuenta y sus datos personales en cualquier momento:</p>
+            <div class="highlight-box">
+                <p><strong>Proceso de Solicitud de Eliminación de Datos:</strong></p>
+                <ol>
+                    <li>Envíe un correo electrónico a: <a
+                            href="mailto:hello@getselfinity.com">hello@getselfinity.com</a></li>
+                    <li>Asunto: <strong>"Solicitud de Eliminación de Datos"</strong></li>
+                    <li>Incluya su dirección de correo electrónico registrada</li>
+                    <li>Procesaremos su solicitud en un plazo de 30 días</li>
+                    <li>Recibirá una confirmación una vez que la eliminación se haya completado</li>
+                </ol>
+                <p><strong>Nota:</strong> Esta acción es permanente y no se puede deshacer. Todos sus datos, incluyendo
+                    las entradas de diario, su progreso y sus logros, serán eliminados permanentemente.</p>
+            </div>
+
+            <h2>7. Privacidad Infantil</h2>
+
+            <p>
+                Selfinity <strong>no está dirigida a niños menores de 13 años de edad</strong>. No recopilamos
+                conscientemente
+                información personal de niños menores de 13 años.
+            </p>
+            <p>
+                Si descubrimos que hemos recopilado inadvertidamente información de un niño menor de 13 años,
+                eliminaremos
+                esa información inmediatamente. Si cree que hemos recopilado información de un niño
+                menor de 13 años, comuníquese con nosotros a <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>.
+            </p>
+
+            <h2>8. Sus Derechos de Privacidad</h2>
+
+            <p>Dependiendo de su ubicación, puede tener los siguientes derechos:</p>
+            <ul>
+                <li><strong>Acceso:</strong> Solicitar una copia de sus datos personales</li>
+                <li><strong>Corrección:</strong> Actualizar o corregir información inexacta</li>
+                <li><strong>Eliminación:</strong> Solicitar la eliminación de su cuenta y sus datos</li>
+                <li><strong>Portabilidad:</strong> Solicitar sus datos en un formato legible por máquina</li>
+                <li><strong>Objeción:</strong> Oponerse a ciertas actividades de procesamiento de datos</li>
+                <li><strong>Exclusión voluntaria (Opt-out):</strong> Cancelar la suscripción a comunicaciones de
+                    marketing</li>
+            </ul>
+
+            <p>
+                Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros en
+                <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>.
+            </p>
+
+            <h2>9. Transferencias Internacionales de Datos</h2>
+
+            <p>
+                Sus datos pueden transferirse a, y almacenarse en, servidores situados fuera de su país.
+                Aseguramos que existen las salvaguardas adecuadas para proteger sus datos de acuerdo con
+                esta Política de Privacidad y las leyes aplicables.
+            </p>
+
+            <h2>10. Cambios a Esta Política de Privacidad</h2>
+
+            <p>
+                Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras
+                prácticas
+                o requisitos legales. Cuando realicemos cambios significativos, procederemos a:
+            </p>
+            <ul>
+                <li>Actualizar la "Última actualización" en la parte superior de esta política</li>
+                <li>Notificarle a través de la aplicación o por correo electrónico</li>
+                <li>Solicitar su consentimiento si la ley lo requiere</li>
+            </ul>
+            <p>
+                Le recomendamos revisar esta Política de Privacidad de forma periódica para mantenerse informado sobre
+                cómo protegemos su información.
+            </p>
+
+            <h2>11. Contáctenos</h2>
+
+            <p>
+                Si tiene preguntas, inquietudes o solicitudes con respecto a esta Política de Privacidad o a nuestras
+                prácticas de manejo de datos, comuníquese con nosotros:
+            </p>
+
+            <div class="highlight-box">
+                <p><strong>Información de Contacto:</strong></p>
+                <p>
+                    <strong>Correo electrónico:</strong> <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
+                    <strong>Aplicación:</strong> Selfinity: Mind & Development<br>
+                    <strong>Desarrollador:</strong> Mindoria Studio<br>
+                    <strong>Tiempo de respuesta:</strong> Nuestro objetivo es responder en un plazo de 48 horas
+                </p>
+            </div>
+
+            <div class="nav-links">
+                <a href="index-es.html">← Volver al Inicio</a>
+                <a href="terms-of-use-es.html">Términos de Uso →</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cambiar a modo oscuro
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        // Comprobar la preferencia guardada o por defecto a 'light'
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'light');
+        }
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+
+</html>
