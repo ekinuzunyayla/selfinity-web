@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===================== Selfinity (getselfinity.com) ===================== -->
+
+  <!-- Root is the language gateway: it is the x-default for the home page. -->
+  <url>
+    <loc>https://getselfinity.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/index-tr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/index-tr.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/index-tr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/index-en.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/index-tr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/index-es.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/index-tr.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/privacy-policy.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/privacy-policy-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/privacy-policy-en.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/privacy-policy-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/privacy-policy-es.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/privacy-policy-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/privacy-policy-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/terms-of-use.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/terms-of-use-en.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://getselfinity.com/terms-of-use-es.html</loc>
+    <lastmod>2026-07-29</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://getselfinity.com/terms-of-use-en.html"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+    <url>
+        <loc>https://getselfinity.com/support.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getselfinity.com/support-tr.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getselfinity.com/support-en.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://getselfinity.com/support-es.html</loc>
+        <lastmod>2026-07-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>

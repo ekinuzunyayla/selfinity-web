@@ -1,1 +1,19 @@
+# app-ads.txt — Authorized Sellers for Apps (IAB Tech Lab spec)
+# https://iabtechlab.com/wp-content/uploads/2022/04/App-ads.txt-1.1.pdf
+#
+# Bu dosya Selfinity mobil uygulamasının reklam envanterini satmaya yetkili
+# demand source'larını beyan eder. AdMob crawler, Google Play'deki "developer
+# website" URL'sinden (getselfinity.com) bu dosyayı çeker ve uygulamayı
+# "Authorized" olarak işaretler. Yokluğunda premium ad demand (Google ADX'in
+# büyük kısmı) envanteri reddeder → eCPM ~%20-30 düşer.
+#
+# ⚠️ SÜRÜM DURUMU
+#   Play'de yayında olan 5.1.x hâlâ AdMob reklamı gösteriyor → bu dosya
+#   CANLI olarak gerekli, silinmemeli.
+#   Yeni KMP sürümünde (5.2.0) reklam yok. 5.1.x trafiği tamamen bittikten
+#   sonra bu dosya ve ads.txt kaldırılabilir.
+#
+# Yayıncı satırı aşağıdadır; AdMob Console → Apps → app-ads.txt sekmesinden
+# doğrulanabilir (değişiklik sonrası "Verified" 24 saat içinde döner).
+
 google.com, pub-3834148733890519, DIRECT, f08c47fec0942fa0

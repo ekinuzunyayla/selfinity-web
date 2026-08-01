@@ -5,28 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selfinity - Gizlilik Politikası</title>
+    <meta name="description"
+        content="Selfinity gizlilik politikası: hangi verileri topluyoruz, neyi bilerek toplamıyoruz, yapay zekâ özellikleri Google Gemini'ye tam olarak neyi gönderiyor ve hesabınızı nasıl silersiniz.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://getselfinity.com/privacy-policy.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/privacy-policy-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/privacy-policy-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://getselfinity.com/privacy-policy-en.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#834CCA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F8F9FA;
-            --text-primary: #1A1A1A;
-            --text-secondary: #6B7280;
-            --accent-start: #667eea;
-            --accent-end: #764ba2;
-            --border-color: #E5E7EB;
-            --highlight-bg: #FFF3CD;
-            --highlight-border: #FFC107;
+            --font-head: 'Manrope', 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            /* zemin & yüzeyler — hepsi OPAK, kartlarda rgba yasak */
+            --bg: #FFFFFF; --card: #F5F3FF; --chip-wash: #E9E0F6; --container: #BEA4E5; --border: #E9E0F6;
+            --primary: #834CCA; --secondary: #A680DB; --on-primary: #FFFFFF;
+            --text: #1A1921; --muted: #7D7A8A; --success: #52B788;   /* saf siyah yasak */
+            /* radius — Golden Shape Rule: yalnız bu üçü + 28px CTA istisnası */
+            --r-bento: 24px; --r-comp: 16px; --r-micro: 8px; --r-cta: 28px;
+            /* gölgeler — açık temada asla gri/siyah */
+            --shadow-card: 0 4px 12px rgba(131,76,202,.20), 0 2px 6px rgba(131,76,202,.10);
+            --shadow-card-hover: 0 8px 24px rgba(131,76,202,.25), 0 2px 6px rgba(131,76,202,.12);
+            --shadow-btn: 0 2px 6px rgba(131,76,202,.06);
+            --grad-hero: linear-gradient(180deg, #F8F5FF 0%, #EDE7F6 55%, #D1C4E9 100%);
+            --grad-twilight: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+            --grad-cta: linear-gradient(90deg, #8C52FF 0%, #9D92FF 100%);
+            --grad-celebration: linear-gradient(135deg, #9B6DFF 0%, #7C4DFF 55%, #6B3FA0 100%);
+            --grad-gold: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
         }
 
         [data-theme="dark"] {
-            --bg-primary: #0F172A;
-            --bg-secondary: #1E293B;
-            --text-primary: #F8FAFC;
-            --text-secondary: #E2E8F0;
-            /* Brighter, almost white for better readability in dark mode */
-            --border-color: #334155;
-            --highlight-bg: #422006;
-            --highlight-border: #FFC107;
+            --bg: #0C0A14; --card: #171426; --chip-wash: #231F3A; --container: #231F3A; --border: #231F3A;
+            --primary: #9D92FF; --secondary: #A680DB;
+            --on-primary: #1A1921;   /* lavanta üstünde koyu metin — beyaz AA'yı geçemez */
+            --text: #E6E4F2; --muted: #8B869C; --success: #52B788;   /* saf beyaz yasak */
+            /* karanlıkta siyah gölge yok — ton farkı + %4 lavanta glow */
+            --shadow-card: 0 0 0 1px rgba(157,146,255,.06), 0 6px 20px rgba(157,146,255,.04);
+            --shadow-card-hover: 0 0 0 1px rgba(157,146,255,.10), 0 8px 28px rgba(157,146,255,.06);
+            --shadow-btn: 0 0 0 1px rgba(157,146,255,.08);
+            --grad-hero: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+        }
+
+        /* yasal sayfa ekleri: vurgu kutuları + uzun metin gövde rengi */
+        :root {
+            --highlight-bg: #FFF6DC;
+            --highlight-border: #F2A93B;
+            --good-bg: #E5F5EC;
+            --good-border: #52B788;
+            --text-body: #4A4655;
+        }
+
+        [data-theme="dark"] {
+            --highlight-bg: #2E2410;
+            --highlight-border: #F2A93B;
+            --good-bg: #12281C;
+            --good-border: #52B788;
+            --text-body: #C9C6D6;
         }
 
         * {
@@ -36,10 +77,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.8;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
+            color: var(--text-body);
+            background: var(--bg);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -51,55 +92,48 @@
 
         .header,
         header {
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
+            background: var(--grad-twilight);
+            color: #E6E4F2;
             padding: 60px 40px;
-            border-radius: 16px;
+            border-radius: var(--r-bento);
             margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
         }
 
         h1 {
+            font-family: var(--font-head);
             font-size: 3em;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
-            color: white;
+            color: #E6E4F2;
             background: none;
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: #E6E4F2;
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.95;
-            color: white;
-        }
-
-        header .last-updated {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9em;
-            margin-top: 10px;
-            background: transparent;
-            border: none;
-            padding: 0;
+            color: #E6E4F2;
         }
 
         .content {
-            background: var(--bg-primary);
+            background: var(--card);
             padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: var(--r-bento);
+            box-shadow: var(--shadow-card);
             transition: background-color 0.3s ease;
         }
 
         h2 {
-            color: var(--accent-start);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 50px;
             margin-bottom: 20px;
             font-size: 2em;
             font-weight: 700;
             padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-start);
+            border-bottom: 3px solid var(--primary);
         }
 
         h2:first-of-type {
@@ -107,7 +141,8 @@
         }
 
         h3 {
-            color: var(--accent-end);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -116,18 +151,18 @@
 
         p {
             margin: 15px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         .last-updated {
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-style: italic;
             margin-bottom: 40px;
             padding: 20px;
-            background: var(--bg-secondary);
-            border-left: 5px solid var(--accent-start);
-            border-radius: 8px;
+            background: var(--chip-wash);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--r-micro);
             font-size: 1.05em;
         }
 
@@ -138,37 +173,103 @@
 
         li {
             margin: 12px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         li strong {
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box {
             background: var(--highlight-bg);
             padding: 25px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin: 30px 0;
             border-left: 5px solid var(--highlight-border);
         }
 
-        .highlight-box p {
+        .highlight-box p,
+        .highlight-box li {
             margin: 10px 0;
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box strong {
-            color: var(--text-primary);
+            color: var(--text);
+        }
+
+        .good-box {
+            background: var(--good-bg);
+            padding: 25px;
+            border-radius: var(--r-comp);
+            margin: 30px 0;
+            border-left: 5px solid var(--good-border);
+        }
+
+        .good-box p,
+        .good-box li {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        .good-box strong {
+            color: var(--text);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 25px 0;
+            border-radius: var(--r-comp);
+            border: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .table-scroll {
+            border-color: var(--chip-wash);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            min-width: 560px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        [data-theme="dark"] .data-table th,
+        [data-theme="dark"] .data-table td {
+            border-bottom-color: var(--chip-wash);
+        }
+
+        .data-table th {
+            background: var(--chip-wash);
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table td strong {
+            color: var(--text);
         }
 
         .contact-box {
-            background: var(--bg-secondary);
+            background: var(--chip-wash);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin-top: 50px;
-            border-left: 5px solid var(--accent-start);
+            border-left: 5px solid var(--primary);
         }
 
         .contact-box h2 {
@@ -177,7 +278,7 @@
         }
 
         a {
-            color: var(--accent-start);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s ease;
@@ -192,18 +293,49 @@
             display: inline-block;
             margin-top: 40px;
             padding: 15px 40px;
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
-            border-radius: 50px;
+            background: var(--grad-cta);
+            color: #FFFFFF;
+            border-radius: var(--r-comp);
             text-decoration: none;
-            font-weight: 600;
+            font-family: var(--font-head);
+            font-weight: 700;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: var(--shadow-card);
         }
 
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: var(--shadow-card-hover);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-links {
+            border-top-color: var(--chip-wash);
+        }
+
+        .nav-links a {
+            padding: 10px 22px;
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
             text-decoration: none;
             opacity: 1;
         }
@@ -213,25 +345,36 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 6px;
         }
 
         .lang-switcher a {
             display: inline-block;
-            padding: 10px 24px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            padding: 10px 16px;
+            background: var(--card);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            box-shadow: var(--shadow-btn);
             transition: all 0.3s ease;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--border);
         }
 
         .lang-switcher a:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
             opacity: 1;
+            text-decoration: none;
+        }
+
+        .lang-switcher a.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: transparent;
         }
 
         .theme-toggle {
@@ -239,9 +382,9 @@
             top: 20px;
             left: 20px;
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
@@ -250,12 +393,12 @@
             cursor: pointer;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         /* Fixed Back Button */
@@ -265,24 +408,24 @@
             left: 80px;
             /* offset from theme toggle */
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
+            color: var(--text);
             text-decoration: none;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .back-btn-fixed:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         @media (max-width: 768px) {
@@ -298,6 +441,7 @@
             .header,
             header {
                 padding: 40px 30px;
+                margin-top: 60px;
             }
 
             h1 {
@@ -332,6 +476,11 @@
             .lang-switcher {
                 right: 10px;
             }
+
+            .lang-switcher a {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -339,327 +488,594 @@
 <body>
     <a href="index-tr.html" class="back-btn-fixed" aria-label="Geri Dön">←</a>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <button class="theme-toggle" id="themeToggle" aria-label="Temayı değiştir">
         <span id="themeIcon">🌙</span>
     </button>
 
     <div class="lang-switcher">
-        <a href="privacy-policy-en.html">English</a>
+        <a href="privacy-policy.html" class="active" hreflang="tr" aria-current="page">TR</a>
+        <a href="privacy-policy-en.html" hreflang="en">EN</a>
+        <a href="privacy-policy-es.html" hreflang="es">ES</a>
     </div>
 
     <div class="container">
         <div class="header">
             <h1>Gizlilik Politikası</h1>
-            <p class="subtitle">Verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz</p>
+            <p class="subtitle">Neyi topluyoruz, neyi toplamıyoruz ve cihazınızdan ne çıkıyor</p>
         </div>
 
         <div class="content">
             <div class="last-updated">
-                <strong>Son güncelleme:</strong> 9 Ocak 2025
+                <strong>Yürürlük tarihi:</strong> 29 Temmuz 2026<br>
+                <strong>Kapsam:</strong> Android ve iOS için Selfinity uygulaması, sürüm 5.2.0 ve sonrası, ve
+                getselfinity.com web sitesi. Daha eski Android sürümleri için bölüm 14.1'e bakın.
             </div>
 
             <h2>1. Giriş</h2>
-            <p>
-                <strong>Mindoria Studio</strong>, Selfinity mobil uygulamasının geliştiricisi olarak
-                kullanıcılarımızın gizliliğini ciddiye alıyoruz. Selfinity, kullanıcıların ruh hallerini
-                izlemelerine, günlüklerini tutmalarına, alışkanlıklarını yönetmelerine ve genel sağlıkları
-                için kişiselleştirilmiş öneriler almalarına yardımcı olan kapsamlı bir kişisel gelişim
-                platformudur.
-            </p>
-            <p>
-                Bu Gizlilik Politikası, uygulamamızı kullanırken hangi bilgilerin toplandığını, bunların
-                nasıl kullanıldığını, saklandığını ve korunduğunu açıklamaktadır. Selfinity'yi kullanarak
-                bu politikada açıklanan uygulamaları kabul etmiş olursunuz.
-            </p>
+            <p>Selfinity ("Selfinity", "uygulama", "biz"), Türkiye merkezli <strong>Mindoria Studio</strong> tarafından
+                geliştirilen ve işletilen bir kişisel iyi oluş ve gelişim uygulamasıdır.</p>
+            <p>Bu Gizlilik Politikası; hangi kişisel verileri topladığımızı, neden topladığımızı, kimlerle
+                paylaştığımızı ve sahip olduğunuz hakları açıklar. Okunmak için yazıldı: alışılmadık ya da önemli bir
+                şey varsa, onu satır aralarına gizlemek yerine açıkça söylüyoruz.</p>
+            <p><strong>Veri sorumlusu:</strong> Mindoria Studio, Türkiye. <strong>İletişim:</strong> <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a></p>
+            <p>Bu politikayı kabul etmiyorsanız lütfen Selfinity'yi kullanmayın.</p>
 
-            <h2>2. Topladığımız Bilgiler</h2>
-
-            <h3>2.1 Hesap Bilgileri</h3>
-            <p>Hesap oluşturduğunuzda şunları topluyoruz:</p>
-            <ul>
-                <li><strong>E-posta ve Şifre:</strong> E-posta/şifre kaydı yoluyla kayıt olursanız</li>
-                <li><strong>Google OAuth Bilgileri:</strong> Google ile Giriş Yap kullanırsanız (isim, e-posta, profil
-                    resmi)</li>
-                <li><strong>Kullanıcı Adı:</strong> Profilinizde görünen isim</li>
-                <li><strong>Profil Bilgileri:</strong> Kişiselleştirme için isteğe bağlı bilgiler (avatar, arka plan
-                    tercihleri)</li>
-            </ul>
-
-            <h3>2.2 Kullanıcı Tarafından Oluşturulan İçerik</h3>
-            <p>Uygulama deneyiminizin bir parçası olarak şunları saklıyoruz:</p>
-            <ul>
-                <li><strong>Günlük Girişleri:</strong> Zihinsel sağlık günlükleriniz, duygu günlükleri ve düşünce
-                    kayıtları</li>
-                <li><strong>Görevler ve Hedefler:</strong> Günlük/haftalık görevler, uzun vadeli hedefler ve alışkanlık
-                    izleyiciler</li>
-                <li><strong>Ruh Hali Kayıtları:</strong> Zaman içindeki ruh hali girişleri ve duygu verileri</li>
-                <li><strong>Vizyon Panoları:</strong> Görseller, notlar ve motivasyon içeriği</li>
-                <li><strong>Afirmasyonlar ve Minnettarlık Günlükleri:</strong> Kişisel düşünce ve yansıma girişleri</li>
-                <li><strong>Uyku ve Su Takibi:</strong> Uyku kalitesi ve günlük hidrasyon kayıtları</li>
-            </ul>
-
-            <h3>2.3 Teknik ve Kullanım Verileri</h3>
-            <p>Hizmetimizi iyileştirmek için şunları topluyoruz:</p>
-            <ul>
-                <li><strong>Cihaz Bilgileri:</strong> Cihaz türü, işletim sistemi versiyonu ve donanım özellikleri</li>
-                <li><strong>IP Adresi:</strong> Genel konum ve ağ bilgileri için</li>
-                <li><strong>Uygulama Kullanım İstatistikleri:</strong> Hangi özellikleri kullandığınız, oturum süresi ve
-                    sıklığı</li>
-                <li><strong>Firebase Analytics:</strong> Uygulama performansı ve kullanıcı etkileşim metrikleri</li>
-                <li><strong>Firebase Crashlytics:</strong> Çöküş raporları ve hata günlükleri (uygulamayı istikrarlı
-                    tutmak için)</li>
-            </ul>
-
-            <h3>2.4 Reklam Verileri (Ücretsiz Kullanıcılar)</h3>
-            <ul>
-                <li><strong>Google AdMob:</strong> Kişiselleştirilmiş reklamlar göstermek için reklam tanımlayıcıları
-                    (Google Reklam Kimliği)</li>
-                <li><strong>Onay Durumu:</strong> Reklam kişiselleştirme tercihleri (GDPR/CCPA uyumluluğu için)</li>
-            </ul>
-            <div class="highlight-box">
-                <p><strong>Not:</strong> Gizlilik haklarınızı korumak için kişiselleştirilmiş reklamları devre dışı
-                    bırakabilirsiniz. Premium'a geçin ve tüm reklamları tamamen kaldırın.</p>
+            <h2>2. Kısaca özet</h2>
+            <div class="good-box">
+                <ul>
+                    <li>Reklam <strong>göstermiyoruz</strong> ve reklam kimliği <strong>toplamıyoruz</strong>.</li>
+                    <li><strong>Hiçbir</strong> analitik, atıf veya çökme raporlama SDK'sı kullanmıyoruz. Uygulamanın
+                        içinde Google Analytics de yok, Firebase de, sosyal ağ SDK'sı da, üçüncü taraf takipçi de.</li>
+                    <li>Kişisel verilerinizi <strong>satmıyoruz</strong> ve reklam amacıyla
+                        <strong>paylaşmıyoruz</strong>. Ne şimdi, ne geçmişte, ne de planlanan bir şey olarak.
+                    </li>
+                    <li>Sizi başka şirketlerin uygulama ve sitelerinde <strong>takip etmiyoruz</strong>; bu yüzden
+                        uygulama iOS'ta hiçbir zaman İzleme İzni (App Tracking Transparency) istemiyor.</li>
+                    <li>Kaydettiklerinizin önemli bir kısmı <strong>cihazınızdan hiç çıkmıyor</strong> — tam liste
+                        bölüm 7'de.</li>
+                    <li>Hesabınızı ve sunucularımızdaki verilerinizi uygulama içinden silebilirsiniz — bölüm 9.</li>
+                    <li>Bazı isteğe bağlı özellikler, <strong>yalnızca siz onları kullanmayı seçtiğinizde</strong>
+                        Google'ın Gemini yapay zekâsına içerik gönderir. Bölüm 5 hangi özelliğin tam olarak neyi
+                        gönderdiğini tek tek yazar.</li>
+                </ul>
             </div>
 
-            <h3>2.5 Sağlık ve Fitness Verileri</h3>
+            <h2>3. Topladığımız veriler</h2>
+
+            <h3>3.1 Hesap bilgileri</h3>
             <ul>
-                <li><strong>Google Health Connect Entegrasyonu:</strong> İzin verirseniz adım sayısı ve fiziksel
-                    aktivite verilerini okuyabiliriz</li>
+                <li><strong>E-posta adresi ve şifre.</strong> Şifreniz, kimlik doğrulama sağlayıcımız (Supabase)
+                    tarafından yalnızca özet (hash) hâlinde saklanır. Şifrenizin açık hâlini biz hiçbir zaman görmez ve
+                    saklamayız.</li>
+                <li><strong>Görünen ad</strong> ve isterseniz seçtiğiniz bir avatar veya profil fotoğrafı.</li>
+                <li><strong>Google ile giriş:</strong> Google hesabınızdaki e-posta adresi, ad ve profil fotoğrafı bize
+                    iletilir.</li>
+                <li><strong>Apple ile giriş:</strong> Apple'ın bize ilettiği e-posta adresini alırız. "E-postamı Gizle"
+                    seçeneğini kullanırsanız yalnızca Apple'ın gizli yönlendirme adresini alırız, gerçek adresinizi
+                    asla.</li>
+                <li><strong>Misafir (anonim) hesaplar:</strong> Kayıt olmadan devam ederseniz, sunucularımızda rastgele
+                    üretilmiş bir kimlikle anonim bir hesap oluştururuz. <strong>Misafir modu "yalnızca cihazda"
+                        demek değildir</strong> — bu gerçek bir hesaptır ve bölüm 3.2'deki içerik, kayıtlı bir hesapta
+                    olduğu gibi sunucularımıza senkronlanır. Misafir hesabın e-posta adresi olmadığı için, uygulamayı
+                    kaldırırsanız veya cihaz değiştirirseniz kurtarılamaz. Dilediğiniz an, her şeyi koruyarak tam
+                    hesaba dönüştürebilirsiniz.</li>
+                <li><strong>Onay kayıtları:</strong> kayıt sırasında koşulları kabul ettiğinize dair kayıt ve e-posta
+                    iletişim tercihiniz.</li>
             </ul>
-            <div class="highlight-box">
-                <p><strong>Önemli:</strong> Sağlık verilerini yalnızca siz açıkça izin verirseniz topluyoruz.
-                    İstediğiniz zaman bu izni iptal edebilirsiniz.</p>
+
+            <h3>3.2 Oluşturduğunuz iyi oluş içerikleri</h3>
+            <p>Selfinity bir iyi oluş uygulaması; dolayısıyla sakladığı şeyin büyük bölümü sizin bilerek girdiğiniz
+                içeriktir. Bunun önemli bir kısmı GDPR kapsamında <strong>sağlıkla ilgili özel nitelikli veri</strong>,
+                KVKK kapsamında ise <strong>özel nitelikli kişisel veri</strong> sayılır. Bu verileri yalnızca
+                <strong>açık rızanıza</strong> dayanarak işleriz; bu rızayı ilgili özelliği kullanmayı seçerek
+                verirsiniz.
+            </p>
+            <ul>
+                <li>Ruh hâli kayıtları ve serbest metin notları</li>
+                <li>Uyku kayıtları (yatış saati, uyanış saati, kalite)</li>
+                <li>Su ve içecek tüketimi</li>
+                <li>Beslenme kayıtları (öğünler, kalori, makro besinler)</li>
+                <li>Günlük adım sayıları</li>
+                <li>Günlük yazıları ("Sihirli Sayfalar")</li>
+                <li>BDT düşünce kayıtları — durum, otomatik düşünceniz, duygular, bilişsel çarpıtmalar ve akılcı yanıt
+                </li>
+                <li>Hızlı düşünceler ve endişe kutusu girdileri</li>
+                <li>Şükran girdileri ve haftalık değerlendirmeler</li>
+                <li>Öz değerlendirme ve psikometrik test sonuçları</li>
+                <li>Meditasyon ve nefes seansı geçmişi</li>
+                <li>Günlük iyi oluş ("biyo-durum") skorları</li>
+                <li>Akış (Life Log) etkinlikleri, isteğe bağlı notlar ve fotoğraflar dâhil</li>
+                <li>Vizyon panosu öğeleri ve eklediğiniz görseller</li>
+                <li>Kişisel bakım rutinleri ve tamamlanma geçmişi</li>
+                <li>Odak ve Pomodoro seansları</li>
+                <li>İlerleme verileri: XP, seviye, seriler, elmaslar, başarımlar, görevler, envanter, bahçe ve mini oyun
+                    durumu</li>
+            </ul>
+            <p>Yukarıdakilerin bir kısmı cihazınızdan hiç çıkmaz — hangileri olduğu bölüm 7'de.</p>
+
+            <h3>3.3 Cihaz izinleri ve sensörler</h3>
+            <p>Aşağıdaki izinlerin tamamı isteğe bağlıdır. Uygulama izin vermeden de çalışır; yalnızca ilgili özellik
+                devre dışı kalır. İzinleri istediğiniz zaman işletim sistemi ayarlarınızdan geri alabilirsiniz.</p>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>İzin</th>
+                            <th>Uygulama neden istiyor</th>
+                            <th>Cihazdan bir şey çıkıyor mu?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kamera</strong></td>
+                            <td>Gıda barkodu taramak; yapay zekâ analizi için öğün fotoğrafı çekmek</td>
+                            <td>Barkod: hayır — çözümleme cihazda yapılır. Öğün fotoğrafı: evet, analiz için Google
+                                Gemini'ye gönderilir (bölüm 5).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mikrofon ve konuşma tanıma</strong></td>
+                            <td>Komorebi asistanına yazmak yerine konuşmak</td>
+                            <td>Genellikle evet. Konuşmanız, işletim sisteminizin kendi konuşma tanıma servisi
+                                tarafından metne çevrilir — Android'de Google, iOS'ta Apple — ve bu servisler sesi
+                                kendi sunucularında işleyebilir. Selfinity sesinizi hiçbir zaman saklamaz ve kendi
+                                sunucularına göndermez.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fiziksel etkinlik / hareket</strong></td>
+                            <td>Cihazın adım sensöründen günlük adımlarınızı saymak</td>
+                            <td>Ortaya çıkan günlük adım sayısı saklanır ve senkronlanır. Ham sensör verisi saklanmaz.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bildirimler</strong></td>
+                            <td>Kendi kurduğunuz hatırlatıcılar</td>
+                            <td>Hayır. Her hatırlatıcı cihazınızda planlanır ve cihazınızda çalar. Push bildirimi
+                                kullanmıyoruz ve sizin için bir push jetonu tutmuyoruz.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tam alarm (Android)</strong></td>
+                            <td>Pomodoro seansının bitiminde tam zamanında çalmak</td>
+                            <td>Hayır.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <h2>3. Bilgilerinizi Nasıl Kullanıyoruz</h2>
-            <p>Topladığımız bilgileri şu amaçlarla kullanırız:</p>
+            <h3>3.4 Otomatik olarak toplanan teknik veriler</h3>
+            <p>Bunu bilerek asgari düzeyde tutuyoruz:</p>
             <ul>
-                <li><strong>Temel Özellikler:</strong> Hesap kimlik doğrulaması, günlük girişleri, görev yönetimi ve
-                    ilerleme takibi</li>
-                <li><strong>Kişiselleştirilmiş Deneyim:</strong> Yapay zeka destekli içgörüler (Google Gemini API
-                    aracılığıyla) ruh hali trendlerine, alışkanlık geliştirmeye ve kişiselleştirilmiş motivasyona dayalı
-                    olarak</li>
-                <li><strong>Analitik ve İyileştirme:</strong> Firebase Analytics ile kullanıcı deneyimini anlamak ve
-                    optimize etmek</li>
-                <li><strong>Reklam (Ücretsiz Seviye):</strong> Google AdMob aracılığıyla alakalı reklamlar göstermek
-                </li>
-                <li><strong>Müşteri Desteği:</strong> Sorunları gidermek ve teknik yardım sağlamak</li>
-                <li><strong>Faturalama ve Abonelikler:</strong> Google Play Faturalama aracılığıyla ödemeleri işlemek
-                </li>
-                <li><strong>Yasal Uyumluluk:</strong> Yürürlükteki yasalara ve düzenlemelere uymak</li>
+                <li>oturumunuzun açık kalması için bir kimlik doğrulama oturum jetonu;</li>
+                <li>isteklerinizin geldiği IP adresi — barındırma sağlayıcımız bunu olağan sunucu işletimi ve güvenlik
+                    kayıtları kapsamında işler;</li>
+                <li>doğru içeriği ve yerelleştirmeyi sunabilmek için uygulama diliniz ile temel cihaz ve platform
+                    bilgisi.</li>
             </ul>
+            <p>Açıkça <strong>toplamadıklarımız</strong>: analitik veya davranış olayları, kullanım takip SDK'sı, çökme
+                raporlama SDK'sı, reklam kimliği (Android Reklam Kimliği veya Apple IDFA), cihaz parmak izi,
+                uygulamalar veya siteler arası takip ve uygulama içi takip çerezleri — bunların hiçbiri yok.</p>
 
-            <h2>4. Üçüncü Taraf Hizmetleri</h2>
-
-            <h3>4.1 Supabase (Backend ve Veritabanı)</h3>
-            <p>
-                Kimlik doğrulama, veri depolama ve gerçek zamanlı senkronizasyon için Supabase kullanıyoruz.
-                Tüm kullanıcı verileri Supabase'in altyapısında saklanır (AWS üzerinde barındırılır).
+            <h3>3.5 Abonelik ve satın alma verileri</h3>
+            <p>Premium abonelikler <strong>Apple App Store</strong> ve <strong>Google Play</strong> üzerinden satılır ve
+                <strong>RevenueCat</strong> ile yönetilir.
             </p>
             <ul>
-                <li><strong>Barındırma Konumu:</strong> Amazon Web Services (AWS)</li>
-                <li><strong>Veri Şifreleme:</strong> Aktarım sırasında HTTPS/TLS, beklemede şifreleme</li>
-                <li><strong>Gizlilik Politikası:</strong> <a href="https://supabase.com/privacy"
-                        target="_blank">https://supabase.com/privacy</a></li>
+                <li>Kart bilgilerinizi, fatura adresinizi veya herhangi bir ödeme aracınızı hiçbir zaman görmeyiz ve
+                    almayız. Bunlar yalnızca Apple veya Google'a gider.</li>
+                <li>Aboneliğinizin cihazlarınız arasında hesabınızı takip edebilmesi için RevenueCat'e Selfinity
+                    kullanıcı kimliğinizi (rastgele bir UUID) göndeririz. RevenueCat, satın alma makbuzunuzu ve abonelik
+                    durumunuzu (ürün, başlangıç tarihi, yenilenme tarihi, etkin olup olmadığı) Apple veya Google'dan
+                    alır.</li>
+                <li>Uygulamanın Premium özellikleri açıp açmayacağını bilmesi için abonelik durumunuzu kendi
+                    sunucularımızda saklarız.</li>
             </ul>
 
-            <h3>4.2 Firebase (Google Analytics ve Crashlytics)</h3>
-            <p>
-                Uygulama performansı ve çöküş raporlaması için Google Firebase kullanıyoruz:
-            </p>
+            <h3>3.6 Sosyal özellikler</h3>
+            <p>Arkadaş özelliklerini kullanırsanız:</p>
             <ul>
-                <li><strong>Firebase Analytics:</strong> Kullanıcı etkileşimi ve uygulama kullanım metrikleri</li>
-                <li><strong>Firebase Crashlytics:</strong> Uygulama çöküşlerini ve hataları tespit etmek için otomatik
-                    raporlama</li>
-                <li><strong>Gizlilik Politikası:</strong> <a href="https://firebase.google.com/support/privacy"
-                        target="_blank">https://firebase.google.com/support/privacy</a></li>
+                <li>Görünen adınız diğer Selfinity kullanıcıları tarafından aranabilir hâle gelir.</li>
+                <li>Arkadaş olarak kabul ettiğiniz kişiler herkese açık profilinizi görebilir: görünen ad, avatar,
+                    seviye, XP, seriler ve başarımlar.</li>
+                <li>Günlük yazılarınız, ruh hâli kayıtlarınız, düşünce kayıtlarınız ve bölüm 3.2'deki diğer tüm kişisel
+                    girdileriniz başka kullanıcılara <strong>asla</strong> görünmez.</li>
             </ul>
 
-            <h3>4.3 Google AdMob (Reklam Gösterimi)</h3>
-            <p>
-                Ücretsiz seviye kullanıcılar için reklam gösteriyoruz:
-            </p>
-            <ul>
-                <li><strong>Reklam Kişiselleştirme:</strong> Google, ilgi alanlarınıza dayalı reklamlar göstermek için
-                    reklam tanımlayıcılarını kullanır</li>
-                <li><strong>Devre Dışı Bırakma Hakkı:</strong> Ayarlar → Gizlilik'ten reklam kişiselleştirmeyi devre
-                    dışı bırakabilirsiniz</li>
-                <li><strong>Gizlilik Politikası:</strong> <a href="https://support.google.com/admob/answer/6128543"
-                        target="_blank">https://support.google.com/admob/answer/6128543</a></li>
-            </ul>
+            <h2>4. Verilerinizi neden ve hangi hukuki dayanakla kullanıyoruz</h2>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Amaç</th>
+                            <th>Kullanılan veri</th>
+                            <th>Hukuki dayanak (GDPR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Uygulamayı çalıştırmak: girdilerinizi saklamak, cihazlarınız arasında senkronlamak,
+                                geçmişinizi ve istatistiklerinizi göstermek</td>
+                            <td>3.1, 3.2</td>
+                            <td>Sözleşmenin ifası, md. 6(1)(b); sağlıkla ilgili içerik için açık rızanız, md. 9(2)(a)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bizzat başlattığınız yapay zekâ özellikleri</td>
+                            <td>bkz. bölüm 5</td>
+                            <td>Açık rıza, md. 6(1)(a) ve md. 9(2)(a) — özelliği her kullandığınızda verilir</td>
+                        </tr>
+                        <tr>
+                            <td>Kurduğunuz hatırlatıcılar ve bildirimler</td>
+                            <td>hatırlatıcı ayarlarınız</td>
+                            <td>Sözleşme, md. 6(1)(b)</td>
+                        </tr>
+                        <tr>
+                            <td>Premium aboneliklerin satışı ve yönetimi</td>
+                            <td>3.5</td>
+                            <td>Sözleşme, md. 6(1)(b)</td>
+                        </tr>
+                        <tr>
+                            <td>Hizmeti güvende tutmak; dolandırıcılığı, kötüye kullanımı ve uygulama içi ödül
+                                ekonomisinin manipülasyonunu önlemek</td>
+                            <td>3.4 ve ilerleme verileri</td>
+                            <td>Meşru menfaat, md. 6(1)(f)</td>
+                        </tr>
+                        <tr>
+                            <td>Kendine zarar riskine işaret eden metinleri tespit edip destek kaynaklarını göstermek
+                                (bölüm 5.1)</td>
+                            <td>yazdığınız serbest metinler</td>
+                            <td>Hayati menfaat, md. 6(1)(d) ve açık rızanız, md. 9(2)(a)</td>
+                        </tr>
+                        <tr>
+                            <td>Destek taleplerinizi yanıtlamak</td>
+                            <td>e-posta adresiniz ve bize yazdıklarınız</td>
+                            <td>Sözleşme ve meşru menfaat</td>
+                        </tr>
+                        <tr>
+                            <td>Yasal yükümlülüklere uymak</td>
+                            <td>gerektiği kadar</td>
+                            <td>Hukuki yükümlülük, md. 6(1)(c)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>KVKK bakımından karşılık gelen dayanaklar md. 5/2-c (sözleşmenin ifası için gereklilik) ve md. 5/2-f
+                (meşru menfaat); özel nitelikli sağlık verileri bakımından ise md. 6 uyarınca <strong>açık
+                    rızanızdır</strong>.</p>
+            <p>Rızanızı istediğiniz zaman geri alabilirsiniz: ilgili özelliği kullanmayı bırakarak, ilgili girdileri
+                silerek veya hesabınızı silerek. Rızanın geri alınması, o ana kadar gerçekleşmiş işlemeyi etkilemez.</p>
 
-            <h3>4.4 Google AI (Gemini API)</h3>
-            <p>
-                Kişiselleştirilmiş öneriler ve içgörüler sağlamak için Google'ın Gemini AI'sını kullanıyoruz:
+            <h2>5. Yapay zekâ özellikleri: tam olarak ne, kime gönderiliyor</h2>
+            <p>Selfinity'de dört isteğe bağlı yapay zekâ özelliği vardır. Hepsi kendi sunucumuz üzerinden çalışır ve
+                sunucumuz bizim adımıza veri işleyen sıfatıyla <strong>Google'ın Gemini API'sini</strong> çağırır.
+                <strong>Bu özellikleri hiç kullanmazsanız, bu bölümde anlatılanların hiçbiri gerçekleşmez.</strong>
             </p>
-            <ul>
-                <li><strong>Yapay Zeka Destekli Özellikler:</strong> Ruh hali analizi, günlük önerileri ve motivasyon
-                    mesajları</li>
-                <li><strong>Veri Gönderimi:</strong> Sadece anonim/toplanmış ruh hali ve günlük özetleri AI'ya
-                    gönderilir</li>
-                <li><strong>Gizlilik Politikası:</strong> <a href="https://ai.google/responsibility/principles/"
-                        target="_blank">https://ai.google/responsibility/principles/</a></li>
-            </ul>
+
             <div class="highlight-box">
-                <p><strong>Önemli:</strong> Ham günlük girişleriniz veya kişisel bilgileriniz Google AI'ya GÖNDERİLMEZ.
-                    Sadece AI tarafından işlenmek üzere toplanmış/anonim trendler paylaşılır.</p>
+                <p><strong>Önceki sürümlere ilişkin bir düzeltme.</strong> Bu sayfanın ve Kullanım Koşullarımızın önceki
+                    sürümlerinde, ham günlük veya düşünce metninin Google'a hiçbir zaman gönderilmediği yazıyordu. Bu
+                    ifade her özellik için doğru değildi. Aşağıdaki tablo doğru açıklamadır; ifadeyi geçtiği her yerde
+                    düzelttik.</p>
             </div>
 
-            <h3>4.5 Google Health Connect</h3>
-            <p>
-                İzin verirseniz, adım takibi için Health Connect ile entegre oluruz:
-            </p>
-            <ul>
-                <li><strong>İzinler:</strong> Sadece adım sayısı verilerini okuruz (veri yazılmaz)</li>
-                <li><strong>Veri Kullanımı:</strong> Adımlar günlük fitness hedefleriniz için uygulama içinde gösterilir
-                </li>
-                <li><strong>Gizlilik Politikası:</strong> <a href="https://support.google.com/googleplay/answer/9888358"
-                        target="_blank">https://support.google.com/googleplay/answer/9888358</a></li>
-            </ul>
-
-            <h3>4.6 Google Play Faturalama</h3>
-            <p>
-                Abonelik ödemeleri Google Play Faturalama aracılığıyla işlenir:
-            </p>
-            <ul>
-                <li><strong>Ödeme İşleme:</strong> Tüm kredi kartı/ödeme işlemleri Google tarafından yönetilir</li>
-                <li><strong>Saklanan Bilgiler:</strong> Abonelik durumunuz, satın alma geçmişi ve fatura token'ları</li>
-                <li><strong>Gizlilik Politikası:</strong> <a
-                        href="https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldo=0&ldt=privacynotice&ldl=tr"
-                        target="_blank">Google Payments Gizlilik Bildirimi</a></li>
-            </ul>
-
-            <h2>5. Veri Güvenliği</h2>
-            <p>Verilerinizi korumak için endüstri standardı güvenlik önlemleri uyguluyoruz:</p>
-            <ul>
-                <li><strong>HTTPS/TLS Şifreleme:</strong> Tüm veri aktarımları şifreli kanallar üzerinden yapılır</li>
-                <li><strong>Şifre Hash'leme:</strong> Şifreler bcrypt veya Supabase'in güvenli kimlik doğrulama sistemi
-                    kullanılarak hash'lenir</li>
-                <li><strong>AWS Barındırma:</strong> Veriler çoklu güvenlik katmanlarına sahip güvenli AWS sunucularında
-                    saklanır</li>
-                <li><strong>Erişim Kontrolü:</strong> Sıkı kimlik doğrulama ve rol tabanlı erişim izinleri</li>
-                <li><strong>Düzenli Güvenlik Denetimleri:</strong> Güvenlik açıklarını belirlemek ve düzeltmek için
-                    periyodik incelemeler</li>
-            </ul>
-            <div class="highlight-box">
-                <p><strong>Not:</strong> İnternette veri aktarımının %100 güvenli olduğunu garanti edemesek de,
-                    bilgilerinizi korumak için ticari olarak kabul edilebilir araçları kullanıyoruz.</p>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Özellik</th>
+                            <th>Google Gemini'ye gönderilenler</th>
+                            <th>Sunucularımızda saklanıyor mu?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Öğün fotoğrafı taraması</strong></td>
+                            <td>Öğün fotoğrafınız (en fazla 1024 piksele küçültülmüş hâli), uygulama diliniz ve —
+                                sonucu düzeltirseniz — yazdığınız düzeltme notu</td>
+                            <td>Hayır. Yalnızca o gün kaç tarama kullandığınızın sayacını tutarız. Fotoğrafın kendisi
+                                sunucularımızda saklanmaz.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Komorebi asistanı</strong></td>
+                            <td>Asistanla konuşmanız (son 12 mesaja kadar), anlattıklarınızı eşleştirebilmesi için kendi
+                                kişisel bakım görev ve rutinlerinizin adları, ve cihazınızın yerel saati</td>
+                            <td>Hayır. Konuşma cihazınızda kalır. Yalnızca bir kullanım sayacı tutulur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Düşünce analizi (BDT)</strong></td>
+                            <td>Yazdığınız otomatik düşünce (en fazla 2.000 karakter) ve seçtiğiniz bilişsel
+                                çarpıtmalar</td>
+                            <td>Hayır. Yalnızca bir kullanım sayacı.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Haftalık yapay zekâ raporu</strong></td>
+                            <td><strong>Ham metniniz değil.</strong> Sunucumuz kendi haftalık verilerinizi okur ve
+                                bunları olgusal özetlere dönüştürür (örneğin "7 günün 5'inde ruh hâli kaydı, ortalama
+                                uyku 6 sa 20 dk") ve tekrar eden tema sözcükleri çıkarır. Modele yalnızca bu türetilmiş
+                                özet gönderilir.</td>
+                            <td>Evet — oluşturulan rapor, sonradan tekrar okuyabilmeniz için hesabınıza kaydedilir.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <h2>6. Veri Saklama ve Silme</h2>
             <ul>
-                <li><strong>Saklama Süresi:</strong> Hesabınız aktif olduğu sürece verilerinizi saklarız</li>
-                <li><strong>Hesap Silme:</strong> Hesabınızı uygulama içinden silebilirsiniz (Ayarlar → Hesap → Hesabı
-                    Sil)</li>
-                <li><strong>Veri Silme Talebi:</strong> Tüm verilerinizin silinmesini isteyebilirsiniz:
-                    <ul>
-                        <li><strong>E-posta:</strong> hello@getselfinity.com</li>
-                        <li><strong>Konu:</strong> "Veri Silme Talebi"</li>
-                        <li><strong>İçerik:</strong> Kayıtlı e-posta adresinizi ve kullanıcı kimliğinizi (varsa)
-                            belirtin</li>
-                    </ul>
+                <li>Google bizim adımıza veri işleyen sıfatıyla hareket eder ve bu verileri genel amaçlı modellerini
+                    eğitmek için kullanmaz.</li>
+                <li>API anahtarımız sunucumuzda durur; uygulama Google'ın yapay zekâsıyla hiçbir zaman doğrudan
+                    konuşmaz.</li>
+                <li>Yapay zekâ çıktısı üretilmiş metindir. Yanlış olabilir ve tıbbi, psikolojik, tanısal ya da beslenme
+                    tavsiyesi değildir. <a href="terms-of-use.html">Kullanım Koşulları</a>'na bakın.</li>
+            </ul>
+
+            <h3>5.1 Otomatik güvenlik taraması</h3>
+            <p>Zarar riskini azaltmak için sunucumuz, yazdığınız serbest metinleri — günlük yazıları, hızlı düşünceler,
+                düşünce kayıtları, ruh hâli notları, Akış notları ve asistan mesajları — kendine zarar veya ruh sağlığı
+                krizine işaret eden örüntüler bakımından otomatik olarak kontrol eder. Bir örüntü eşleştiğinde uygulama
+                size gösterdiğini değiştirir; örneğin üretilmiş bir yanıt yerine destek kaynakları sunar.</p>
+            <ul>
+                <li>Kontrol, kendi sunucumuzda çalışan otomatik bir örüntü eşleştirmesidir. Bu kapsamda Mindoria
+                    Studio'dan hiç kimse girdilerinizi okumaz.</li>
+                <li>Hiçbir üçüncü tarafa, acil durum hizmetine veya sizin bir yakınınıza bildirim yapmayız.</li>
+                <li>Bu eşleşmelere dair hakkınızda bir profil veya kalıcı kayıt oluşturulmaz.</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Selfinity bir acil durum hizmeti değildir ve size yardım ulaştıramaz.</strong> Tehlikede ya
+                    da kriz hâlindeyseniz, lütfen hemen yerel acil durum numaranızı veya bir kriz destek hattını arayın.
+                    Türkiye'de acil durumlarda <strong>112</strong>'yi arayabilirsiniz.</p>
+            </div>
+
+            <h2>6. Verilerinizi kimlerle paylaşıyoruz</h2>
+            <p>Kişisel verilerinizi satmıyoruz ve bağlamlar arası davranışsal reklam için paylaşmıyoruz. CCPA ve CPRA
+                kapsamında, son on iki ayda kişisel bilgi satmadık veya paylaşmadık. Yalnızca aşağıdaki veri
+                işleyenleri kullanıyoruz.</p>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Alıcı</th>
+                            <th>Amaç</th>
+                            <th>Aldıkları</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Supabase</strong> (altyapı Amazon Web Services üzerinde barındırılır)</td>
+                            <td>Barındırma, veritabanı, kimlik doğrulama, dosya depolama, sunucu tarafı
+                                fonksiyonlarımız</td>
+                            <td>Hesabınız ve senkronlanan tüm içerik — bölüm 3.1 ve 3.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google</strong> (Gemini API)</td>
+                            <td>Bölüm 5'teki yapay zekâ özellikleri</td>
+                            <td>Yalnızca bölüm 5'te sayılanlar ve yalnızca o özellikleri kullandığınızda</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RevenueCat</strong></td>
+                            <td>Abonelik yönetimi</td>
+                            <td>Rastgele kullanıcı kimliğiniz ve mağaza abonelik durumunuz</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apple</strong> ve <strong>Google Play</strong></td>
+                            <td>Uygulama dağıtımı, ödeme ve faturalandırma</td>
+                            <td>Doğrudan sizden topladıkları satın alma ve fatura verileri</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Open Food Facts</strong> (kâr amacı gütmeyen gıda veritabanı, Fransa)</td>
+                            <td>Besin değeri bilgisi sorgulamak</td>
+                            <td>Taradığınız barkod numarası veya arattığınız gıda terimi. Hiçbir hesap kimliği veya
+                                kişisel veri eklenmez.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apple</strong> / <strong>Google</strong> konuşma tanıma</td>
+                            <td>Söylediklerinizi metne çevirmek</td>
+                            <td>Söylediğiniz ses — bizim tarafımızdan değil, cihazınızın işletim sistemi tarafından
+                                işlenir</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Bunların dışında, hukuken zorunlu olduğumuz hâllerde — örneğin geçerli bir mahkeme kararı veya bağlayıcı
+                bir yasal yükümlülük — ya da hukuki taleplerin tesisi, kullanılması veya korunması için gerekli
+                olduğunda veri açıklayabiliriz.</p>
+
+            <h2>7. Yalnızca cihazınızda kalanlar</h2>
+            <p>Aşağıdakiler uygulamanın yerel veritabanında saklanır ve <strong>sunucularımıza hiçbir zaman
+                    yüklenmez</strong>:</p>
+            <ul>
+                <li>Endişe kutusu girdileri</li>
+                <li>Öz değerlendirme ve psikometrik test sonuçları</li>
+                <li>Nefes egzersizi seansları</li>
+                <li>Kilonuz, boyunuz, doğum yılınız, cinsiyetiniz ve aktivite düzeyiniz — yalnızca kalori ve beslenme
+                    hedeflerinizi cihazın kendisinde hesaplamak için kullanılır</li>
+                <li>Tek tek içecek kayıtları</li>
+                <li>Mini oyun durumu ve istatistikleri (Sudoku, 2048, kelime bulmaca)</li>
+                <li>Arama geçmişi ve dinleme geçmişi</li>
+                <li>Çevrimdışı kullanım için indirdiğiniz ses içerikleri</li>
+            </ul>
+            <p>Bu veriler yalnızca cihazınızda bulunduğu için, uygulamayı kaldırmak onları kalıcı olarak siler ve biz
+                geri getiremeyiz.</p>
+
+            <h2>8. Yüklediğiniz fotoğraflar ve dosyalar</h2>
+            <p>İki özellik depolamamıza görsel yükler: <strong>Vizyon Panosu</strong> ve <strong>Akış (Life
+                    Log)</strong>.</p>
+            <div class="good-box">
+                <p><strong>Bu depolama alanları özeldir.</strong> Yüklediğiniz bir görsele yalnızca kendi hesabınız
+                    erişebilir: uygulama, görseli göstermek için kısa ömürlü, imzalı bir bağlantı üretir ve bu bağlantı
+                    süresi dolduğunda geçersizleşir. Görselleriniz oturum açmadan erişilebilecek bir adreste durmaz;
+                    bu adresleri hiçbir zaman listelemez, dizine eklemez, yayımlamaz veya paylaşmayız.</p>
+                <p>Uygulama içinde öğeyi silmek, altındaki dosyayı da siler.</p>
+            </div>
+            <p><strong>Önceki sürüm düzeltmesi:</strong> 29 Temmuz 2026'dan önce bu iki alan herkese açıktı ve bir
+                görselin tam adresini bilen biri onu oturum açmadan görüntüleyebilirdi. Bu erişim 29 Temmuz 2026'da
+                tamamen kapatıldı; eski yüklemeler dâhil tüm görseller artık yalnızca yukarıda anlatılan imzalı
+                bağlantılarla sunulur. Uygulamanın eski sürümleri (5.1.x) imzalı bağlantı üretemediği için bu
+                görselleri gösteremeyebilir; en yeni sürüme güncellemeniz yeterlidir.</p>
+            <p>Öğün taraması fotoğrafları farklı çalışır: analiz için Google'a gönderilir ve depolamamıza hiç konmaz.
+                Siz temizleyene kadar cihazınızdaki uygulama önbelleğinde bir kopya kalabilir.</p>
+
+            <h2>9. Verileri ne kadar saklıyoruz ve nasıl silersiniz</h2>
+            <ul>
+                <li>Verilerinizi hesabınız var olduğu sürece saklarız.</li>
+                <li><strong>Hesabınızı uygulamadan silmek:</strong> <strong>Ayarlar → Hesap → Hesabımı sil</strong>
+                    yolunu izleyin. Bu işlem, hesabınızı ve verilerini kalıcı olarak kaldıran bir sunucu yordamını
+                    çalıştırır. Anında ve geri alınamaz; sizin için geri getiremeyiz.</li>
+                <li><strong>E-postayla silme:</strong> kayıtlı adresinizden <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresine "Veri Silme Talebi"
+                    konusuyla yazın. Talebi doğrular ve 30 gün içinde tamamlarız.</li>
+                <li><strong>Yedekler:</strong> veriler silme işleminden sonra en fazla 90 gün boyunca şifreli yedeklerde
+                    kalabilir; bu sürenin sonunda üzerine yazılır.</li>
+                <li><strong>Misafir hesaplar:</strong> misafir hesabın e-posta adresi olmadığı için, cihaza erişimi
+                    kaybederseniz o hesabı tanımlayamayız. Uygulamayı kaldırmadan önce hesabı uygulama içinden silin ya
+                    da önce tam hesaba dönüştürün.</li>
+                <li><strong>Hesabınızı silmek aboneliğinizi iptal etmez.</strong> Aboneliği App Store veya Google Play
+                    üzerinden iptal edin — <a href="terms-of-use.html">Kullanım Koşulları</a>, bölüm 5.</li>
+                <li>Yasa gerektirdiğinde silme talebine dair asgari bir kaydı ve işlem kayıtlarını saklayabiliriz.</li>
+            </ul>
+
+            <h2>10. Haklarınız</h2>
+            <p>Nerede yaşıyor olursanız olun, aşağıdaki hakları <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresine e-posta göndererek
+                kullanabilirsiniz. 30 gün içinde yanıt veririz, bunun için ücret almayız ve bir hakkınızı kullandığınız
+                için size farklı davranmayız.</p>
+
+            <h3>10.1 Türkiye'de iseniz (KVKK md. 11)</h3>
+            <ul>
+                <li>Kişisel verinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme</li>
+                <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                <li>Yurt içinde veya yurt dışında verilerin aktarıldığı üçüncü kişileri bilme</li>
+                <li>Eksik veya yanlış işlenmiş verilerin düzeltilmesini ve bunun üçüncü kişilere bildirilmesini isteme
                 </li>
-                <li><strong>İşlem Süresi:</strong> Veri silme talepleri 30 gün içinde işlenir</li>
-                <li><strong>Yedek Verileri:</strong> Yedeklerden silme işlemi 90 güne kadar sürebilir</li>
+                <li>KVKK md. 7'deki şartlar çerçevesinde silinmesini veya yok edilmesini ve bunun üçüncü kişilere
+                    bildirilmesini isteme</li>
+                <li>Münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhinize bir sonuç ortaya çıkmasına
+                    itiraz etme</li>
+                <li>Hukuka aykırı işleme sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
             </ul>
+            <p>KVKK md. 13 kapsamındaki başvurular 30 gün içinde yanıtlanır; ayrıca Kişisel Verileri Koruma Kurulu'na
+                şikâyette bulunabilirsiniz.</p>
 
-            <h2>7. Çocukların Gizliliği</h2>
-            <p>
-                Selfinity 13 yaşın altındaki çocuklar için tasarlanmamıştır. 13 yaşından küçük
-                kullanıcılardan bilerek kişisel bilgi toplamıyoruz. Eğer bir ebeveyn veya vasi
-                iseniz ve çocuğunuzun bize kişisel bilgi sağladığını fark ederseniz, lütfen
-                hello@getselfinity.com adresinden bizimle iletişime geçin.
-            </p>
-
-            <h2>8. Gizlilik Haklarınız</h2>
-            <p>Yasalar uyarınca (GDPR, CCPA, KVKK) aşağıdaki haklara sahipsiniz:</p>
+            <h3>10.2 AEA veya Birleşik Krallık'ta iseniz (GDPR / UK GDPR)</h3>
             <ul>
-                <li><strong>Erişim Hakkı:</strong> Hakkınızda sakladığımız kişisel verilerin bir kopyasını talep edin
+                <li>Erişim — hakkınızda tuttuğumuz kişisel verilerin bir kopyasını alma</li>
+                <li>Düzeltme — yanlış veya eksik verilerin düzeltilmesi</li>
+                <li>Silme — "unutulma hakkı"</li>
+                <li>İşlemenin kısıtlanması</li>
+                <li>Veri taşınabilirliği — verilerinizi yapılandırılmış, makine tarafından okunabilir bir biçimde alma
                 </li>
-                <li><strong>Düzeltme Hakkı:</strong> Yanlış veya eksik bilgilerin güncellenmesini isteyin</li>
-                <li><strong>Silme Hakkı:</strong> Kişisel verilerinizin silinmesini talep edin ("unutulma hakkı")</li>
-                <li><strong>İşlemeyi Kısıtlama Hakkı:</strong> Kişisel verilerinizin kullanımını sınırlayın</li>
-                <li><strong>Veri Taşınabilirliği:</strong> Yapılandırılmış, makine tarafından okunabilir formatta
-                    verilerinizi alın</li>
-                <li><strong>İtiraz Hakkı:</strong> Profillemeler dahil veri işlemeye itiraz edin</li>
+                <li>İtiraz — meşru menfaate dayanan işlemeye itiraz etme</li>
+                <li>Rızayı istediğiniz zaman geri çekme; bu, o ana kadarki işlemeyi etkilemez</li>
+                <li>Ulusal denetim otoritenize şikâyette bulunma</li>
             </ul>
-            <p>
-                Bu haklardan herhangi birini kullanmak için hello@getselfinity.com adresinden
-                bizimle iletişime geçin.
-            </p>
+            <p>Hakkınızda hukuki ya da benzer şekilde önemli sonuçlar doğuran kararları münhasıran otomatik yollarla
+                almıyoruz.</p>
 
-            <h2>9. Uluslararası Veri Transferleri</h2>
-            <p>
-                Verileriniz, veri koruma yasalarının sizin ülkenizdekinden farklı olabileceği
-                ülkelerde bulunan sunucularda işlenebilir ve saklanabilir. Verilerinizi uluslararası
-                olarak aktararak, bu tür transferlere onay vermiş olursunuz. Verilerinizin bu
-                Gizlilik Politikası'na uygun olarak korunmasını sağlamak için adımlar atıyoruz.
-            </p>
-
-            <h2>10. Politika Değişiklikleri</h2>
-            <p>
-                Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Önemli değişiklikler
-                olduğunda şu yollarla sizi bilgilendireceğiz:
-            </p>
+            <h3>10.3 Kaliforniya'da iseniz (CCPA / CPRA)</h3>
             <ul>
-                <li>Uygulama içi bildirim</li>
-                <li>E-posta bildirimi (kayıtlı e-postanıza)</li>
-                <li>Güncellenmiş "Son güncelleme" tarihi</li>
+                <li>Hangi kişisel bilgileri topladığımızı, kullandığımızı ve açıkladığımızı bilme hakkı</li>
+                <li>Silme ve düzeltme hakkı</li>
+                <li>Kişisel bilgilerin satışından veya paylaşımından çıkma hakkı — ikisini de yapmıyoruz, dolayısıyla
+                    çıkılacak bir şey yok</li>
+                <li>Hassas kişisel bilgilerin kullanımını sınırlama hakkı</li>
+                <li>Bu hakları kullandığınız için ayrımcılığa uğramama hakkı</li>
             </ul>
-            <p>
-                Güncellemeleri düzenli olarak gözden geçirmenizi öneririz. Bu politikadaki
-                değişiklikler yayınlandıktan sonra uygulamayı kullanmaya devam etmek,
-                değişiklikleri kabul ettiğiniz anlamına gelir.
+
+            <h3>10.4 Diğer tüm bölgeler</h3>
+            <p>Yerel mevzuat gerektirsin ya da gerektirmesin, bir politika tercihi olarak aynı hakları dünya genelinde
+                uyguluyoruz.</p>
+
+            <h2>11. Uluslararası veri aktarımları</h2>
+            <p>Türkiye merkezliyiz; sağlayıcılarımız Avrupa Birliği ve Amerika Birleşik Devletleri'nde faaliyet
+                gösteriyor. Verileriniz bir sınırı geçtiğinde Avrupa Komisyonu'nun Standart Sözleşme Hükümlerine
+                (gerektiğinde Birleşik Krallık Eki ile), sağlayıcı sertifikalıysa AB–ABD Veri Gizliliği Çerçevesine ve
+                — Türkiye'den yapılan aktarımlar için — yeterlilik kararı veya yazılı taahhüt bulunmadığı hâllerde KVKK
+                md. 9 uyarınca açık rızanıza dayanırız.</p>
+
+            <h2>12. Çocukların gizliliği</h2>
+            <p>Selfinity 13 yaşın altındaki çocuklara yönelik değildir ve onlardan bilerek kişisel veri toplamayız.
+                Kullanım Koşullarımız en az 13 yaşında olmanızı gerektirir; 18 yaşın altındaysanız ebeveyn veya vasi
+                izniniz gerekir.</p>
+            <p>Amerika Birleşik Devletleri Çocukların Çevrimiçi Gizliliğini Koruma Yasası'na (COPPA) uyuyoruz. Dijital
+                rıza yaşının 13'ten yüksek olduğu ülkelerde — Avrupa Birliği'nin bazı bölgelerinde 16'ya kadar — bu
+                yaşın altında ebeveyn izni gerekir.</p>
+            <p>Bir çocuğun bize kişisel veri verdiğini düşünüyorsanız <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresine yazın; gecikmeden sileriz.
             </p>
+
+            <h2>13. Güvenlik</h2>
+            <ul>
+                <li>Uygulama ile sunucularımız arasındaki tüm trafik HTTPS/TLS kullanır.</li>
+                <li>Altyapımızda beklemedeki veriler şifrelenir.</li>
+                <li>Veritabanımızdaki satır düzeyi güvenlik politikaları her kaydı yalnızca sahibi olan hesaba kısıtlar.
+                </li>
+                <li>Kimlik doğrulama jetonları ve diğer hassas değerler düz dosyalarda değil, iOS Keychain'de ve
+                    Android'in şifreli tercihlerinde tutulur.</li>
+                <li>Üretim verilerine erişim, hizmeti işletmek için gereken en az düzeyle sınırlıdır.</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Hiçbir sistem kusursuz güvenli değildir.</strong> Mutlak güvenliği garanti edemeyiz;
+                    şifrenizi ve cihazınızı güvende tutmak sizin sorumluluğunuzdadır. Kişisel verilerinizi etkileyen bir
+                    ihlalden haberdar olursak, sizi ve yetkili denetim otoritesini yasanın gerektirdiği şekilde
+                    bilgilendiririz.</p>
+            </div>
+
+            <h2>14. Bu politikadaki değişiklikler</h2>
+            <p>Uygulama değiştikçe bu sayfayı güncelliyor ve en üstteki yürürlük tarihini değiştiriyoruz. Önemli
+                değişikliklerde, yürürlüğe girmeden önce sizi uygulama içinden veya e-postayla bilgilendiririz. Bir
+                değişiklikten sonra Selfinity'yi kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz
+                anlamına gelir.</p>
+
+            <h3>14.1 Sürüm 5.1.x ve öncesi (yalnızca Android)</h3>
+            <p>Selfinity'nin eski Android sürümleri farklı davranıyordu. Bu bölüm, henüz güncellemeyen kullanıcılar için
+                korunmuştur:</p>
+            <ul>
+                <li>Premium'u olmayan kullanıcılara <strong>Google AdMob</strong> reklamları gösteriyor ve bu amaçla bir
+                    reklam kimliği topluyordu.</li>
+                <li>Kullanım istatistikleri için <strong>Firebase Analytics</strong>, push bildirimleri için
+                    <strong>Firebase Cloud Messaging</strong> kullanıyordu.
+                </li>
+                <li>Adım ve etkinlik verilerini <strong>Google Health Connect</strong> üzerinden okuyordu.</li>
+                <li>Abonelikler RevenueCat olmadan, doğrudan Google Play Faturalandırma üzerinden satılıyordu.</li>
+            </ul>
+            <p>Sürüm 5.2.0'dan itibaren tüm reklamlar, tüm analitik SDK'ları ve tüm push mesajlaşma uygulamadan
+                kaldırılmıştır; adım sayımı Health Connect yerine cihazın kendi sensörünü kullanır. Hâlâ eski bir
+                sürümdeyseniz, uygulamayı güncellemek sizi bu politikada anlatılan uygulamalara taşır.</p>
 
             <div class="contact-box">
-                <h2>11. İletişim Bilgileri</h2>
+                <h2>15. İletişim</h2>
                 <p>
-                    Bu Gizlilik Politikası hakkında sorularınız, endişeleriniz veya talepleriniz
-                    varsa, lütfen bizimle iletişime geçin:
-                </p>
-                <p>
-                    <strong>Geliştirici:</strong> Mindoria Studio<br>
-                    <strong>Uygulama:</strong> Selfinity<br>
+                    <strong>Geliştirici ve veri sorumlusu:</strong> Mindoria Studio<br>
+                    <strong>Ülke:</strong> Türkiye<br>
+                    <strong>Uygulama:</strong> Selfinity — Zihin &amp; Gelişim<br>
                     <strong>E-posta:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
-                    <strong>Web Sitesi:</strong> <a href="https://getselfinity.com"
-                        target="_blank">https://getselfinity.com</a><br>
-                    <strong>Yanıt Süresi:</strong> 48 saat içinde
+                    <strong>Web sitesi:</strong> <a href="https://getselfinity.com">getselfinity.com</a>
                 </p>
+                <p>Gizlilik ve veri hakları taleplerini 30 gün içinde, genel soruları genellikle 48 saat içinde
+                    yanıtlıyoruz.</p>
             </div>
 
-            <div class="highlight-box">
-                <p><strong>Son Hatırlatma:</strong></p>
-                <p>
-                    Selfinity'yi kullanarak, bu Gizlilik Politikası'nda açıklanan kişisel bilgilerinizin
-                    toplanmasını, kullanılmasını ve saklanmasını kabul edersiniz. Verilerinizi korumaya
-                    ve şeffaf olmaya kararlıyız.
-                </p>
+            <div class="nav-links">
+                <a href="index-tr.html">← Ana Sayfa</a>
+                <a href="terms-of-use.html">Kullanım Koşulları →</a>
+                <a href="privacy-policy-en.html">English</a>
+                <a href="privacy-policy-es.html">Español</a>
             </div>
-
-            <a href="index-tr.html" class="back-link">← Ana Sayfaya Dön</a>
         </div>
     </div>
 
     <script>
-        // Dark mode toggle
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
 
-        // Check for saved theme preference or default to 'light'
-        if (!localStorage.getItem('theme')) {
-            localStorage.setItem('theme', 'light');
-        }
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
         themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     </script>
 </body>

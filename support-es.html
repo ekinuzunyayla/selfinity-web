@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfinity - Soporte</title>
+    <meta name="description"
+        content="Soporte de Selfinity: cómo contactarnos, cómo eliminar tu cuenta, cómo gestionar tu suscripción y respuestas a las preguntas más frecuentes.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://getselfinity.com/support-es.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/support-tr.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/support-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/support-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://getselfinity.com/support-en.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#834CCA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --font-head: 'Manrope', 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            /* zemin & yüzeyler — hepsi OPAK, kartlarda rgba yasak */
+            --bg: #FFFFFF; --card: #F5F3FF; --chip-wash: #E9E0F6; --container: #BEA4E5; --border: #E9E0F6;
+            --primary: #834CCA; --secondary: #A680DB; --on-primary: #FFFFFF;
+            --text: #1A1921; --muted: #7D7A8A; --success: #52B788;   /* saf siyah yasak */
+            /* radius — Golden Shape Rule: yalnız bu üçü + 28px CTA istisnası */
+            --r-bento: 24px; --r-comp: 16px; --r-micro: 8px; --r-cta: 28px;
+            /* gölgeler — açık temada asla gri/siyah */
+            --shadow-card: 0 4px 12px rgba(131,76,202,.20), 0 2px 6px rgba(131,76,202,.10);
+            --shadow-card-hover: 0 8px 24px rgba(131,76,202,.25), 0 2px 6px rgba(131,76,202,.12);
+            --shadow-btn: 0 2px 6px rgba(131,76,202,.06);
+            --grad-twilight: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+            --grad-cta: linear-gradient(90deg, #8C52FF 0%, #9D92FF 100%);
+            /* yasal sayfa ekleri: vurgu kutuları + uzun metin gövde rengi */
+            --highlight-bg: #FFF6DC; --highlight-border: #F2A93B;
+            --good-bg: #E5F5EC; --good-border: #52B788;
+            --text-body: #4A4655;
+        }
+
+        [data-theme="dark"] {
+            --bg: #0C0A14; --card: #171426; --chip-wash: #231F3A; --container: #231F3A; --border: #231F3A;
+            --primary: #9D92FF; --secondary: #A680DB;
+            --on-primary: #1A1921;   /* lavanta üstünde koyu metin — beyaz AA'yı geçemez */
+            --text: #E6E4F2; --muted: #8B869C; --success: #52B788;   /* saf beyaz yasak */
+            /* karanlıkta siyah gölge yok — ton farkı + %4 lavanta glow */
+            --shadow-card: 0 0 0 1px rgba(157,146,255,.06), 0 6px 20px rgba(157,146,255,.04);
+            --shadow-card-hover: 0 0 0 1px rgba(157,146,255,.10), 0 8px 28px rgba(157,146,255,.06);
+            --shadow-btn: 0 0 0 1px rgba(157,146,255,.08);
+            --highlight-bg: #2E2410; --highlight-border: #F2A93B;
+            --good-bg: #12281C; --good-border: #52B788;
+            --text-body: #C9C6D6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            line-height: 1.8;
+            color: var(--text-body);
+            background: var(--bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        .header {
+            background: var(--grad-twilight);
+            color: #E6E4F2;
+            padding: 60px 40px;
+            border-radius: var(--r-bento);
+            margin-bottom: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+        }
+
+        h1 {
+            font-family: var(--font-head);
+            font-size: 3em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #E6E4F2;
+        }
+
+        .subtitle { font-size: 1.2em; opacity: 0.95; color: #E6E4F2; }
+
+        .content {
+            background: var(--card);
+            padding: 50px;
+            border-radius: var(--r-bento);
+            box-shadow: var(--shadow-card);
+            transition: background-color 0.3s ease;
+        }
+
+        h2 {
+            font-family: var(--font-head);
+            color: var(--primary);
+            margin-top: 50px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 700;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        h2:first-of-type { margin-top: 0; }
+
+        h3 {
+            font-family: var(--font-head);
+            color: var(--primary);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        p { margin: 15px 0; color: var(--text-body); font-size: 1.05em; }
+
+        ul { margin: 20px 0; padding-left: 30px; }
+        li { margin: 12px 0; color: var(--text-body); }
+
+        strong { color: var(--text); }
+
+        .lead {
+            color: var(--text-body);
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--chip-wash);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--r-micro);
+            font-size: 1.05em;
+        }
+
+        .good-box {
+            background: var(--good-bg);
+            border-left: 5px solid var(--good-border);
+            padding: 20px 24px;
+            border-radius: var(--r-micro);
+            margin: 25px 0;
+        }
+
+        .highlight-box {
+            background: var(--highlight-bg);
+            border-left: 5px solid var(--highlight-border);
+            padding: 20px 24px;
+            border-radius: var(--r-micro);
+            margin: 25px 0;
+        }
+
+        .contact-box {
+            background: var(--chip-wash);
+            padding: 30px;
+            border-radius: var(--r-comp);
+            margin-top: 50px;
+            border-left: 5px solid var(--primary);
+        }
+
+        .contact-box h2 { margin-top: 0; border-bottom: none; }
+
+        .contact-box.top { margin-top: 0; margin-bottom: 40px; }
+
+        a { color: var(--primary); text-decoration: none; font-weight: 500; transition: opacity 0.3s ease; }
+        a:hover { opacity: 0.8; text-decoration: underline; }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-links { border-top-color: var(--chip-wash); }
+
+        .nav-links a {
+            padding: 10px 22px;
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-links a:hover { border-color: var(--primary); color: var(--primary); text-decoration: none; opacity: 1; }
+
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 6px; }
+
+        .lang-switcher a {
+            display: inline-block;
+            padding: 10px 16px;
+            background: var(--card);
+            color: var(--text);
+            text-decoration: none;
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            font-size: 0.9em;
+            box-shadow: var(--shadow-btn);
+            transition: all 0.3s ease;
+            border: 2px solid var(--border);
+        }
+
+        .lang-switcher a:hover { transform: translateY(-2px); box-shadow: var(--shadow-card); opacity: 1; text-decoration: none; }
+        .lang-switcher a.active { background: var(--primary); color: var(--on-primary); border-color: transparent; }
+
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-btn);
+        }
+
+        .theme-toggle:hover { transform: scale(1.05); box-shadow: var(--shadow-card); }
+
+        .back-btn-fixed {
+            position: fixed;
+            top: 20px;
+            left: 80px;
+            z-index: 1000;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-btn);
+        }
+
+        .back-btn-fixed:hover { transform: scale(1.05); box-shadow: var(--shadow-card); }
+
+        @media (max-width: 768px) {
+            .back-btn-fixed { top: 10px; left: 70px; }
+            .container { padding: 20px 15px; }
+            .header { padding: 40px 30px; margin-top: 60px; }
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1em; }
+            .content { padding: 30px 25px; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.3em; }
+            .theme-toggle, .lang-switcher { top: 10px; }
+            .theme-toggle { left: 10px; }
+            .lang-switcher { right: 10px; }
+            .lang-switcher a { padding: 8px 12px; font-size: 0.85em; }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index-es.html" class="back-btn-fixed" aria-label="Volver">←</a>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <span id="themeIcon">🌙</span>
+    </button>
+
+    <div class="lang-switcher">
+        <a href="support-tr.html" hreflang="tr">TR</a>
+        <a href="support-en.html" hreflang="en">EN</a>
+        <a href="support-es.html" class="active" hreflang="es" aria-current="page">ES</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Soporte</h1>
+            <p class="subtitle">¿Te has quedado atascado? Solo escríbenos.</p>
+        </div>
+
+        <div class="content">
+            <div class="contact-box top">
+                <h2>Contacta con nosotros</h2>
+                <p>
+                    <strong>Correo:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
+                    <strong>Desarrollador:</strong> Mindoria Studio, Türkiye<br>
+                    <strong>App:</strong> Selfinity — Mente y Desarrollo
+                </p>
+                <p>Respondemos las preguntas generales en <strong>48 horas</strong> la mayoría de las veces, y las
+                    solicitudes de privacidad o derechos sobre datos en un máximo de <strong>30 días</strong>.
+                    Si nos dices qué dispositivo y qué versión de la app usas, nos ayudas mucho.</p>
+            </div>
+
+            <div class="lead">
+                Abajo están las preguntas que nos llegan más a menudo. Si la tuya no aparece, escríbenos igualmente
+                — no existe la pregunta demasiado pequeña.
+            </div>
+
+            <h2>Cuenta</h2>
+
+            <h3>¿Cómo elimino mi cuenta?</h3>
+            <p>Desde la app: <strong>Perfil → Ajustes → Eliminar cuenta</strong>. En cuanto lo confirmes, tu cuenta
+                y los datos guardados en nuestros servidores se eliminan de forma permanente y se cierra tu sesión.</p>
+            <div class="highlight-box">
+                <p><strong>Esto no se puede deshacer.</strong> Tus entradas del diario, registros de ánimo, avance
+                    en los viajes y logros se borran. Si hay algo que quieras conservar, guárdalo antes.</p>
+            </div>
+
+            <h3>He olvidado mi contraseña</h3>
+            <p>Toca <strong>He olvidado mi contraseña</strong> en la pantalla de inicio de sesión. Recibirás un
+                código de seis dígitos por correo y, al introducirlo, podrás elegir una contraseña nueva. Si no
+                llega, revisa la carpeta de spam.</p>
+
+            <h3>¿Puedo usarla sin cuenta?</h3>
+            <p>Sí. Puedes empezar como invitado. Si más adelante decides crear una cuenta, no pierdes nada: tu
+                progreso se traslada contigo.</p>
+
+            <h2>Suscripción</h2>
+
+            <h3>¿Cómo cancelo mi suscripción?</h3>
+            <p>Las suscripciones las gestiona la tienda, así que la cancelación se hace desde tu dispositivo y no
+                dentro de la app:</p>
+            <ul>
+                <li><strong>iPhone / iPad:</strong> Ajustes → tu nombre → Suscripciones → Selfinity → Cancelar suscripción</li>
+                <li><strong>Android:</strong> Google Play → icono de perfil → Pagos y suscripciones → Selfinity → Cancelar</li>
+            </ul>
+            <p>Tras cancelar, Premium sigue disponible hasta el final del periodo que ya has pagado.</p>
+
+            <h3>¿Puedo pedir un reembolso?</h3>
+            <p>Los reembolsos los gestionan Apple y Google, así que no es algo que podamos tramitar directamente.
+                En iOS, usa <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>; en Android, tu
+                historial de pedidos de Google Play. Si crees que ha habido un error, escríbenos también — te
+                acompañamos en el proceso.</p>
+
+            <h3>¿Qué puedo usar sin Premium?</h3>
+            <p>Todos los módulos se pueden usar gratis. Premium es una suscripción opcional que añade análisis con
+                IA sin límite y la biblioteca de contenido completa.</p>
+
+            <h2>Datos y privacidad</h2>
+
+            <h3>¿Funciona sin conexión?</h3>
+            <p>Sí. Lo que escribes se guarda primero en tu dispositivo y se sincroniza sin hacer ruido cuando vuelve
+                la conexión. En un avión o en un sitio sin cobertura no se pierde nada.</p>
+
+            <h3>¿Mis datos pasan a otro dispositivo?</h3>
+            <p>Inicia sesión con tu cuenta en cualquier dispositivo y verás los mismos datos. En modo invitado,
+                todo se queda en ese único dispositivo.</p>
+
+            <h3>¿Qué envían las funciones de IA?</h3>
+            <p>Solo el texto o la imagen que esa función necesita para funcionar; nunca tu identidad. Lo que envía
+                cada función está detallado en la <a href="privacy-policy-es.html">Política de Privacidad</a>.</p>
+
+            <div class="good-box">
+                <p>No usamos tus registros de ánimo, tus entradas del diario ni tus notas personales para
+                    publicidad, y no los vendemos a terceros.</p>
+            </div>
+
+            <h2>Preguntas frecuentes</h2>
+
+            <h3>Mis pasos no coinciden con los del teléfono</h3>
+            <p>Los pasos se leen del procesador de movimiento del teléfono. El tiempo que el teléfono pasa en un
+                bolso o sobre la mesa no se cuenta, así que pequeñas diferencias con un dispositivo de muñeca son
+                normales.</p>
+
+            <h3>No me llegan los recordatorios</h3>
+            <p>Comprueba primero que las notificaciones estén permitidas para Selfinity en los ajustes del
+                dispositivo. Si lo están, puede que la optimización de batería o un modo de concentración las esté
+                retrasando.</p>
+
+            <h3>He encontrado un error</h3>
+            <p>Nos ayuda mucho que incluyas: modelo del dispositivo, versión del sistema, versión de la app (abajo
+                del todo en <strong>Perfil → Ajustes</strong>) y, si puedes, una captura de pantalla. 🙂</p>
+
+            <div class="contact-box">
+                <h2>¿Sigues atascado?</h2>
+                <p>Escríbenos y lo resolvemos juntos: <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a></p>
+            </div>
+
+            <div class="nav-links">
+                <a href="index-es.html">← Inicio</a>
+                <a href="privacy-policy-es.html">Política de Privacidad</a>
+                <a href="terms-of-use-es.html">Términos de Uso</a>
+                <a href="support-tr.html">Türkçe</a>
+                <a href="support-en.html">English</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const savedTheme = localStorage.getItem('theme') || 'light';
+
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        });
+    </script>
+</body>
+
+</html>

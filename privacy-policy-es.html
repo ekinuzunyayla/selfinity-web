@@ -5,26 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selfinity - Política de Privacidad</title>
+    <meta name="description"
+        content="Política de privacidad de Selfinity: qué datos recogemos, qué no recogemos deliberadamente, qué envían exactamente las funciones de inteligencia artificial a Google Gemini y cómo eliminar su cuenta.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://getselfinity.com/privacy-policy-es.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/privacy-policy.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/privacy-policy-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/privacy-policy-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://getselfinity.com/privacy-policy-en.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#834CCA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F8F9FA;
-            --text-primary: #1A1A1A;
-            --text-secondary: #6B7280;
-            --text-tertiary: #9CA3AF;
-            --accent-start: #667eea;
-            --accent-end: #764ba2;
-            --border-color: #E5E7EB;
+            --font-head: 'Manrope', 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            /* zemin & yüzeyler — hepsi OPAK, kartlarda rgba yasak */
+            --bg: #FFFFFF; --card: #F5F3FF; --chip-wash: #E9E0F6; --container: #BEA4E5; --border: #E9E0F6;
+            --primary: #834CCA; --secondary: #A680DB; --on-primary: #FFFFFF;
+            --text: #1A1921; --muted: #7D7A8A; --success: #52B788;   /* saf siyah yasak */
+            /* radius — Golden Shape Rule: yalnız bu üçü + 28px CTA istisnası */
+            --r-bento: 24px; --r-comp: 16px; --r-micro: 8px; --r-cta: 28px;
+            /* gölgeler — açık temada asla gri/siyah */
+            --shadow-card: 0 4px 12px rgba(131,76,202,.20), 0 2px 6px rgba(131,76,202,.10);
+            --shadow-card-hover: 0 8px 24px rgba(131,76,202,.25), 0 2px 6px rgba(131,76,202,.12);
+            --shadow-btn: 0 2px 6px rgba(131,76,202,.06);
+            --grad-hero: linear-gradient(180deg, #F8F5FF 0%, #EDE7F6 55%, #D1C4E9 100%);
+            --grad-twilight: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+            --grad-cta: linear-gradient(90deg, #8C52FF 0%, #9D92FF 100%);
+            --grad-celebration: linear-gradient(135deg, #9B6DFF 0%, #7C4DFF 55%, #6B3FA0 100%);
+            --grad-gold: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
         }
 
         [data-theme="dark"] {
-            --bg-primary: #0F172A;
-            --bg-secondary: #1E293B;
-            --text-primary: #F8FAFC;
-            --text-secondary: #E2E8F0;
-            /* Más brillante, casi blanco para mejor lectura en modo oscuro */
-            --text-tertiary: #CBD5E1;
-            --border-color: #334155;
+            --bg: #0C0A14; --card: #171426; --chip-wash: #231F3A; --container: #231F3A; --border: #231F3A;
+            --primary: #9D92FF; --secondary: #A680DB;
+            --on-primary: #1A1921;   /* lavanta üstünde koyu metin — beyaz AA'yı geçemez */
+            --text: #E6E4F2; --muted: #8B869C; --success: #52B788;   /* saf beyaz yasak */
+            /* karanlıkta siyah gölge yok — ton farkı + %4 lavanta glow */
+            --shadow-card: 0 0 0 1px rgba(157,146,255,.06), 0 6px 20px rgba(157,146,255,.04);
+            --shadow-card-hover: 0 0 0 1px rgba(157,146,255,.10), 0 8px 28px rgba(157,146,255,.06);
+            --shadow-btn: 0 0 0 1px rgba(157,146,255,.08);
+            --grad-hero: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+        }
+
+        /* yasal sayfa ekleri: vurgu kutuları + uzun metin gövde rengi */
+        :root {
+            --highlight-bg: #FFF6DC;
+            --highlight-border: #F2A93B;
+            --good-bg: #E5F5EC;
+            --good-border: #52B788;
+            --text-body: #4A4655;
+        }
+
+        [data-theme="dark"] {
+            --highlight-bg: #2E2410;
+            --highlight-border: #F2A93B;
+            --good-bg: #12281C;
+            --good-border: #52B788;
+            --text-body: #C9C6D6;
         }
 
         * {
@@ -34,10 +77,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.8;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
+            color: var(--text-body);
+            background: var(--bg);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -49,55 +92,48 @@
 
         .header,
         header {
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
+            background: var(--grad-twilight);
+            color: #E6E4F2;
             padding: 60px 40px;
-            border-radius: 16px;
+            border-radius: var(--r-bento);
             margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
         }
 
         h1 {
+            font-family: var(--font-head);
             font-size: 3em;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
-            color: white;
+            color: #E6E4F2;
             background: none;
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: #E6E4F2;
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.95;
-            color: white;
-        }
-
-        header .last-updated {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9em;
-            margin-top: 10px;
-            background: transparent;
-            border: none;
-            padding: 0;
+            color: #E6E4F2;
         }
 
         .content {
-            background: var(--bg-primary);
+            background: var(--card);
             padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: var(--r-bento);
+            box-shadow: var(--shadow-card);
             transition: background-color 0.3s ease;
         }
 
         h2 {
-            color: var(--accent-start);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 50px;
             margin-bottom: 20px;
             font-size: 2em;
             font-weight: 700;
             padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-start);
+            border-bottom: 3px solid var(--primary);
         }
 
         h2:first-of-type {
@@ -105,7 +141,8 @@
         }
 
         h3 {
-            color: var(--accent-end);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -114,18 +151,18 @@
 
         p {
             margin: 15px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         .last-updated {
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-style: italic;
             margin-bottom: 40px;
             padding: 20px;
-            background: var(--bg-secondary);
-            border-left: 5px solid var(--accent-start);
-            border-radius: 8px;
+            background: var(--chip-wash);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--r-micro);
             font-size: 1.05em;
         }
 
@@ -136,37 +173,103 @@
 
         li {
             margin: 12px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         li strong {
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box {
             background: var(--highlight-bg);
             padding: 25px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin: 30px 0;
             border-left: 5px solid var(--highlight-border);
         }
 
-        .highlight-box p {
+        .highlight-box p,
+        .highlight-box li {
             margin: 10px 0;
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box strong {
-            color: var(--text-primary);
+            color: var(--text);
+        }
+
+        .good-box {
+            background: var(--good-bg);
+            padding: 25px;
+            border-radius: var(--r-comp);
+            margin: 30px 0;
+            border-left: 5px solid var(--good-border);
+        }
+
+        .good-box p,
+        .good-box li {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        .good-box strong {
+            color: var(--text);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 25px 0;
+            border-radius: var(--r-comp);
+            border: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .table-scroll {
+            border-color: var(--chip-wash);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            min-width: 560px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        [data-theme="dark"] .data-table th,
+        [data-theme="dark"] .data-table td {
+            border-bottom-color: var(--chip-wash);
+        }
+
+        .data-table th {
+            background: var(--chip-wash);
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table td strong {
+            color: var(--text);
         }
 
         .contact-box {
-            background: var(--bg-secondary);
+            background: var(--chip-wash);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin-top: 50px;
-            border-left: 5px solid var(--accent-start);
+            border-left: 5px solid var(--primary);
         }
 
         .contact-box h2 {
@@ -175,7 +278,7 @@
         }
 
         a {
-            color: var(--accent-start);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s ease;
@@ -190,18 +293,49 @@
             display: inline-block;
             margin-top: 40px;
             padding: 15px 40px;
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
-            border-radius: 50px;
+            background: var(--grad-cta);
+            color: #FFFFFF;
+            border-radius: var(--r-comp);
             text-decoration: none;
-            font-weight: 600;
+            font-family: var(--font-head);
+            font-weight: 700;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: var(--shadow-card);
         }
 
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: var(--shadow-card-hover);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-links {
+            border-top-color: var(--chip-wash);
+        }
+
+        .nav-links a {
+            padding: 10px 22px;
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
             text-decoration: none;
             opacity: 1;
         }
@@ -211,25 +345,36 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 6px;
         }
 
         .lang-switcher a {
             display: inline-block;
-            padding: 10px 24px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            padding: 10px 16px;
+            background: var(--card);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            box-shadow: var(--shadow-btn);
             transition: all 0.3s ease;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--border);
         }
 
         .lang-switcher a:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
             opacity: 1;
+            text-decoration: none;
+        }
+
+        .lang-switcher a.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: transparent;
         }
 
         .theme-toggle {
@@ -237,9 +382,9 @@
             top: 20px;
             left: 20px;
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
@@ -248,39 +393,39 @@
             cursor: pointer;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
-        /* Botón de retroceso fijo */
+        /* Fixed Back Button */
         .back-btn-fixed {
             position: fixed;
             top: 20px;
             left: 80px;
             /* offset from theme toggle */
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
+            color: var(--text);
             text-decoration: none;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .back-btn-fixed:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         @media (max-width: 768px) {
@@ -296,6 +441,7 @@
             .header,
             header {
                 padding: 40px 30px;
+                margin-top: 60px;
             }
 
             h1 {
@@ -330,6 +476,11 @@
             .lang-switcher {
                 right: 10px;
             }
+
+            .lang-switcher a {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -342,387 +493,607 @@
     </button>
 
     <div class="lang-switcher">
-        <a href="privacy-policy-en.html">English</a>
+        <a href="privacy-policy.html" hreflang="tr">TR</a>
+        <a href="privacy-policy-en.html" hreflang="en">EN</a>
+        <a href="privacy-policy-es.html" class="active" hreflang="es" aria-current="page">ES</a>
     </div>
 
     <div class="container">
-        <header>
+        <div class="header">
             <h1>Política de Privacidad</h1>
-            <p class="last-updated">Última actualización: 15 de septiembre de 2025</p>
-        </header>
+            <p class="subtitle">Qué recogemos, qué no, y qué sale de su dispositivo</p>
+        </div>
 
         <div class="content">
+            <div class="last-updated">
+                <strong>Fecha de entrada en vigor:</strong> 29 de julio de 2026<br>
+                <strong>Ámbito:</strong> la aplicación Selfinity para Android e iOS, versión 5.2.0 y posteriores, y el
+                sitio web getselfinity.com. Para versiones de Android anteriores, consulte la sección 14.1.
+            </div>
+
             <h2>1. Introducción</h2>
-            <p>
-                Bienvenido a Selfinity: Mind & Development ("nosotros", "nuestro" o "nos"), desarrollado por Mindoria
-                Studio.
-                Esta Política de Privacidad explica cómo recopilamos, utilizamos, divulgamos y protegemos su información
-                cuando
-                utiliza nuestra aplicación móvil y servicios relacionados.
-            </p>
-            <p>
-                Selfinity es una plataforma de desarrollo personal y productividad que le ayuda a registrar hábitos,
-                practicar el mindfulness, escribir sus pensamientos en un diario y alcanzar sus metas a través de
-                orientación
-                impulsada por inteligencia artificial y funciones de gamificación.
-            </p>
+            <p>Selfinity ("Selfinity", "la aplicación", "nosotros") es una aplicación de bienestar personal y desarrollo
+                individual desarrollada y operada por <strong>Mindoria Studio</strong>, con sede en Türkiye.</p>
+            <p>Esta Política de Privacidad explica qué datos personales recogemos, por qué los recogemos, con quién los
+                compartimos y qué derechos y opciones tiene usted. Está escrita para ser leída: cuando algo es inusual o
+                importante, lo decimos con claridad en lugar de esconderlo entre líneas.</p>
+            <p><strong>Responsable del tratamiento:</strong> Mindoria Studio, Türkiye. <strong>Contacto:</strong> <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a></p>
+            <p>Si no está de acuerdo con esta política, le rogamos que no utilice Selfinity.</p>
 
-            <h2>2. Información que Recopilamos</h2>
-
-            <h3>2.1 Información de la Cuenta</h3>
-            <ul>
-                <li><strong>Dirección de correo electrónico</strong> y <strong>nombre</strong> cuando crea una cuenta a
-                    través de Google OAuth
-                    o autenticación de correo electrónico/contraseña</li>
-                <li><strong>Información del perfil</strong>, incluyendo la foto de perfil opcional</li>
-                <li><strong>Credenciales de autenticación</strong> gestionadas de forma segura a través de Supabase</li>
-            </ul>
-
-            <h3>2.2 Contenido Generado por el Usuario</h3>
-            <p>Recopilamos y almacenamos el contenido que usted crea dentro de la aplicación, incluyendo:</p>
-            <ul>
-                <li><strong>Entradas de diario</strong> y registros de pensamientos</li>
-                <li><strong>Tareas, metas y listas de cosas por hacer</strong></li>
-                <li><strong>Datos de seguimiento de hábitos</strong> y registros de finalización</li>
-                <li><strong>Registros de actividad</strong> (seguimiento del estado de ánimo, entradas de gratitud,
-                    sesiones de meditación)</li>
-                <li><strong>Tableros de visión</strong> e imágenes subidas</li>
-                <li><strong>Afirmaciones</strong> y notas personales</li>
-                <li><strong>Registros de sueño, ingesta de agua y datos de nutrición</strong></li>
-            </ul>
-
-            <h3>2.3 Datos Técnicos Automáticos</h3>
-            <p>Recopilamos automáticamente cierta información técnica cuando utiliza la aplicación:</p>
-            <ul>
-                <li><strong>Información del dispositivo:</strong> Tipo de dispositivo, versión del sistema operativo,
-                    identificadores del dispositivo</li>
-                <li><strong>Dirección IP</strong> y ubicación general (nivel de país/región)</li>
-                <li><strong>Estadísticas de uso:</strong> Funciones de la aplicación utilizadas, duración de la sesión,
-                    vistas de pantalla</li>
-                <li><strong>Registros de errores e informes de fallos</strong> a través de Firebase Crashlytics</li>
-                <li><strong>Datos analíticos</strong> a través de Firebase Analytics (patrones de uso anonimizados)</li>
-            </ul>
-
-            <h3>2.4 Identificadores de Publicidad</h3>
-            <p>
-                Con su consentimiento, recopilamos identificadores de publicidad a través de <strong>Google
-                    AdMob</strong> para mostrar
-                anuncios personalizados. Puede optar por no recibir anuncios personalizados en la configuración de su
-                dispositivo.
-            </p>
-
-            <h3>2.5 Datos de Salud y Condición Física</h3>
-            <p>
-                Con su permiso explícito, accedemos a <strong>datos del recuento de pasos</strong> a través de
-                <strong>Google Health Connect</strong> para proporcionar funciones de seguimiento de actividad. Estos
-                datos:
-            </p>
-            <ul>
-                <li>Requieren su permiso por separado</li>
-                <li>Se almacenan localmente y se sincronizan con nuestros servidores solo con su consentimiento</li>
-                <li>Se pueden desconectar en cualquier momento a través de la configuración de Health Connect</li>
-                <li>Nunca se comparten con terceros con fines publicitarios</li>
-            </ul>
-
-            <h2>3. Cómo Utilizamos Su Información</h2>
-
-            <p>Utilizamos la información recopilada para los siguientes propósitos:</p>
-
-            <h3>3.1 Funciones Principales de la Aplicación</h3>
-            <ul>
-                <li>Proporcionar y mantener la funcionalidad de la aplicación (seguimiento de hábitos, diario,
-                    meditación, etc.)</li>
-                <li>Almacenar y sincronizar sus datos en todos sus dispositivos</li>
-                <li>Mostrar su progreso, estadísticas y logros</li>
-                <li>Habilitar notificaciones de recordatorios y tareas programadas</li>
-            </ul>
-
-            <h3>3.2 Personalización Impulsada por IA</h3>
-            <div class="highlight-box">
-                <p><strong>Análisis Impulsado por IA:</strong></p>
-                <p>
-                    Utilizamos <strong>servicios de IA de Google (Gemini)</strong> para proporcionar percepciones
-                    personalizadas y
-                    recomendaciones
-                    basadas en sus entradas de diario, registros de estado de ánimo y datos de actividad. Esto incluye:
-                </p>
+            <h2>2. Resumen</h2>
+            <div class="good-box">
                 <ul>
-                    <li>Analizar sentimientos y patrones en sus entradas de diario</li>
-                    <li>Generar afirmaciones peronalizadas y contenido motivacional</li>
-                    <li>Proporcionar percepciones sobre las tendencias de su estado de ánimo y hábitos</li>
-                    <li>Sugerir actividades y metas basadas en sus patrones de uso</li>
+                    <li><strong>No</strong> mostramos publicidad y <strong>no</strong> recogemos identificadores
+                        publicitarios.</li>
+                    <li>No utilizamos <strong>ningún</strong> SDK de analítica, atribución o informes de fallos. Dentro
+                        de la aplicación no hay Google Analytics, ni Firebase, ni SDK de redes sociales, ni rastreadores
+                        de terceros.</li>
+                    <li><strong>No</strong> vendemos sus datos personales y <strong>no</strong> los compartimos con
+                        fines publicitarios. Ni ahora, ni antes, ni está previsto.</li>
+                    <li><strong>No</strong> le rastreamos en las aplicaciones ni en los sitios web de otras empresas;
+                        por eso la aplicación nunca solicita el permiso de seguimiento (App Tracking Transparency) en
+                        iOS.</li>
+                    <li>Una parte importante de lo que registra <strong>nunca sale de su dispositivo</strong>: la lista
+                        completa está en la sección 7.</li>
+                    <li>Puede eliminar su cuenta, y con ella sus datos en nuestros servidores, desde dentro de la
+                        aplicación — sección 9.</li>
+                    <li>Algunas funciones opcionales envían contenido a la inteligencia artificial Gemini de Google
+                        <strong>solo cuando usted decide utilizarlas</strong>. La sección 5 detalla exactamente qué
+                        envía cada función.
+                    </li>
                 </ul>
-                <p>
-                    <strong>Nota de Privacidad:</strong> El procesamiento de IA se realiza de forma segura, y sus datos
-                    no se utilizan para entrenar
-                    los modelos generales de IA de Google. El análisis es específico para su cuenta y no se comparte con
-                    otros
-                    usuarios.
-                </p>
             </div>
 
-            <h3>3.3 Mejora y Análisis de la Aplicación</h3>
+            <h2>3. Los datos que recogemos</h2>
+
+            <h3>3.1 Información de la cuenta</h3>
             <ul>
-                <li>Monitorizar el rendimiento de la aplicación y solucionar problemas técnicos</li>
-                <li>Analizar patrones de uso para mejorar las funciones (a través de Firebase Analytics)</li>
-                <li>Realizar pruebas A/B para nuevas funciones</li>
-                <li>Comprender las preferencias del usuario y optimizar la experiencia de usuario</li>
+                <li><strong>Correo electrónico y contraseña.</strong> Nuestro proveedor de autenticación (Supabase)
+                    almacena su contraseña únicamente en forma cifrada (hash). Nunca vemos ni almacenamos su contraseña
+                    en texto claro.</li>
+                <li><strong>Nombre visible</strong> y, opcionalmente, el avatar o la foto de perfil que elija.</li>
+                <li><strong>Inicio de sesión con Google:</strong> recibimos la dirección de correo, el nombre y la foto
+                    de perfil de su cuenta de Google.</li>
+                <li><strong>Inicio de sesión con Apple:</strong> recibimos la dirección de correo que Apple nos
+                    transmite. Si utiliza "Ocultar mi correo", solo recibimos la dirección privada de reenvío de Apple y
+                    nunca la real.</li>
+                <li><strong>Cuentas de invitado (anónimas):</strong> si continúa sin registrarse, creamos en nuestros
+                    servidores una cuenta anónima con un identificador generado al azar. <strong>El modo invitado no
+                        significa "solo en el dispositivo"</strong>: es una cuenta real y el contenido de la sección 3.2
+                    se sincroniza con nuestros servidores igual que en una cuenta registrada. Como una cuenta de
+                    invitado no tiene dirección de correo, no puede recuperarse si desinstala la aplicación o cambia de
+                    dispositivo. Puede convertirla en una cuenta completa en cualquier momento y conservarlo todo.</li>
+                <li><strong>Registros de consentimiento:</strong> su aceptación de las condiciones y su preferencia de
+                    comunicaciones por correo, registradas al darse de alta.</li>
             </ul>
 
-            <h3>3.4 Publicidad</h3>
+            <h3>3.2 Contenido de bienestar que usted crea</h3>
+            <p>Selfinity es una aplicación de bienestar, por lo que la mayor parte de lo que guarda es contenido que
+                usted introduce deliberadamente. Buena parte de ello constituye <strong>datos de categoría especial
+                    relativos a la salud</strong> según el RGPD y <strong>datos personales de naturaleza especial</strong>
+                según la ley turca KVKK. Los tratamos únicamente sobre la base de su consentimiento explícito, que
+                otorga al decidir utilizar la función correspondiente.</p>
             <ul>
-                <li>Mostrar anuncios relevantes a través de Google AdMob</li>
-                <li>Mostrar anuncios personalizados basados en sus intereses (con consentimiento)</li>
-                <li>Medir el rendimiento y la efectividad de los anuncios</li>
+                <li>Registros de estado de ánimo, incluidas notas de texto libre</li>
+                <li>Registros de sueño (hora de acostarse, hora de despertar, calidad)</li>
+                <li>Consumo de agua y otras bebidas</li>
+                <li>Registros de nutrición (comidas, calorías, macronutrientes)</li>
+                <li>Recuento diario de pasos</li>
+                <li>Entradas de diario ("Páginas Mágicas")</li>
+                <li>Registros de pensamiento de TCC: la situación, su pensamiento automático, las emociones, las
+                    distorsiones cognitivas y la respuesta racional</li>
+                <li>Pensamientos rápidos y entradas del buzón de preocupaciones</li>
+                <li>Entradas de gratitud y revisiones semanales</li>
+                <li>Resultados de autoevaluaciones y tests psicométricos</li>
+                <li>Historial de sesiones de meditación y respiración</li>
+                <li>Puntuaciones diarias de bienestar ("bioestado")</li>
+                <li>Actividades del Registro de Vida, incluidas notas y fotos opcionales</li>
+                <li>Elementos del tablero de visión, incluidas las imágenes que añada</li>
+                <li>Rutinas de cuidado personal y su historial de cumplimiento</li>
+                <li>Sesiones de enfoque y Pomodoro</li>
+                <li>Datos de progreso: XP, nivel, rachas, diamantes, logros, misiones, inventario, jardín y estado de
+                    los minijuegos</li>
+            </ul>
+            <p>Parte de lo anterior nunca sale de su dispositivo; la sección 7 indica cuál.</p>
+
+            <h3>3.3 Permisos del dispositivo y sensores</h3>
+            <p>Todos los permisos siguientes son opcionales. La aplicación funciona sin ellos; solo deja de funcionar la
+                función correspondiente. Puede revocarlos en cualquier momento desde los ajustes de su sistema
+                operativo.</p>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Permiso</th>
+                            <th>Para qué lo pide la aplicación</th>
+                            <th>¿Sale algo del dispositivo?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cámara</strong></td>
+                            <td>Escanear códigos de barras de alimentos; fotografiar una comida para su análisis con IA
+                            </td>
+                            <td>Código de barras: no, la descodificación ocurre en el dispositivo. Foto de la comida:
+                                sí, se envía a Google Gemini para su análisis (sección 5).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Micrófono y reconocimiento de voz</strong></td>
+                            <td>Hablar con el asistente Komorebi en lugar de escribir</td>
+                            <td>Normalmente sí. Su voz la transcribe el propio servicio de reconocimiento de voz de su
+                                sistema operativo — Google en Android, Apple en iOS —, que puede procesar el audio en
+                                sus servidores. Selfinity nunca almacena su audio ni lo envía a nuestros servidores.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Actividad física / movimiento</strong></td>
+                            <td>Contar sus pasos diarios a partir del sensor del dispositivo</td>
+                            <td>El recuento diario resultante se almacena y se sincroniza. Las lecturas brutas del
+                                sensor, no.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Notificaciones</strong></td>
+                            <td>Los recordatorios que usted mismo configura</td>
+                            <td>No. Cada recordatorio se programa y se dispara en su dispositivo. No utilizamos
+                                notificaciones push ni conservamos ningún token push suyo.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alarma exacta (Android)</strong></td>
+                            <td>Sonar justo al terminar una sesión Pomodoro</td>
+                            <td>No.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>3.4 Datos técnicos recogidos automáticamente</h3>
+            <p>Los mantenemos deliberadamente al mínimo:</p>
+            <ul>
+                <li>un token de sesión de autenticación, para que su sesión siga abierta;</li>
+                <li>la dirección IP desde la que llegan sus solicitudes, que nuestro proveedor de alojamiento trata como
+                    parte del funcionamiento normal del servidor y de los registros de seguridad;</li>
+                <li>el idioma de la aplicación e información básica del dispositivo y la plataforma, necesarios para
+                    ofrecer el contenido y la localización correctos.</li>
+            </ul>
+            <p>Lo que explícitamente <strong>no</strong> recogemos: ningún evento de analítica o de comportamiento,
+                ningún SDK de seguimiento de uso, ningún SDK de informes de fallos, ningún identificador publicitario
+                (Android Advertising ID o Apple IDFA), ninguna huella digital del dispositivo, ningún seguimiento entre
+                aplicaciones o sitios web y ninguna cookie de seguimiento dentro de la aplicación.</p>
+
+            <h3>3.5 Datos de suscripción y compra</h3>
+            <p>Las suscripciones Premium se venden a través de la <strong>App Store de Apple</strong> y de <strong>Google
+                    Play</strong>, y se gestionan con <strong>RevenueCat</strong>.</p>
+            <ul>
+                <li>Nunca vemos ni recibimos los datos de su tarjeta, su dirección de facturación ni ningún medio de
+                    pago. Eso va únicamente a Apple o a Google.</li>
+                <li>Enviamos a RevenueCat su identificador de usuario de Selfinity (un UUID aleatorio) para que su
+                    suscripción siga a su cuenta entre dispositivos. RevenueCat recibe de Apple o de Google su recibo de
+                    compra y el estado de su suscripción (producto, fecha de inicio, fecha de renovación y si está
+                    activa).</li>
+                <li>Guardamos el estado de su suscripción en nuestros propios servidores para que la aplicación sepa si
+                    debe desbloquear las funciones Premium.</li>
             </ul>
 
-            <h3>3.5 Comunicación y Soporte</h3>
+            <h3>3.6 Funciones sociales</h3>
+            <p>Si utiliza las funciones de amistades:</p>
             <ul>
-                <li>Responder a sus solicitudes de soporte y consultas</li>
-                <li>Enviar actualizaciones importantes sobre la aplicación o su cuenta</li>
-                <li>Notificarle sobre nuevas funciones (si opta por recibirlas)</li>
+                <li>Su nombre visible pasa a ser buscable por otros usuarios de Selfinity.</li>
+                <li>Las personas que haya aceptado como amistades pueden ver su perfil público: nombre visible, avatar,
+                    nivel, XP, rachas y logros.</li>
+                <li>Sus entradas de diario, registros de estado de ánimo, registros de pensamiento y cualquier otra
+                    entrada personal de la sección 3.2 <strong>nunca</strong> son visibles para otros usuarios.</li>
             </ul>
 
-            <h3>3.6 Procesamiento de Transacciones</h3>
-            <ul>
-                <li>Procesar las compras de suscripción a través de Google Play Billing</li>
-                <li>Gestionar su estado de membresía premium</li>
-                <li>Gestionar solicitudes de reembolso y problemas de facturación</li>
-            </ul>
-
-            <h2>4. Proveedores de Servicios de Terceros</h2>
-
-            <p>Nos integramos con los siguientes servicios de terceros para proporcionar la funcionalidad de la
-                aplicación:</p>
-
-            <h3>4.1 Supabase (Backend y Base de Datos)</h3>
-            <p>
-                <strong>Propósito:</strong> Autenticación de usuarios, almacenamiento en base de datos, API de
-                backend<br>
-                <strong>Datos compartidos:</strong> Información de la cuenta, contenido generado por el usuario, datos
-                de uso de la aplicación<br>
-                <strong>Política de Privacidad:</strong> <a href="https://supabase.com/privacy"
-                    target="_blank">supabase.com/privacy</a>
+            <h2>4. Por qué usamos sus datos y con qué base jurídica</h2>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Finalidad</th>
+                            <th>Datos utilizados</th>
+                            <th>Base jurídica (RGPD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hacer funcionar la aplicación: guardar sus entradas, sincronizarlas entre sus
+                                dispositivos y mostrar su historial y sus estadísticas</td>
+                            <td>3.1, 3.2</td>
+                            <td>Ejecución de un contrato, art. 6(1)(b); para el contenido relativo a la salud, su
+                                consentimiento explícito, art. 9(2)(a)</td>
+                        </tr>
+                        <tr>
+                            <td>Las funciones de IA que usted activa</td>
+                            <td>véase la sección 5</td>
+                            <td>Consentimiento explícito, art. 6(1)(a) y art. 9(2)(a), otorgado cada vez que usa la
+                                función</td>
+                        </tr>
+                        <tr>
+                            <td>Los recordatorios y notificaciones que configura</td>
+                            <td>sus ajustes de recordatorios</td>
+                            <td>Contrato, art. 6(1)(b)</td>
+                        </tr>
+                        <tr>
+                            <td>Venta y gestión de las suscripciones Premium</td>
+                            <td>3.5</td>
+                            <td>Contrato, art. 6(1)(b)</td>
+                        </tr>
+                        <tr>
+                            <td>Mantener el servicio seguro; prevenir el fraude, el abuso y la manipulación de la
+                                economía de recompensas de la aplicación</td>
+                            <td>3.4 y datos de progreso</td>
+                            <td>Interés legítimo, art. 6(1)(f)</td>
+                        </tr>
+                        <tr>
+                            <td>Detectar textos que sugieran riesgo de autolesión y mostrar recursos de apoyo (sección
+                                5.1)</td>
+                            <td>el texto libre que usted escribe</td>
+                            <td>Intereses vitales, art. 6(1)(d), junto con su consentimiento explícito, art. 9(2)(a)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Responder a sus solicitudes de soporte</td>
+                            <td>su dirección de correo y lo que nos cuente</td>
+                            <td>Contrato e interés legítimo</td>
+                        </tr>
+                        <tr>
+                            <td>Cumplir obligaciones legales</td>
+                            <td>lo que sea necesario</td>
+                            <td>Obligación legal, art. 6(1)(c)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Conforme a la ley turca KVKK, las bases equivalentes son el art. 5/2-c (necesario para la ejecución de un
+                contrato) y el art. 5/2-f (interés legítimo) y, para los datos de salud de naturaleza especial, su
+                <strong>consentimiento explícito</strong> conforme al art. 6.
             </p>
+            <p>Puede retirar su consentimiento en cualquier momento dejando de usar la función correspondiente,
+                eliminando las entradas afectadas o eliminando su cuenta. La retirada no afecta al tratamiento ya
+                realizado.</p>
 
-            <h3>4.2 Firebase (Google)</h3>
-            <p>
-                <strong>Propósito:</strong> Analítica, informes de fallos, monitorización de rendimiento<br>
-                <strong>Datos compartidos:</strong> Información del dispositivo, estadísticas de uso, registros de
-                fallos (anonimizados)<br>
-                <strong>Política de Privacidad:</strong> <a href="https://firebase.google.com/support/privacy"
-                    target="_blank">firebase.google.com/support/privacy</a>
-            </p>
-
-            <h3>4.3 Google AdMob</h3>
-            <p>
-                <strong>Propósito:</strong> Visualización de anuncios<br>
-                <strong>Datos compartidos:</strong> Identificadores de publicidad, información del dispositivo, patrones
-                de uso<br>
-                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
-                    target="_blank">policies.google.com/privacy</a><br>
-                <strong>Opt-out (exclusión):</strong> Puede desactivar los anuncios personalizados en la configuración
-                de su dispositivo
-            </p>
-
-            <h3>4.4 Servicios de IA de Google (Gemini)</h3>
-            <p>
-                <strong>Propósito:</strong> Análisis y percepciones personalizadas impulsadas por IA<br>
-                <strong>Datos compartidos:</strong> Entradas de diario, registros de estado de ánimo (solo cuando
-                utiliza funciones de IA)<br>
-                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
-                    target="_blank">policies.google.com/privacy</a><br>
-                <strong>Nota:</strong> Los datos se procesan de forma segura y no se utilizan para entrenar modelos de
-                IA generales
-            </p>
-
-            <h3>4.5 Google Health Connect</h3>
-            <p>
-                <strong>Propósito:</strong> Recuento de pasos y seguimiento de actividad física<br>
-                <strong>Datos compartidos:</strong> Datos del recuento de pasos (solo con permiso explícito)<br>
-                <strong>Política de Privacidad:</strong> <a href="https://policies.google.com/privacy"
-                    target="_blank">policies.google.com/privacy</a><br>
-                <strong>Control:</strong> Administre los permisos a través de la configuración de la aplicación Health
-                Connect
-            </p>
-
-            <h3>4.6 Google Play Billing</h3>
-            <p>
-                <strong>Propósito:</strong> Procesamiento de compras dentro de la aplicación y suscripciones<br>
-                <strong>Datos compartidos:</strong> Historial de compras, información de pago (gestionado por Google
-                Play)<br>
-                <strong>Política de Privacidad:</strong> <a
-                    href="https://payments.google.com/payments/apis-secure/get_legal_document"
-                    target="_blank">Privacidad de Google Play</a>
-            </p>
-
-            <h2>5. Seguridad y Almacenamiento de Datos</h2>
-
-            <h3>5.1 Medidas de Seguridad</h3>
-            <p>Implementamos medidas de seguridad estándar de la industria para proteger sus datos:</p>
-            <ul>
-                <li><strong>Cifrado:</strong> Todos los datos transmitidos entre su dispositivo y nuestros servidores
-                    están cifrados
-                    usando HTTPS/TLS</li>
-                <li><strong>Autenticación segura:</strong> Las contraseñas se codifican mediante hash y nunca se
-                    almacenan en texto plano</li>
-                <li><strong>Controles de acceso:</strong> Estrictas limitaciones de acceso a sus datos personales</li>
-                <li><strong>Auditorías regulares:</strong> Revisiones de seguridad y evaluaciones de vulnerabilidad</li>
-            </ul>
-
-            <h3>5.2 Almacenamiento de Datos</h3>
-            <p>
-                Sus datos se almacenan en <strong>servidores de Supabase</strong> (alojados en AWS) con redundancia y
-                sistemas de
-                copia de seguridad.
-                Algunos datos también se almacenan localmente en su dispositivo para el acceso offline y un rendimiento
-                más rápido.
-            </p>
+            <h2>5. Funciones de IA: qué se envía exactamente y a quién</h2>
+            <p>Selfinity tiene cuatro funciones de inteligencia artificial opcionales. Todas pasan por nuestro propio
+                servidor, que llama a la <strong>API Gemini de Google</strong> como encargado del tratamiento por cuenta
+                nuestra. <strong>Si nunca utiliza estas funciones, nada de lo descrito en esta sección llega a
+                    ocurrir.</strong></p>
 
             <div class="highlight-box">
-                <p><strong>Aviso Importante:</strong></p>
-                <p>
-                    A pesar de que implementamos sólidas medidas de seguridad, ningún sistema de almacenamiento
-                    electrónico es 100% seguro.
-                    No podemos garantizar una seguridad absoluta frente a accesos no autorizados, fallos de hardware u
-                    otras
-                    circunstancias imprevistas.
-                </p>
+                <p><strong>Una corrección respecto a versiones anteriores.</strong> Versiones anteriores de esta página
+                    y de nuestras Condiciones de Uso afirmaban que el texto sin procesar del diario o de los
+                    pensamientos nunca se enviaba a Google. Eso no era exacto para todas las funciones. La tabla
+                    siguiente es la descripción correcta, y hemos corregido esa afirmación allí donde aparecía.</p>
             </div>
 
-            <h2>6. Retención y Eliminación de Datos</h2>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th>Qué se envía a Google Gemini</th>
+                            <th>¿Se guarda en nuestros servidores?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Escaneo de comidas por foto</strong></td>
+                            <td>La foto de su comida (reducida a un máximo de 1024 píxeles), el idioma de la aplicación
+                                y, si corrige el resultado, la nota de corrección que escriba</td>
+                            <td>No. Solo conservamos un contador de cuántos escaneos ha usado ese día. La foto en sí no
+                                se almacena en nuestros servidores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Asistente Komorebi</strong></td>
+                            <td>Su conversación con el asistente (hasta los últimos 12 mensajes), los nombres de sus
+                                propias tareas y rutinas de cuidado personal para poder relacionar lo que usted
+                                describe, y la hora local de su dispositivo</td>
+                            <td>No. La conversación permanece en su dispositivo. Solo se guarda un contador de uso.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Análisis de pensamientos (TCC)</strong></td>
+                            <td>El pensamiento automático que escribió (hasta 2.000 caracteres) y las distorsiones
+                                cognitivas que seleccionó</td>
+                            <td>No. Solo un contador de uso.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Informe semanal con IA</strong></td>
+                            <td><strong>No su texto sin procesar.</strong> Nuestro servidor lee los datos de su propia
+                                semana y los convierte en resúmenes factuales (por ejemplo, "estado de ánimo registrado
+                                5 de 7 días, sueño medio 6 h 20 min") más palabras clave de temas recurrentes. Al modelo
+                                solo se le envía ese resumen derivado.</td>
+                            <td>Sí: el informe generado se guarda en su cuenta para que pueda releerlo más adelante.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-            <h3>6.1 Cuánto Tiempo Conservamos Sus Datos</h3>
             <ul>
-                <li><strong>Cuentas activas:</strong> Los datos se conservan mientras su cuenta esté activa</li>
-                <li><strong>Cuentas inactivas:</strong> Las cuentas inactivas durante más de 2 años pueden eliminarse
-                    previa notificación
+                <li>Google actúa como encargado del tratamiento por cuenta nuestra y no utiliza estos datos para
+                    entrenar sus modelos de propósito general.</li>
+                <li>Nuestra clave de API reside en nuestro servidor; la aplicación nunca se comunica directamente con la
+                    IA de Google.</li>
+                <li>El resultado de la IA es texto generado. Puede ser incorrecto y no constituye asesoramiento médico,
+                    psicológico, diagnóstico ni nutricional. Consulte nuestras <a href="terms-of-use-es.html">Condiciones
+                        de Uso</a>.</li>
+            </ul>
+
+            <h3>5.1 Análisis automático de seguridad</h3>
+            <p>Para reducir el riesgo de daño, nuestro servidor revisa automáticamente el texto libre que usted escribe
+                — entradas de diario, pensamientos rápidos, registros de pensamiento, notas de estado de ánimo, notas
+                del Registro de Vida y mensajes al asistente — en busca de patrones que sugieran autolesión o una
+                crisis de salud mental. Cuando un patrón coincide, la aplicación cambia lo que le muestra; por ejemplo,
+                ofrece recursos de apoyo en lugar de una respuesta generada.</p>
+            <ul>
+                <li>La comprobación es una coincidencia de patrones automatizada que se ejecuta en nuestro propio
+                    servidor. Nadie de Mindoria Studio lee sus entradas como parte de ella.</li>
+                <li>No avisamos a ningún tercero, servicio de emergencia ni contacto suyo.</li>
+                <li>No se construye ningún perfil ni registro permanente sobre usted a partir de estas coincidencias.
                 </li>
-                <li><strong>Cuentas eliminadas:</strong> Los datos se eliminan de forma permanente en un plazo de 30
-                    días posteriores a la eliminación de la cuenta
-                </li>
-                <li><strong>Obligaciones legales:</strong> Algunos datos pueden conservarse por más tiempo si lo exige
-                    la ley</li>
             </ul>
-
-            <h3>6.2 Cómo Solicitar la Eliminación de Datos</h3>
-            <p>Tiene derecho a solicitar la eliminación de su cuenta y sus datos personales en cualquier momento:</p>
             <div class="highlight-box">
-                <p><strong>Proceso de Solicitud de Eliminación de Datos:</strong></p>
-                <ol>
-                    <li>Envíe un correo electrónico a: <a
-                            href="mailto:hello@getselfinity.com">hello@getselfinity.com</a></li>
-                    <li>Asunto: <strong>"Solicitud de Eliminación de Datos"</strong></li>
-                    <li>Incluya su dirección de correo electrónico registrada</li>
-                    <li>Procesaremos su solicitud en un plazo de 30 días</li>
-                    <li>Recibirá una confirmación una vez que la eliminación se haya completado</li>
-                </ol>
-                <p><strong>Nota:</strong> Esta acción es permanente y no se puede deshacer. Todos sus datos, incluyendo
-                    las entradas de diario, su progreso y sus logros, serán eliminados permanentemente.</p>
+                <p><strong>Selfinity no es un servicio de emergencia y no puede enviarle ayuda.</strong> Si está en
+                    peligro o en crisis, contacte de inmediato con el número de emergencias de su país o con una línea
+                    de ayuda en crisis.</p>
             </div>
 
-            <h2>7. Privacidad Infantil</h2>
+            <h2>6. Con quién compartimos sus datos</h2>
+            <p>No vendemos sus datos personales ni los compartimos para publicidad conductual entre contextos. Conforme
+                a la CCPA y la CPRA, no hemos vendido ni compartido información personal en los doce meses anteriores.
+                Solo utilizamos los encargados del tratamiento siguientes.</p>
+            <div class="table-scroll">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Destinatario</th>
+                            <th>Finalidad</th>
+                            <th>Qué recibe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Supabase</strong> (infraestructura alojada en Amazon Web Services)</td>
+                            <td>Alojamiento, base de datos, autenticación, almacenamiento de archivos y nuestras
+                                funciones de servidor</td>
+                            <td>Su cuenta y todo el contenido sincronizado — secciones 3.1 y 3.2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google</strong> (API Gemini)</td>
+                            <td>Las funciones de IA de la sección 5</td>
+                            <td>Únicamente lo que enumera la sección 5, y solo cuando usa esas funciones</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RevenueCat</strong></td>
+                            <td>Gestión de suscripciones</td>
+                            <td>Su identificador de usuario aleatorio y el estado de su suscripción en la tienda</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Apple</strong> y <strong>Google Play</strong></td>
+                            <td>Distribución de la aplicación, pago y facturación</td>
+                            <td>Los datos de compra y facturación que recogen directamente de usted</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Open Food Facts</strong> (base de datos alimentaria sin ánimo de lucro, Francia)
+                            </td>
+                            <td>Consultar información nutricional</td>
+                            <td>El código de barras que escanea o el término de alimento que busca. No se adjunta
+                                ningún identificador de cuenta ni dato personal.</td>
+                        </tr>
+                        <tr>
+                            <td>Reconocimiento de voz de <strong>Apple</strong> / <strong>Google</strong></td>
+                            <td>Convertir su dictado en texto</td>
+                            <td>El audio que dicta, tratado por el sistema operativo de su dispositivo y no por nosotros
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Además de estos casos, podemos revelar datos cuando estemos legalmente obligados a ello —por ejemplo,
+                ante una orden judicial válida o una obligación legal vinculante— o cuando sea necesario para formular,
+                ejercer o defender reclamaciones legales.</p>
 
-            <p>
-                Selfinity <strong>no está dirigida a niños menores de 13 años de edad</strong>. No recopilamos
-                conscientemente
-                información personal de niños menores de 13 años.
-            </p>
-            <p>
-                Si descubrimos que hemos recopilado inadvertidamente información de un niño menor de 13 años,
-                eliminaremos
-                esa información inmediatamente. Si cree que hemos recopilado información de un niño
-                menor de 13 años, comuníquese con nosotros a <a
-                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>.
-            </p>
-
-            <h2>8. Sus Derechos de Privacidad</h2>
-
-            <p>Dependiendo de su ubicación, puede tener los siguientes derechos:</p>
+            <h2>7. Lo que permanece solo en su dispositivo</h2>
+            <p>Lo siguiente se almacena en la base de datos local de la aplicación y <strong>nunca se sube a nuestros
+                    servidores</strong>:</p>
             <ul>
-                <li><strong>Acceso:</strong> Solicitar una copia de sus datos personales</li>
-                <li><strong>Corrección:</strong> Actualizar o corregir información inexacta</li>
-                <li><strong>Eliminación:</strong> Solicitar la eliminación de su cuenta y sus datos</li>
-                <li><strong>Portabilidad:</strong> Solicitar sus datos en un formato legible por máquina</li>
-                <li><strong>Objeción:</strong> Oponerse a ciertas actividades de procesamiento de datos</li>
-                <li><strong>Exclusión voluntaria (Opt-out):</strong> Cancelar la suscripción a comunicaciones de
-                    marketing</li>
+                <li>Entradas del buzón de preocupaciones</li>
+                <li>Resultados de autoevaluaciones y tests psicométricos</li>
+                <li>Sesiones de ejercicios de respiración</li>
+                <li>Su peso, estatura, año de nacimiento, sexo y nivel de actividad, utilizados únicamente para calcular
+                    sus objetivos de calorías y nutrición en el propio dispositivo</li>
+                <li>Los registros individuales de bebidas</li>
+                <li>Estado y estadísticas de los minijuegos (Sudoku, 2048, sopa de letras)</li>
+                <li>Historial de búsqueda e historial de reproducción</li>
+                <li>Contenido de audio que descargue para uso sin conexión</li>
+            </ul>
+            <p>Como estos datos existen solo en su dispositivo, desinstalar la aplicación los elimina de forma
+                permanente y no podemos restaurarlos.</p>
+
+            <h2>8. Fotos y archivos que sube</h2>
+            <p>Dos funciones suben imágenes a nuestro almacenamiento: el <strong>Tablero de Visión</strong> y el
+                <strong>Registro de Vida</strong>.
+            </p>
+            <div class="good-box">
+                <p><strong>Estas áreas de almacenamiento son privadas.</strong> A una imagen que usted sube solo puede
+                    accederse a través de su propia cuenta: para mostrarla, la aplicación genera un enlace firmado de
+                    corta duración que deja de funcionar al expirar. Sus imágenes no están en ninguna dirección que
+                    pueda abrirse sin iniciar sesión, y nunca las listamos, indexamos, publicamos ni compartimos.</p>
+                <p>Al eliminar el elemento dentro de la aplicación también se elimina el archivo subyacente.</p>
+            </div>
+            <p><strong>Corrección respecto a versiones anteriores:</strong> antes del 29 de julio de 2026 estas dos
+                áreas eran públicas y cualquiera que conociera la dirección exacta de una imagen podía abrirla sin
+                iniciar sesión. Ese acceso se cerró por completo el 29 de julio de 2026; todas las imágenes — incluidas
+                las subidas antiguas — se sirven ahora únicamente mediante los enlaces firmados descritos arriba. Las
+                versiones antiguas de la aplicación (5.1.x) no pueden generar enlaces firmados y podrían no mostrar
+                estas imágenes; basta con actualizar a la última versión.</p>
+            <p>Las fotos del escaneo de comidas funcionan de otra manera: se envían a Google para su análisis y no se
+                depositan en nuestro almacenamiento. Puede quedar una copia en la caché de la aplicación en su
+                dispositivo hasta que la borre.</p>
+
+            <h2>9. Cuánto tiempo conservamos los datos y cómo eliminarlos</h2>
+            <ul>
+                <li>Conservamos sus datos mientras exista su cuenta.</li>
+                <li><strong>Eliminar su cuenta desde la aplicación:</strong> abra <strong>Ajustes → Cuenta → Eliminar mi
+                        cuenta</strong>. Esto ejecuta una rutina de servidor que elimina de forma permanente su cuenta y
+                    sus datos. Es inmediato e irreversible, y no podemos deshacerlo.</li>
+                <li><strong>Eliminación por correo:</strong> escriba a <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> desde su dirección registrada con
+                    el asunto "Solicitud de eliminación de datos". Verificamos la solicitud y la completamos en un plazo
+                    de 30 días.</li>
+                <li><strong>Copias de seguridad:</strong> los datos pueden permanecer en copias cifradas hasta 90 días
+                    después de la eliminación, momento en el que se sobrescriben.</li>
+                <li><strong>Cuentas de invitado:</strong> una cuenta de invitado no tiene dirección de correo, por lo
+                    que no podemos identificarla si pierde el acceso al dispositivo. Elimínela desde dentro de la
+                    aplicación antes de desinstalarla, o conviértala primero en una cuenta completa.</li>
+                <li><strong>Eliminar su cuenta no cancela su suscripción.</strong> Cancélela en la App Store o en Google
+                    Play — véanse las <a href="terms-of-use-es.html">Condiciones de Uso</a>, sección 5.</li>
+                <li>Podemos conservar un registro mínimo de la solicitud de eliminación y los registros de transacción
+                    cuando la ley lo exija.</li>
             </ul>
 
-            <p>
-                Para ejercer cualquiera de estos derechos, póngase en contacto con nosotros en
-                <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>.
-            </p>
+            <h2>10. Sus derechos</h2>
+            <p>Viva donde viva, puede ejercer los derechos siguientes escribiendo a <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>. Respondemos en un plazo de 30 días,
+                no cobramos por ello y nunca le trataremos de forma distinta por ejercer un derecho.</p>
 
-            <h2>9. Transferencias Internacionales de Datos</h2>
-
-            <p>
-                Sus datos pueden transferirse a, y almacenarse en, servidores situados fuera de su país.
-                Aseguramos que existen las salvaguardas adecuadas para proteger sus datos de acuerdo con
-                esta Política de Privacidad y las leyes aplicables.
-            </p>
-
-            <h2>10. Cambios a Esta Política de Privacidad</h2>
-
-            <p>
-                Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestras
-                prácticas
-                o requisitos legales. Cuando realicemos cambios significativos, procederemos a:
-            </p>
+            <h3>10.1 Si se encuentra en el EEE o en el Reino Unido (RGPD / UK GDPR)</h3>
             <ul>
-                <li>Actualizar la "Última actualización" en la parte superior de esta política</li>
-                <li>Notificarle a través de la aplicación o por correo electrónico</li>
-                <li>Solicitar su consentimiento si la ley lo requiere</li>
+                <li>Acceso: obtener una copia de los datos personales que tenemos sobre usted</li>
+                <li>Rectificación: corregir datos inexactos o incompletos</li>
+                <li>Supresión: el "derecho al olvido"</li>
+                <li>Limitación del tratamiento</li>
+                <li>Portabilidad: recibir sus datos en un formato estructurado y legible por máquina</li>
+                <li>Oposición: oponerse al tratamiento basado en nuestro interés legítimo</li>
+                <li>Retirar el consentimiento en cualquier momento, sin que ello afecte al tratamiento ya realizado</li>
+                <li>Presentar una reclamación ante su autoridad de control nacional (en España, la Agencia Española de
+                    Protección de Datos)</li>
             </ul>
-            <p>
-                Le recomendamos revisar esta Política de Privacidad de forma periódica para mantenerse informado sobre
-                cómo protegemos su información.
+            <p>No tomamos decisiones que produzcan efectos jurídicos o similarmente significativos sobre usted
+                basándonos únicamente en medios automatizados.</p>
+
+            <h3>10.2 Si se encuentra en Türkiye (KVKK art. 11)</h3>
+            <ul>
+                <li>Saber si se tratan sus datos personales y solicitar información al respecto</li>
+                <li>Conocer la finalidad del tratamiento y si se usan conforme a ella</li>
+                <li>Conocer los terceros a los que se transfieren sus datos, dentro o fuera de Türkiye</li>
+                <li>Solicitar la corrección de datos incompletos o inexactos y su notificación a terceros</li>
+                <li>Solicitar la supresión o destrucción en las condiciones del art. 7, y su notificación a terceros
+                </li>
+                <li>Oponerse a un resultado obtenido exclusivamente mediante análisis automatizado que le perjudique
+                </li>
+                <li>Reclamar una indemnización por los daños derivados de un tratamiento ilícito</li>
+            </ul>
+
+            <h3>10.3 Si se encuentra en California (CCPA / CPRA)</h3>
+            <ul>
+                <li>Derecho a saber qué información personal recogemos, usamos y divulgamos</li>
+                <li>Derecho de supresión y derecho de rectificación</li>
+                <li>Derecho a excluirse de la venta o el intercambio de información personal: no hacemos ninguna de las
+                    dos cosas, así que no hay nada de lo que excluirse</li>
+                <li>Derecho a limitar el uso de información personal sensible</li>
+                <li>Derecho a no sufrir discriminación por ejercer estos derechos</li>
+            </ul>
+
+            <h3>10.4 En cualquier otro lugar</h3>
+            <p>Por decisión propia aplicamos los mismos derechos en todo el mundo, lo exija o no la legislación local.
             </p>
 
-            <h2>11. Contáctenos</h2>
-
-            <p>
-                Si tiene preguntas, inquietudes o solicitudes con respecto a esta Política de Privacidad o a nuestras
-                prácticas de manejo de datos, comuníquese con nosotros:
+            <h2>11. Transferencias internacionales de datos</h2>
+            <p>Tenemos nuestra sede en Türkiye y nuestros proveedores operan en la Unión Europea y en Estados Unidos.
+                Cuando sus datos cruzan una frontera nos apoyamos en las Cláusulas Contractuales Tipo de la Comisión
+                Europea (con el Anexo del Reino Unido cuando corresponde), en el Marco de Privacidad de Datos UE-EE. UU.
+                cuando el proveedor está certificado y, para las transferencias desde Türkiye, en su consentimiento
+                explícito conforme al art. 9 de la KVKK cuando no exista decisión de adecuación ni compromiso escrito.
             </p>
 
+            <h2>12. Privacidad de los menores</h2>
+            <p>Selfinity no está dirigida a menores de 13 años y no recogemos conscientemente datos personales de ellos.
+                Nuestras Condiciones de Uso exigen tener al menos 13 años y, si es menor de 18, necesita el permiso de
+                su madre, padre o tutor.</p>
+            <p>Cumplimos la Ley de Protección de la Privacidad Infantil en Línea de Estados Unidos (COPPA). En los
+                países donde la edad de consentimiento digital es superior a 13 años —hasta los 16 en partes de la Unión
+                Europea— se necesita autorización parental por debajo de esa edad.</p>
+            <p>Si cree que un menor nos ha facilitado datos personales, escriba a <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> y los eliminaremos sin demora.</p>
+
+            <h2>13. Seguridad</h2>
+            <ul>
+                <li>Todo el tráfico entre la aplicación y nuestros servidores usa HTTPS/TLS.</li>
+                <li>Los datos en reposo en nuestra infraestructura están cifrados.</li>
+                <li>Las políticas de seguridad a nivel de fila de nuestra base de datos restringen cada registro a la
+                    cuenta propietaria.</li>
+                <li>Los tokens de autenticación y otros valores sensibles se guardan en el Llavero de iOS y en las
+                    preferencias cifradas de Android, no en archivos planos.</li>
+                <li>El acceso a los datos de producción se limita a lo necesario para operar el servicio.</li>
+            </ul>
             <div class="highlight-box">
-                <p><strong>Información de Contacto:</strong></p>
+                <p><strong>Ningún sistema es perfectamente seguro.</strong> No podemos garantizar una seguridad absoluta
+                    y usted es responsable de mantener a salvo su contraseña y su dispositivo. Si detectamos una brecha
+                    que afecte a sus datos personales, se lo notificaremos a usted y a la autoridad de control
+                    competente según exija la ley.</p>
+            </div>
+
+            <h2>14. Cambios en esta política</h2>
+            <p>Actualizamos esta página cuando la aplicación cambia y modificamos la fecha de entrada en vigor que
+                figura arriba. Ante cambios significativos se lo notificaremos en la aplicación o por correo electrónico
+                antes de que surtan efecto. Seguir usando Selfinity después de un cambio significa que acepta la
+                política actualizada.</p>
+
+            <h3>14.1 Versiones 5.1.x y anteriores (solo Android)</h3>
+            <p>Las versiones antiguas de Selfinity para Android se comportaban de otra manera. Esta sección se mantiene
+                para quienes aún no han actualizado:</p>
+            <ul>
+                <li>Mostraban anuncios de <strong>Google AdMob</strong> a los usuarios sin Premium y recogían un
+                    identificador publicitario con ese fin.</li>
+                <li>Usaban <strong>Firebase Analytics</strong> para estadísticas de uso y <strong>Firebase Cloud
+                        Messaging</strong> para notificaciones push.</li>
+                <li>Leían datos de pasos y actividad a través de <strong>Google Health Connect</strong>.</li>
+                <li>Las suscripciones se vendían directamente mediante la facturación de Google Play, sin RevenueCat.
+                </li>
+            </ul>
+            <p>Desde la versión 5.2.0 se han eliminado de la aplicación toda la publicidad, todos los SDK de analítica y
+                toda la mensajería push, y el recuento de pasos usa el sensor del propio dispositivo en lugar de Health
+                Connect. Si todavía usa una versión antigua, actualizar la aplicación le lleva a las prácticas descritas
+                en esta política.</p>
+
+            <div class="contact-box">
+                <h2>15. Contacto</h2>
                 <p>
+                    <strong>Desarrollador y responsable del tratamiento:</strong> Mindoria Studio<br>
+                    <strong>País:</strong> Türkiye<br>
+                    <strong>Aplicación:</strong> Selfinity — Mente y Desarrollo<br>
                     <strong>Correo electrónico:</strong> <a
                         href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
-                    <strong>Aplicación:</strong> Selfinity: Mind & Development<br>
-                    <strong>Desarrollador:</strong> Mindoria Studio<br>
-                    <strong>Tiempo de respuesta:</strong> Nuestro objetivo es responder en un plazo de 48 horas
+                    <strong>Sitio web:</strong> <a href="https://getselfinity.com">getselfinity.com</a>
                 </p>
+                <p>Respondemos a las solicitudes de privacidad y de derechos en un plazo de 30 días, y a las preguntas
+                    generales normalmente en 48 horas.</p>
             </div>
 
             <div class="nav-links">
-                <a href="index-es.html">← Volver al Inicio</a>
-                <a href="terms-of-use-es.html">Términos de Uso →</a>
+                <a href="index-es.html">← Inicio</a>
+                <a href="terms-of-use-es.html">Condiciones de Uso →</a>
+                <a href="privacy-policy.html">Türkçe</a>
+                <a href="privacy-policy-en.html">English</a>
             </div>
         </div>
     </div>
 
     <script>
-        // Cambiar a modo oscuro
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
 
-        // Comprobar la preferencia guardada o por defecto a 'light'
-        if (!localStorage.getItem('theme')) {
-            localStorage.setItem('theme', 'light');
-        }
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
         themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     </script>
 </body>

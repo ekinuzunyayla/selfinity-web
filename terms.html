@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Selfinity</title>
+    <meta name="description" content="Selfinity's terms of use, in Turkish, English and Spanish.">
+    <meta name="theme-color" content="#834CCA">
+    <!-- Short URL for the terms of use. The real documents are per-language;
+         this page points at the right one instead of duplicating them. -->
+    <link rel="canonical" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html">
+    <script>
+        (function () {
+            try {
+                var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+                var target = lang.indexOf('tr') === 0 ? 'terms-of-use.html'
+                    : lang.indexOf('es') === 0 ? 'terms-of-use-es.html'
+                        : 'terms-of-use-en.html';
+                window.location.replace(target);
+            } catch (e) { /* fall through to the links below */ }
+        })();
+    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #F5F3FF;
+            --bg-secondary: #FFFFFF;
+            --text-primary: #1A1921;
+            --text-secondary: #4A4655;
+            --accent-start: #834CCA;
+            --accent-end: #9D92FF;
+            --border-color: #E9E0F6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-primary: #171426;
+                --bg-secondary: #0C0A14;
+                --text-primary: #E6E4F2;
+                --text-secondary: #C9C6D6;
+                --accent-start: #9D92FF;
+                --accent-end: #B9A6FF;
+                --border-color: #231F3A;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            background: var(--bg-primary);
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(131, 76, 202, 0.14);
+            padding: 44px 36px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Manrope', 'Nunito', sans-serif;
+            font-size: 1.6em;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .links a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 24px;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .links a:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-start);
+        }
+
+        .links .code {
+            font-size: 0.8em;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent-start);
+        }
+
+        .home {
+            display: inline-block;
+            margin-top: 26px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <h1>Selfinity — Terms of Use</h1>
+        <p>Kullanım Koşulları · Condiciones de Uso</p>
+        <nav class="links">
+            <a href="terms-of-use.html" hreflang="tr" lang="tr"><span>Türkçe</span><span class="code">TR</span></a>
+            <a href="terms-of-use-en.html" hreflang="en" lang="en"><span>English</span><span class="code">EN</span></a>
+            <a href="terms-of-use-es.html" hreflang="es" lang="es"><span>Español</span><span class="code">ES</span></a>
+        </nav>
+        <a class="home" href="/">getselfinity.com</a>
+    </main>
+</body>
+
+</html>

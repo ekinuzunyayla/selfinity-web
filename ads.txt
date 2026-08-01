@@ -1,0 +1,13 @@
+# ads.txt — Authorized Digital Sellers (IAB Tech Lab spec)
+# https://iabtechlab.com/wp-content/uploads/2022/04/Ads.txt-1.1.pdf
+#
+# Selfinity bir mobil uygulama olduğu için AdMob crawler'ı asıl `app-ads.txt`
+# dosyasını kullanır (Google Play'deki developer website URL'i üzerinden).
+# Bu `ads.txt` yalnızca web display reklamları içindir; getselfinity.com
+# reklam satmıyor. Dosya defansif olarak duruyor, çünkü bazı validator'lar
+# her iki dosyayı da kontrol eder ve eksikliğini uyarı olarak raporlar.
+#
+# Yayıncı satırı app-ads.txt ile aynıdır (aynı AdMob hesabı).
+# Sürüm durumu ve ne zaman kaldırılabileceği için app-ads.txt'e bakın.
+
+google.com, pub-3834148733890519, DIRECT, f08c47fec0942fa0

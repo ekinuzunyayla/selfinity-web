@@ -5,28 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selfinity - Kullanım Koşulları</title>
+    <meta name="description"
+        content="Selfinity Kullanım Koşulları: hesaplar, içerikleriniz, App Store ve Google Play abonelikleri, yapay zekâ özellikleri, tıbbi uyarı ve hesap sonlandırma.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://getselfinity.com/terms-of-use.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#834CCA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F8F9FA;
-            --text-primary: #1A1A1A;
-            --text-secondary: #6B7280;
-            --accent-start: #667eea;
-            --accent-end: #764ba2;
-            --border-color: #E5E7EB;
-            --highlight-bg: #FFF3CD;
-            --highlight-border: #FFC107;
+            --font-head: 'Manrope', 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            /* zemin & yüzeyler — hepsi OPAK, kartlarda rgba yasak */
+            --bg: #FFFFFF; --card: #F5F3FF; --chip-wash: #E9E0F6; --container: #BEA4E5; --border: #E9E0F6;
+            --primary: #834CCA; --secondary: #A680DB; --on-primary: #FFFFFF;
+            --text: #1A1921; --muted: #7D7A8A; --success: #52B788;   /* saf siyah yasak */
+            /* radius — Golden Shape Rule: yalnız bu üçü + 28px CTA istisnası */
+            --r-bento: 24px; --r-comp: 16px; --r-micro: 8px; --r-cta: 28px;
+            /* gölgeler — açık temada asla gri/siyah */
+            --shadow-card: 0 4px 12px rgba(131,76,202,.20), 0 2px 6px rgba(131,76,202,.10);
+            --shadow-card-hover: 0 8px 24px rgba(131,76,202,.25), 0 2px 6px rgba(131,76,202,.12);
+            --shadow-btn: 0 2px 6px rgba(131,76,202,.06);
+            --grad-hero: linear-gradient(180deg, #F8F5FF 0%, #EDE7F6 55%, #D1C4E9 100%);
+            --grad-twilight: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+            --grad-cta: linear-gradient(90deg, #8C52FF 0%, #9D92FF 100%);
+            --grad-celebration: linear-gradient(135deg, #9B6DFF 0%, #7C4DFF 55%, #6B3FA0 100%);
+            --grad-gold: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
         }
 
         [data-theme="dark"] {
-            --bg-primary: #0F172A;
-            --bg-secondary: #1E293B;
-            --text-primary: #F8FAFC;
-            --text-secondary: #E2E8F0;
-            /* Brighter, almost white for better readability in dark mode */
-            --border-color: #334155;
-            --highlight-bg: #422006;
-            --highlight-border: #FFC107;
+            --bg: #0C0A14; --card: #171426; --chip-wash: #231F3A; --container: #231F3A; --border: #231F3A;
+            --primary: #9D92FF; --secondary: #A680DB;
+            --on-primary: #1A1921;   /* lavanta üstünde koyu metin — beyaz AA'yı geçemez */
+            --text: #E6E4F2; --muted: #8B869C; --success: #52B788;   /* saf beyaz yasak */
+            /* karanlıkta siyah gölge yok — ton farkı + %4 lavanta glow */
+            --shadow-card: 0 0 0 1px rgba(157,146,255,.06), 0 6px 20px rgba(157,146,255,.04);
+            --shadow-card-hover: 0 0 0 1px rgba(157,146,255,.10), 0 8px 28px rgba(157,146,255,.06);
+            --shadow-btn: 0 0 0 1px rgba(157,146,255,.08);
+            --grad-hero: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+        }
+
+        /* yasal sayfa ekleri: vurgu kutuları + uzun metin gövde rengi */
+        :root {
+            --highlight-bg: #FFF6DC;
+            --highlight-border: #F2A93B;
+            --good-bg: #E5F5EC;
+            --good-border: #52B788;
+            --text-body: #4A4655;
+        }
+
+        [data-theme="dark"] {
+            --highlight-bg: #2E2410;
+            --highlight-border: #F2A93B;
+            --good-bg: #12281C;
+            --good-border: #52B788;
+            --text-body: #C9C6D6;
         }
 
         * {
@@ -36,10 +77,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.8;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
+            color: var(--text-body);
+            background: var(--bg);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -51,55 +92,48 @@
 
         .header,
         header {
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
+            background: var(--grad-twilight);
+            color: #E6E4F2;
             padding: 60px 40px;
-            border-radius: 16px;
+            border-radius: var(--r-bento);
             margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
         }
 
         h1 {
+            font-family: var(--font-head);
             font-size: 3em;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
-            color: white;
+            color: #E6E4F2;
             background: none;
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: #E6E4F2;
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.95;
-            color: white;
-        }
-
-        header .last-updated {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9em;
-            margin-top: 10px;
-            background: transparent;
-            border: none;
-            padding: 0;
+            color: #E6E4F2;
         }
 
         .content {
-            background: var(--bg-primary);
+            background: var(--card);
             padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: var(--r-bento);
+            box-shadow: var(--shadow-card);
             transition: background-color 0.3s ease;
         }
 
         h2 {
-            color: var(--accent-start);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 50px;
             margin-bottom: 20px;
             font-size: 2em;
             font-weight: 700;
             padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-start);
+            border-bottom: 3px solid var(--primary);
         }
 
         h2:first-of-type {
@@ -107,7 +141,8 @@
         }
 
         h3 {
-            color: var(--accent-end);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -116,18 +151,18 @@
 
         p {
             margin: 15px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         .last-updated {
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-style: italic;
             margin-bottom: 40px;
             padding: 20px;
-            background: var(--bg-secondary);
-            border-left: 5px solid var(--accent-start);
-            border-radius: 8px;
+            background: var(--chip-wash);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--r-micro);
             font-size: 1.05em;
         }
 
@@ -138,37 +173,103 @@
 
         li {
             margin: 12px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         li strong {
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box {
             background: var(--highlight-bg);
             padding: 25px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin: 30px 0;
             border-left: 5px solid var(--highlight-border);
         }
 
-        .highlight-box p {
+        .highlight-box p,
+        .highlight-box li {
             margin: 10px 0;
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box strong {
-            color: var(--text-primary);
+            color: var(--text);
+        }
+
+        .good-box {
+            background: var(--good-bg);
+            padding: 25px;
+            border-radius: var(--r-comp);
+            margin: 30px 0;
+            border-left: 5px solid var(--good-border);
+        }
+
+        .good-box p,
+        .good-box li {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        .good-box strong {
+            color: var(--text);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 25px 0;
+            border-radius: var(--r-comp);
+            border: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .table-scroll {
+            border-color: var(--chip-wash);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            min-width: 560px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        [data-theme="dark"] .data-table th,
+        [data-theme="dark"] .data-table td {
+            border-bottom-color: var(--chip-wash);
+        }
+
+        .data-table th {
+            background: var(--chip-wash);
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table td strong {
+            color: var(--text);
         }
 
         .contact-box {
-            background: var(--bg-secondary);
+            background: var(--chip-wash);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin-top: 50px;
-            border-left: 5px solid var(--accent-start);
+            border-left: 5px solid var(--primary);
         }
 
         .contact-box h2 {
@@ -177,7 +278,7 @@
         }
 
         a {
-            color: var(--accent-start);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s ease;
@@ -192,18 +293,49 @@
             display: inline-block;
             margin-top: 40px;
             padding: 15px 40px;
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
-            border-radius: 50px;
+            background: var(--grad-cta);
+            color: #FFFFFF;
+            border-radius: var(--r-comp);
             text-decoration: none;
-            font-weight: 600;
+            font-family: var(--font-head);
+            font-weight: 700;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: var(--shadow-card);
         }
 
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            box-shadow: var(--shadow-card-hover);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-links {
+            border-top-color: var(--chip-wash);
+        }
+
+        .nav-links a {
+            padding: 10px 22px;
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
             text-decoration: none;
             opacity: 1;
         }
@@ -213,25 +345,36 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 6px;
         }
 
         .lang-switcher a {
             display: inline-block;
-            padding: 10px 24px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            padding: 10px 16px;
+            background: var(--card);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            box-shadow: var(--shadow-btn);
             transition: all 0.3s ease;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--border);
         }
 
         .lang-switcher a:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
             opacity: 1;
+            text-decoration: none;
+        }
+
+        .lang-switcher a.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: transparent;
         }
 
         .theme-toggle {
@@ -239,9 +382,9 @@
             top: 20px;
             left: 20px;
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
@@ -250,12 +393,12 @@
             cursor: pointer;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         /* Fixed Back Button */
@@ -265,24 +408,24 @@
             left: 80px;
             /* offset from theme toggle */
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
+            color: var(--text);
             text-decoration: none;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .back-btn-fixed:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         @media (max-width: 768px) {
@@ -298,6 +441,7 @@
             .header,
             header {
                 padding: 40px 30px;
+                margin-top: 60px;
             }
 
             h1 {
@@ -332,6 +476,11 @@
             .lang-switcher {
                 right: 10px;
             }
+
+            .lang-switcher a {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -339,12 +488,14 @@
 <body>
     <a href="index-tr.html" class="back-btn-fixed" aria-label="Geri Dön">←</a>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <button class="theme-toggle" id="themeToggle" aria-label="Temayı değiştir">
         <span id="themeIcon">🌙</span>
     </button>
 
     <div class="lang-switcher">
-        <a href="terms-of-use-en.html">English</a>
+        <a href="terms-of-use.html" class="active" hreflang="tr" aria-current="page">TR</a>
+        <a href="terms-of-use-en.html" hreflang="en">EN</a>
+        <a href="terms-of-use-es.html" hreflang="es">ES</a>
     </div>
 
     <div class="container">
@@ -355,383 +506,421 @@
 
         <div class="content">
             <div class="last-updated">
-                <strong>Yürürlük Tarihi:</strong> 9 Ocak 2025
+                <strong>Yürürlük tarihi:</strong> 29 Temmuz 2026<br>
+                <strong>Kapsam:</strong> Android ve iOS için Selfinity uygulaması ve getselfinity.com web sitesi.
             </div>
 
-            <h2>1. Giriş ve Kabul</h2>
-            <p>
-                <strong>Mindoria Studio</strong> tarafından geliştirilen bir kişisel gelişim mobil uygulaması
-                olan <strong>Selfinity</strong>'ye hoş geldiniz. Selfinity'yi indirerek, yükleyerek veya
-                kullanarak bu Kullanım Koşulları'nı ("Koşullar") kabul etmiş olursunuz. Bu Koşulları kabul
-                etmiyorsanız, lütfen uygulamayı kullanmayın.
-            </p>
-            <p>
-                Bu Koşullar, sizinle ("Kullanıcı") ve Mindoria Studio ("Şirket," "biz," "bizim," veya
-                "bize") arasında yasal bir anlaşma oluşturur. Bu Koşulları istediğimiz zaman güncelleme
-                hakkımızı saklı tutarız ve değişiklikler yayınlandıktan sonra uygulamayı kullanmaya devam
-                etmeniz, değiştirilmiş Koşulların kabulü anlamına gelir.
-            </p>
+            <h2>1. Giriş ve kabul</h2>
+            <p>Bu Kullanım Koşulları ("Koşullar"), Türkiye merkezli <strong>Mindoria Studio</strong> ("Mindoria Studio",
+                "biz") ile sizin aranızdaki, Android ve iOS için Selfinity mobil uygulamasının ve getselfinity.com
+                sitesinin (birlikte "Hizmet") kullanımını düzenleyen hukuki bir sözleşmedir.</p>
+            <p>Hesap oluşturarak, misafir olarak devam ederek veya başka bir şekilde Hizmet'i kullanarak, bu Koşulları
+                ve <a href="privacy-policy.html">Gizlilik Politikamızı</a> okuduğunuzu, anladığınızı ve kabul ettiğinizi
+                beyan etmiş olursunuz. Kabul etmiyorsanız Hizmet'i kullanmayın.</p>
 
-            <h2>2. Hizmetlerin Açıklaması</h2>
-            <p>
-                Selfinity, aşağıdaki özellikleri sağlayan kapsamlı bir kişisel gelişim platformudur:
-            </p>
+            <h2>2. Hizmet'in tanımı</h2>
+            <p>Selfinity bir kişisel iyi oluş ve gelişim uygulamasıdır. Planınıza ve platformunuza bağlı olarak şunları
+                sunar:</p>
             <ul>
-                <li><strong>Alışkanlık Takibi:</strong> Seri takibi ve hatırlatıcılarla günlük pozitif alışkanlıkları
-                    izleyin ve oluşturun</li>
-                <li><strong>Zihinsel Sağlık Egzersizleri:</strong> Meditasyon seansları, nefes egzersizleri ve
-                    farkındalık aktivitelerine erişin</li>
-                <li><strong>Günlük ve Düşünce Kayıtları:</strong> Özel günlükler, ruh hali kayıtları ve bilişsel
-                    davranışçı terapi (BDT) düşünce kayıtları tutun</li>
-                <li><strong>Yapay Zeka Destekli Rehberlik:</strong> Google Gemini AI destekli kişiselleştirilmiş
-                    içgörüler ve motivasyon mesajları alın</li>
-                <li><strong>Oyunlaştırma Özellikleri:</strong> Tutarlı katılım yoluyla ödüller kazanın, başarıların
-                    kilidini açın ve seviye atlayın</li>
-                <li><strong>Vizyon Panoları:</strong> Hedef ve özlemlerin görsel temsillerini oluşturun</li>
-                <li><strong>Uyku ve Su Takibi:</strong> Uyku kalitesini ve günlük hidrasyonu izleyin</li>
-                <li><strong>Google Health Connect Entegrasyonu:</strong> Adım sayısı verilerini senkronize edin (isteğe
-                    bağlı)</li>
-                <li><strong>Premium İçerik:</strong> Abonelik yoluyla özel özelliklere erişin</li>
+                <li>Alışkanlık, ruh hâli, uyku, su, beslenme, adım ve kişisel bakım takibi</li>
+                <li>Günlük tutma ("Sihirli Sayfalar"), şükran girdileri ve haftalık değerlendirmeler</li>
+                <li>BDT esinli araçlar: düşünce kayıtları, düşünce envanteri ve endişe kutusu</li>
+                <li>Rehberli meditasyonlar, nefes egzersizleri ve ses manzaraları</li>
+                <li>Rehberler, hikâyeler ve günlük ilham içerikleri</li>
+                <li>Google Gemini destekli isteğe bağlı yapay zekâ özellikleri — öğün fotoğrafı taraması, Komorebi
+                    asistanı, düşünce analizi ve haftalık rapor (bölüm 8.1)</li>
+                <li>Oyunlaştırma: deneyim puanı, seviyeler, seriler, elmaslar, başarımlar, görevler, bahçe ve mini
+                    oyunlar</li>
+                <li>Vizyon panosu, Akış (Life Log), odak ve Pomodoro seansları ve öz değerlendirme testleri</li>
+                <li>Arkadaşlarla bağlantı kurmak için isteğe bağlı sosyal özellikler</li>
+                <li>Ana ekran widget'ları ve cihazda planlanan hatırlatıcılar</li>
             </ul>
 
             <div class="highlight-box">
-                <p><strong>Önemli Tıbbi Sorumluluk Reddi:</strong></p>
-                <p>
-                    Selfinity bir tıbbi cihaz DEĞİLDİR ve profesyonel tıbbi veya psikolojik tavsiye,
-                    teşhis veya tedavi SAĞLAMAZ. Uygulama yalnızca genel sağlık ve kişisel gelişim
-                    amaçları için tasarlanmıştır. Ciddi zihinsel sağlık sorunları yaşıyorsanız, lütfen
-                    nitelikli bir sağlık uzmanına danışın.
+                <p><strong>Tıbbi uyarı — lütfen okuyun.</strong> Selfinity genel amaçlı bir iyi oluş ve kişisel gelişim
+                    ürünüdür. <strong>Tıbbi cihaz değildir</strong>; hiçbir hastalığı veya durumu teşhis etmez, tedavi
+                    etmez, iyileştirmez, önlemez ve profesyonel tıbbi, psikiyatrik, psikolojik, beslenme veya terapi
+                    desteğinin yerini tutmaz.</p>
+                <p>Uygulamadaki BDT esinli egzersizler, öz değerlendirme testleri, beslenme tahminleri, uyku ve adım
+                    değerleri, iyi oluş skorları ve yapay zekâ üretimi metinler bilgilendirme amaçlıdır ve yanlış
+                    olabilir. Selfinity'de okuduğunuz bir şey yüzünden profesyonel tavsiyeyi göz ardı etmeyin veya
+                    almayı ertelemeyin. Tıbbi ya da ruh sağlığıyla ilgili bir konuda daima nitelikli bir uzmana danışın.
+                </p>
+                <p><strong>Selfinity bir acil durum hizmeti değildir.</strong> Acil bir durumu güvenilir biçimde tespit
+                    edemez ve yardım çağıramaz. Kriz hâlindeyseniz ya da tehlikedeyseniz hemen yerel acil durum
+                    numaranızı veya bir kriz destek hattını arayın; Türkiye'de <strong>112</strong>'yi arayabilirsiniz.
                 </p>
             </div>
 
-            <h2>3. Kullanıcı Hesapları</h2>
+            <h2>3. Kullanıcı hesapları</h2>
 
-            <h3>3.1 Hesap Oluşturma</h3>
-            <p>Selfinity'yi kullanmak için şu yollarla bir hesap oluşturmalısınız:</p>
+            <h3>3.1 Hesap oluşturma</h3>
+            <p>Selfinity'yi e-posta ve şifreyle, Google ile girerek, Apple ile girerek veya misafir olarak
+                kullanabilirsiniz.</p>
             <ul>
-                <li>Geçerli bir e-posta adresi ve şifre sağlama, VEYA</li>
-                <li>Google OAuth ile giriş yapma (Google ile Giriş Yap)</li>
+                <li>Doğru bilgi vermeli ve bilgilerinizi güncel tutmalısınız.</li>
+                <li><strong>Misafir hesaplar</strong> kayıt olmadan uygulamayı kullanmanızı sağlar. Misafir hesabın
+                    e-posta adresi yoktur; bu nedenle uygulamayı kaldırırsanız, cihazınızı kaybederseniz veya cihaz
+                    değiştirirseniz kurtarılamaz ve biz de sizin için geri getiremeyiz. Misafir hesabı dilediğiniz an,
+                    verilerinizi koruyarak tam hesaba dönüştürebilirsiniz.</li>
+                <li>Yazılı olarak aksini kararlaştırmadıkça kişi başına yalnızca bir hesap tutabilirsiniz.</li>
             </ul>
 
-            <h3>3.2 Hesap Uygunluğu</h3>
+            <h3>3.2 Yaş ve uygunluk</h3>
             <ul>
-                <li>Hesap oluşturmak için en az 13 yaşında olmalısınız</li>
-                <li>18 yaşın altındaki kullanıcılar ebeveyn veya vasi onayı gerektirir</li>
-                <li>Doğru ve gerçek bilgiler sağlamalısınız</li>
-                <li>Şifrenizin gizliliğini korumaktan siz sorumlusunuz</li>
+                <li>Selfinity'yi kullanmak için en az <strong>13 yaşında</strong> olmalısınız.</li>
+                <li>18 yaşın altındaysanız, bu Koşulları sizin adınıza kabul eden bir ebeveyn veya yasal vasinin izni
+                    gerekir.</li>
+                <li>Ülkenizde dijital rıza yaşı 13'ten yüksekse, bir ebeveyn veya vasi izin vermedikçe o yüksek yaş
+                    geçerlidir.</li>
+                <li>Ülkenizin mevzuatı uyarınca Hizmet'i kullanmanız yasaklanmış olmamalıdır.</li>
             </ul>
 
-            <h3>3.3 Hesap Sorumluluğu</h3>
-            <p>
-                Hesabınız altında gerçekleştirilen tüm aktivitelerden yalnızca siz sorumlusunuz. Hesabınıza
-                yetkisiz erişimden şüpheleniyorsanız, derhal hello@getselfinity.com adresinden bizi
-                bilgilendirmeli ve şifrenizi değiştirmelisiniz.
+            <h3>3.3 Hesabınıza ilişkin sorumluluğunuz</h3>
+            <ul>
+                <li>Şifrenizi gizli tutmaktan ve hesabınız altında gerçekleşen tüm etkinlikten siz sorumlusunuz.</li>
+                <li>Yetkisiz bir kullanımdan şüphelenirseniz gecikmeden <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresine bildirin.</li>
+                <li>Cihazınızdan ve operatörünüzün veya platformun uyguladığı ücretlerden siz sorumlusunuz.</li>
+            </ul>
+
+            <h2>4. İçerikleriniz</h2>
+
+            <h3>4.1 İçeriğiniz size aittir</h3>
+            <p>Selfinity'de yazdığınız, kaydettiğiniz veya yüklediğiniz her şey — günlük yazıları, ruh hâli kayıtları,
+                düşünce kayıtları, şükran notları, fotoğraflar, vizyon panoları ve diğerleri — sizin kalır. Bunlar
+                üzerinde hiçbir mülkiyet iddiamız yoktur.</p>
+
+            <h3>4.2 Bize verdiğiniz lisans</h3>
+            <p>Hizmet'in çalışabilmesi için Mindoria Studio'ya, yalnızca Hizmet'i size sunmak amacıyla, içeriğinizi
+                barındırma, saklama, yedekleme, çoğaltma, iletme ve görüntüleme konusunda dünya çapında, münhasır
+                olmayan ve telifsiz bir lisans verirsiniz. Somut olarak bu şu anlama gelir:</p>
+            <ul>
+                <li>içeriğinizin altyapımızda (Amazon Web Services üzerinde barındırılan Supabase) saklanması ve
+                    cihazlarınıza senkronlanması;</li>
+                <li><strong>yalnızca ve yalnızca bir yapay zekâ özelliğini kullandığınızda</strong>, ilgili içeriğin
+                    işlenmek üzere Google'ın Gemini API'sine iletilmesi — bölüm 8.1 ve <a
+                        href="privacy-policy.html">Gizlilik Politikası</a>'nın 5. bölümünde açıklandığı gibi;</li>
+                <li>istatistiklerinizin, geçmişinizin ve haftalık raporlarınızın üretilmesi.</li>
+            </ul>
+            <p>Bu lisans Hizmet'i işletmekle sınırlıdır. İçeriğinizi satmayız, reklam için kullanmayız ve yayımlamayız.
+                İçeriği veya hesabınızı sildiğinizde sona erer; yalnızca Gizlilik Politikası'nda anlatıldığı gibi şifreli
+                yedeklerde kısa süre kalan kopyalar bunun dışındadır.</p>
+
+            <h3>4.3 İçerik standartları</h3>
+            <p>Selfinity büyük ölçüde özel bir alandır; ancak içeriğin başka kişilere ulaşabildiği yerlerde — örneğin
+                görünen ad veya profil — hukuka aykırı, hak ihlali oluşturan, nefret içeren, taciz edici, cinsel açıdan
+                açık ya da bir başkasının kimliğine bürünen içerik gönderemezsiniz.</p>
+
+            <h2>5. Abonelikler ve ödemeler</h2>
+
+            <h3>5.1 Ücretsiz ve Premium</h3>
+            <p>Selfinity ücretsiz bir katman ve ücretli bir <strong>Premium</strong> abonelik sunar. Premium ek
+                içerikleri ve özellikleri açar, yapay zekâ özelliklerindeki kullanım sınırlarını yükseltir veya
+                kaldırır. Ücretsiz katmanda <strong>reklam yoktur</strong>. Her katmanın kapsamını değiştirebiliriz; bir
+                değişiklik ödediğiniz şeyi esaslı biçimde azaltıyorsa makul bir süre önce bildiririz.</p>
+
+            <h3>5.2 Faturalandırma, otomatik yenileme ve iptal</h3>
+            <p>Premium, iOS'ta App Store üzerinden <strong>Apple</strong>, Android'de Google Play üzerinden
+                <strong>Google</strong> tarafından satılır ve faturalandırılır. Abonelik durumunu cihazlarınız arasında
+                yönetmek için <strong>RevenueCat</strong> kullanırız. Ödeme bilgilerinizi hiçbir zaman almaz ve
+                saklamayız.
             </p>
-
-            <h2>4. Kullanıcı Tarafından Oluşturulan İçerik</h2>
-
-            <h3>4.1 İçerik Sahipliği</h3>
-            <p>
-                Uygulama içinde oluşturduğunuz tüm içeriğin tam sahipliği size aittir:
-            </p>
             <ul>
-                <li>Günlük girişleri ve düşünce kayıtları</li>
-                <li>Notlar, afirmasyonlar ve minnettarlık günlükleri</li>
-                <li>Vizyon panosu görselleri ve açıklamaları</li>
-                <li>Kişisel hedefler ve alışkanlık takipçileri</li>
-                <li>Ruh hali kayıtları ve uyku verileri</li>
-            </ul>
-
-            <h3>4.2 Selfinity'ye Lisans Verme</h3>
-            <p>
-                Selfinity'de içerik oluşturarak, bize yalnızca uygulamanın hizmetlerini sağlamak amacıyla
-                içeriğinizi barındırmak, saklamak, işlemek ve görüntülemek için <strong>dünya çapında,
-                    münhasır olmayan, telif ücreti gerektirmeyen bir lisans</strong> vermiş olursunuz. Bu şunları
-                içerir:
-            </p>
-            <ul>
-                <li>Verilerinizi sunucularımızda (Supabase/AWS) saklamak</li>
-                <li>İçeriğinizi AI hizmetleri (Google Gemini) ile işleyerek kişiselleştirilmiş içgörüler oluşturmak</li>
-                <li>Verilerinizi cihazlarınız arasında senkronize etmek</li>
-            </ul>
-            <p>
-                <strong>Bu lisans, içeriğinizi sildiğinizde veya hesabınızı kapattığınızda sona erer.</strong>
-                Kişisel içeriğinizi reklam veya pazarlama amaçları için üçüncü taraflarla paylaşmıyoruz.
-            </p>
-
-            <h3>4.3 İçerik Standartları</h3>
-            <p>İçeriğiniz özel olsa da, şunları yüklememeyi kabul edersiniz:</p>
-            <ul>
-                <li>Yasaları veya düzenlemeleri ihlal eden içerik</li>
-                <li>Zararlı yazılım, virüs veya zararlı kod içeren içerik</li>
-                <li>Başkalarının fikri mülkiyet haklarını ihlal eden içerik</li>
-                <li>Onay olmadan başkalarının kişisel bilgilerini içeren içerik</li>
-            </ul>
-
-            <h2>5. Abonelikler ve Ödemeler</h2>
-
-            <h3>5.1 Ücretsiz ve Premium Seviyeler</h3>
-            <p>
-                Selfinity hem ücretsiz hem de premium (ücretli) abonelik seviyeleri sunar:
-            </p>
-            <ul>
-                <li><strong>Ücretsiz Seviye:</strong> Reklamlarla birlikte temel özelliklere erişim</li>
-                <li><strong>Premium Seviye:</strong> Özel özelliklerle (meditasyon kütüphaneleri, gelişmiş analizler,
-                    sınırsız AI içgörüleri) reklamsız deneyim</li>
-            </ul>
-
-            <h3>5.2 Abonelik Faturalandırması</h3>
-            <ul>
-                <li>Premium abonelikler, Google Play Faturalama aracılığıyla aylık veya yıllık olarak faturalandırılır
+                <li>Ödeme, satın alma onayında App Store veya Google Play hesabınızdan tahsil edilir.</li>
+                <li><strong>Abonelikler otomatik olarak yenilenir</strong>; mevcut dönemin bitiminden <strong>en az 24
+                        saat önce</strong> iptal etmezseniz o günkü fiyattan yenilenir. Yenileme ücreti, dönemin
+                    bitiminden önceki 24 saat içinde tahsil edilir.</li>
+                <li><strong>iOS'ta iptal:</strong> Ayarlar → adınız → Abonelikler → Selfinity → Aboneliği İptal Et.</li>
+                <li><strong>Android'de iptal:</strong> Google Play Store → Menü → Abonelikler → Selfinity → İptal Et.
                 </li>
-                <li><strong>Otomatik Yenileme:</strong> Abonelikler, yenileme tarihinden en az 24 saat önce iptal
-                    edilmedikçe otomatik olarak yenilenir</li>
-                <li>Aboneliğinizi istediğiniz zaman Google Play Store ayarlarından yönetebilir veya iptal edebilirsiniz
+                <li>İptal, bir sonraki yenilemeyi durdurur. Halihazırda ödediğiniz dönemin sonuna kadar Premium
+                    erişiminiz sürer.</li>
+                <li>Selfinity hesabınızı silmek aboneliğinizi <strong>iptal etmez</strong>. Aboneliği ayrıca mağazadan
+                    da iptal edin.</li>
+                <li>Bir platformda yapılan satın almalar diğerine aktarılamaz. Google Play'den alınan bir abonelik iOS
+                    cihazına geçmez; tersi de geçerlidir.</li>
+            </ul>
+
+            <h3>5.3 Ücretsiz deneme</h3>
+            <p>Ücretsiz deneme sunulduğu hâllerde, deneme süresi içinde abonelik satın alırsanız denemenin kullanılmayan
+                kısmı sona erer. Denemenin bitiminden en az 24 saat önce iptal etmezseniz, deneme otomatik olarak
+                ücretli aboneliğe dönüşür. Denemeye uygunluğu biz değil, Apple veya Google belirler.</p>
+
+            <h3>5.4 İade</h3>
+            <ul>
+                <li>Satıcı sıfatı Apple ve Google'da olduğundan, <strong>tüm iadeler kendi politikaları uyarınca onlar
+                        tarafından yürütülür</strong>. Bir mağaza iadesini biz veremez, zorlayamaz veya engelleyemeyiz.
                 </li>
-                <li>Aboneliği iptal etmek gelecek ödemeleri durdurur ancak mevcut faturalama dönemini iade etmez</li>
+                <li>iOS: reportaproblem.apple.com üzerinden iade talep edin. Android: Google Play üzerinden talep edin.
+                </li>
+                <li>Buradaki hiçbir hüküm, tüketici olarak sahip olduğunuz yasal iade veya cayma haklarını sınırlamaz —
+                    Avrupa Birliği ve Birleşik Krallık'taki 14 günlük cayma hakkı ile Türk tüketici mevzuatındaki
+                    haklarınız dâhil.</li>
+                <li>Bir mağaza iadesi bizim kontrolümüzdeki bir nedenle sonuçsuz kalırsa <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresine yazın, yardımcı
+                    oluruz.</li>
             </ul>
 
-            <h3>5.3 Ücretsiz Deneme</h3>
-            <p>
-                Premium özellikler için ücretsiz denemeler sunabiliriz. Deneme sona ermeden iptal etmezseniz,
-                aboneliğiniz otomatik olarak normal fiyattan ücretli plana dönüşecektir.
-            </p>
+            <h3>5.5 Fiyat değişiklikleri</h3>
+            <p>Abonelik fiyatlarını değiştirebiliriz. Fiyat değişikliği sizin için yalnızca bir sonraki yenilemeden
+                itibaren geçerli olur; mağaza sizi bilgilendirir ve gerekli hâllerde onayınızı ister. Yeni fiyatı kabul
+                etmiyorsanız yenileme tarihinden önce iptal edin.</p>
 
-            <h3>5.4 İade Politikası</h3>
-            <p>
-                Ödemeler, yasaların gerektirdiği veya Google Play Store politikalarının izin verdiği durumlar
-                dışında genellikle <strong>iade edilemez</strong>. İade talepleri için lütfen satın alma
-                tarihinden itibaren 7 gün içinde Google Play Store desteğiyle veya hello@getselfinity.com
-                ile iletişime geçin.
-            </p>
+            <h2>6. Fikrî mülkiyet</h2>
 
-            <h3>5.5 Fiyat Değişiklikleri</h3>
-            <p>
-                Abonelik fiyatlarını istediğimiz zaman değiştirme hakkımızı saklı tutarız. Fiyatlar artarsa,
-                sizi en az 30 gün önceden bilgilendireceğiz. Fiyat değişikliğinden sonra kullanmaya devam
-                etmeniz, yeni fiyatlandırmayı kabul ettiğiniz anlamına gelir.
-            </p>
+            <h3>6.1 Bize ait olanlar</h3>
+            <p>Hizmet — uygulama, kaynak kodu, tasarımı, markası, logosu, maskotları, illüstrasyonları, yazılı
+                rehberleri, hikâyeleri, meditasyon ve nefes sesleri, ses manzaraları ve sunduğumuz diğer tüm içerik —
+                Mindoria Studio'ya veya lisans verenlerine aittir ve telif hakkı, marka ve diğer mevzuatla korunur. Bu
+                Koşullardaki hiçbir hüküm bu hakları size devretmez.</p>
+            <p>Size, bu Koşullara uygun olarak Hizmet'i kendi ticari olmayan amaçlarınız için kullanmanız üzere kişisel,
+                sınırlı, münhasır olmayan, devredilemez ve geri alınabilir bir lisans veriyoruz.</p>
 
-            <h2>6. Fikri Mülkiyet Hakları</h2>
-
-            <h3>6.1 Şirkete Ait İçerik</h3>
-            <p>
-                Selfinity içinde sağlanan tüm materyaller—uygulama tasarımı, kod, grafikler, logolar,
-                meditasyon sesleri, rehberli egzersizler ve eğitim içeriği dahil ancak bunlarla sınırlı
-                olmamak üzere—Mindoria Studio'ya aittir ve telif hakkı, ticari marka ve diğer fikri
-                mülkiyet yasalarıyla korunmaktadır.
-            </p>
-
-            <h3>6.2 Kullanım Kısıtlamaları</h3>
-            <p>Şunları YAPAMAZSINIz:</p>
+            <h3>6.2 Yapamayacaklarınız</h3>
             <ul>
-                <li>Uygulama içeriğini ticari amaçlarla kopyalama, dağıtma veya çoğaltma</li>
-                <li>Uygulamanın kaynak kodunu tersine mühendislik yapma, decompile etme veya parçalara ayırma</li>
-                <li>Uygulamadan telif hakkı bildirimlerini veya markayı kaldırma</li>
-                <li>Selfinity'nin fikri mülkiyetine dayalı türev eserler oluşturma</li>
-                <li>Uygulamadan veri çıkarmak için otomatik araçlar (botlar, kazıyıcılar) kullanma</li>
+                <li>Hizmet'i kopyalamak, değiştirmek, çevirmek veya türev çalışmalar oluşturmak</li>
+                <li>Tersine mühendislik yapmak, kaynak koda dönüştürmek veya parçalarına ayırmak — yürürlükteki
+                    mevzuatın bu kısıtlamaya rağmen açıkça izin verdiği ölçü hariç</li>
+                <li>Telif, marka veya mülkiyet bildirimlerini kaldırmak ya da değiştirmek</li>
+                <li>Hizmet'i veya içeriğini kiralamak, satmak, alt lisanslamak veya başka şekilde ticari olarak
+                    sömürmek</li>
+                <li>Rehberlerimizi, hikâyelerimizi, seslerimizi veya diğer içeriğimizi toplu olarak çekmek, kazımak veya
+                    indirmek</li>
+                <li>Adımızı, logomuzu veya marka varlıklarımızı yazılı izin olmadan kullanmak</li>
             </ul>
 
-            <h2>7. Yasaklı Davranışlar</h2>
-            <p>Selfinity'yi kullanırken şunları YAPMAMAYIT kabul edersiniz:</p>
+            <h2>7. Yasaklı davranışlar</h2>
+            <p>Şunları yapmamayı kabul edersiniz:</p>
             <ul>
-                <li><strong>Yasadışı Aktiviteler:</strong> Uygulamayı yasadışı amaçlarla veya yasadışı faaliyetleri
-                    teşvik etmek için kullanma</li>
-                <li><strong>Taciz:</strong> Başkalarını taciz etme, tehdit etme veya taklit etme (sosyal özellikler
-                    etkinse)</li>
-                <li><strong>Güvenlik İstismarı:</strong> Güvenlik açıklarından yararlanmaya, diğer kullanıcıların
-                    hesaplarına veya sunucularımıza yetkisiz erişim elde etmeye çalışma</li>
-                <li><strong>Zararlı Yazılım Dağıtımı:</strong> Virüs, zararlı yazılım veya kötü amaçlı kod yükleme</li>
-                <li><strong>Veri Madenciliği:</strong> Uygulamadan veri toplamak veya kazımak için otomatik sistemler
-                    kullanma</li>
-                <li><strong>Hesap Paylaşımı:</strong> Hesap kimlik bilgilerinizi başkalarıyla paylaşma veya birden fazla
-                    hesap oluşturma</li>
+                <li>Hizmet'i hukuka aykırı bir amaçla veya yürürlükteki herhangi bir mevzuata aykırı biçimde kullanmak
+                </li>
+                <li>Görünen adlar veya sosyal özellikler dâhil olmak üzere herhangi bir kişiyi taciz etmek, tehdit
+                    etmek, karalamak veya kimliğine bürünmek</li>
+                <li>Herhangi bir hesaba, sunucuya, veritabanına veya Hizmet'in bir bölümüne ya da başka bir kullanıcının
+                    verilerine yetkisiz erişim sağlamaya çalışmak</li>
+                <li>Sistemlerimizin açıklarını yoklamak, taramak veya test etmek ya da herhangi bir güvenlik veya kimlik
+                    doğrulama önlemini aşmak</li>
+                <li>Virüs, zararlı yazılım veya Hizmet'e zarar vermeyi ya da onu aksatmayı amaçlayan kod yüklemek veya
+                    iletmek</li>
+                <li>Hizmet'le etkileşmek, deneyim puanı, elmas, seri, başarım veya ödül biriktirmek ya da uygulama içi
+                    ilerleme ekonomisini başka şekilde manipüle etmek için bot, betik, değiştirilmiş istemci, emülatör
+                    veya herhangi bir otomatik araç kullanmak</li>
+                <li>Hizmet'i veya altyapısını aksatmak ya da üzerinde makul olmayan bir yük oluşturmak</li>
+                <li>Herhangi bir kullanım sınırını, kotayı, ödeme duvarını veya güvenlik özelliğini aşmak, devre dışı
+                    bırakmak veya bunlara müdahale etmek</li>
+                <li>Premium özelliklere erişimi, bedelini ödememiş kişilere yeniden satmak, dağıtmak veya sağlamak</li>
             </ul>
-            <p>
-                Bu kuralları ihlal etmek, iade yapılmaksızın derhal hesap askıya alınmasına veya sonlandırılmasına
-                neden olabilir.
-            </p>
+            <p>Bu bölümü ihlal eden hesapları askıya alabilir veya sonlandırabilir, gerektiğinde hileyle elde edilmiş
+                uygulama içi ödülleri geri alabiliriz.</p>
 
-            <h2>8. Üçüncü Taraf Entegrasyonları</h2>
+            <h2>8. Üçüncü taraf hizmetler</h2>
 
-            <h3>8.1 Google Health Connect</h3>
-            <p>
-                İzin verirseniz, Selfinity Google Health Connect'ten adım sayısı verilerini okuyabilir.
-                Bu izni istediğiniz zaman cihaz ayarlarınızdan iptal edebilirsiniz. Health Connect
-                verilerini yazmıyor veya değiştirmiyoruz.
-            </p>
-
-            <h3>8.2 Google AI (Gemini API)</h3>
-            <p>
-                Yapay zeka destekli özelliklerimiz, kişiselleştirilmiş içgörüler oluşturmak için Google
-                Gemini API kullanır. Google AI'ya yalnızca anonimleştirilmiş/toplanmış veriler gönderilir
-                —ham günlük girişleriniz ve kişisel bilgileriniz PAYLAŞILMAZ.
-            </p>
-
-            <h3>8.3 Üçüncü Taraf Bağlantıları</h3>
-            <p>
-                Selfinity, üçüncü taraf web sitelerine veya hizmetlerine bağlantılar içerebilir. Harici
-                sitelerin içeriği, gizlilik politikaları veya uygulamalarından sorumlu değiliz.
-            </p>
-
-            <h2>9. Sorumluluk Sınırlaması</h2>
-
-            <h3>9.1 "Olduğu Gibi" Hizmet</h3>
-            <p>
-                Selfinity, açık veya zımni herhangi bir garanti olmaksızın <strong>"olduğu gibi"</strong>
-                ve <strong>"mevcut olduğu şekliyle"</strong> sağlanmaktadır. Şunları garanti etmiyoruz:
-            </p>
+            <h3>8.1 Yapay zekâ özellikleri (Google Gemini)</h3>
+            <p>Selfinity'nin isteğe bağlı yapay zekâ özellikleri, kendi sunucumuzdan çağrılan <strong>Google Gemini
+                    API</strong> ile çalışır. Bu özelliklerden birini kullandığınızda ilgili içerik işlenmek üzere
+                Google'a gönderilir:</p>
             <ul>
-                <li>Uygulamanın hatasız veya kesintisiz olacağı</li>
-                <li>Hataların hemen düzeltileceği</li>
-                <li>Uygulamanın özel gereksinimlerinizi karşılayacağı</li>
-                <li>Verilerin asla kaybolmayacağı (yedekleme sistemleri uygulamış olsak da)</li>
+                <li><strong>Öğün fotoğrafı taraması:</strong> öğün fotoğrafınız ve sonucu düzeltirseniz düzeltme
+                    notunuz.</li>
+                <li><strong>Komorebi asistanı:</strong> asistanla konuşmanız ve kendi kişisel bakım görev ve
+                    rutinlerinizin adları.</li>
+                <li><strong>Düşünce analizi:</strong> yazdığınız otomatik düşünce ve seçtiğiniz bilişsel çarpıtmalar.
+                </li>
+                <li><strong>Haftalık rapor:</strong> haftanızdan türetilmiş olgusal özetler ve tekrar eden tema
+                    sözcükleri — ham günlük veya düşünce metniniz değil.</li>
+            </ul>
+            <p>Bunun tamamı <a href="privacy-policy.html">Gizlilik Politikası</a>'nın 5. bölümünde açıklanmıştır. Google
+                bizim adımıza veri işleyen sıfatıyla hareket eder ve bu içeriği genel amaçlı modellerini eğitmek için
+                kullanmaz. İçeriğinizin Google'a gönderilmesini istemiyorsanız bu özellikleri kullanmayın; uygulamanın
+                geri kalanı onlarsız da çalışır.</p>
+            <div class="highlight-box">
+                <p><strong>Yapay zekâ çıktısı üretilmiş metindir ve yanlış olabilir.</strong> Fotoğraftan çıkarılan
+                    beslenme tahminleri, asistan yanıtları, düşünce analizleri ve haftalık raporlar hatalı, eksik ya da
+                    sizin durumunuza uygun olmayabilir. Bunları değerlendirilecek öneriler olarak görün; asla tıbbi,
+                    psikolojik veya beslenme tavsiyesi olarak değil, ve kendi muhakemenizi kullanın.</p>
+            </div>
+
+            <h3>8.2 Beslenme verileri ve konuşma tanıma</h3>
+            <ul>
+                <li><strong>Open Food Facts:</strong> barkod ve gıda aramaları, üçüncü taraf bir ortak çalışma projesi
+                    olan Open Food Facts veritabanından yanıtlanır. Veriler gönüllüler tarafından girilir; eksik, güncel
+                    olmayan veya yanlış olabilir. Özellikle alerjenler için daima ürünün kendi etiketini kontrol edin.
+                </li>
+                <li><strong>Konuşma tanıma:</strong> sesle giriş, cihazınızın işletim sistemindeki konuşma tanıma
+                    servisini kullanır (Android'de Google, iOS'ta Apple) ve bu servislerin kendi koşulları ile gizlilik
+                    politikalarına tabidir.</li>
             </ul>
 
-            <h3>9.2 Hasar Sınırlaması</h3>
-            <p>
-                Yasaların izin verdiği en geniş ölçüde, Mindoria Studio şunlardan sorumlu OLMAYACAKTIR:
+            <h3>8.3 Uygulama mağazaları ve üçüncü taraf bağlantıları</h3>
+            <p>App Store veya Google Play kullanımınız aynı zamanda onların kendi koşullarına tabidir. Hizmet, kontrol
+                etmediğimiz ve desteklemediğimiz üçüncü taraf sitelere veya kaynaklara bağlantı verebilir; bunların
+                içeriğinden, uygulamalarından veya erişilebilirliğinden sorumlu değiliz.</p>
+
+            <h2>9. Sorumluluk reddi ve sorumluluğun sınırlandırılması</h2>
+
+            <h3>9.1 Hizmet "olduğu gibi" sunulur</h3>
+            <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde Hizmet, açık veya zımni hiçbir garanti verilmeksizin —
+                satılabilirlik, belirli bir amaca uygunluk ve ihlal etmeme yönündeki zımni garantiler dâhil —
+                <strong>"olduğu gibi"</strong> ve <strong>"mevcut hâliyle"</strong> sunulur.
             </p>
-            <ul>
-                <li>Uygulama kullanımından kaynaklanan dolaylı, tesadüfi veya sonuç olarak ortaya çıkan zararlar</li>
-                <li>Veri, kar veya iş fırsatı kaybı</li>
-                <li>Hesabınıza yetkisiz erişimden kaynaklanan zararlar</li>
-                <li>Teknik arızalar, sunucu kesintileri veya üçüncü taraf hizmet kesintileri</li>
-            </ul>
-            <p>
-                Selfinity ile ilgili herhangi bir talep için size karşı toplam sorumluluğumuz, talebi
-                önceleyen 12 ay içinde abonelik için ödediğiniz tutarla sınırlıdır.
-            </p>
+            <p>Hizmet'in kesintisiz, zamanında, güvenli veya hatasız olacağını; kusurların giderileceğini; girdiğiniz
+                verilerin hiçbir zaman kaybolmayacağını; ya da herhangi bir sonuç, içgörü, tahmin veya yapay zekâ
+                metninin doğru veya size uygun olacağını garanti etmeyiz. Kaybetmeyi göze alamayacağınız şeylerin kendi
+                kopyalarını saklamak sizin sorumluluğunuzdadır.</p>
+
+            <h3>9.2 Sorumluluğun sınırlandırılması</h3>
+            <p>Yürürlükteki mevzuatın izin verdiği azami ölçüde Mindoria Studio; Hizmet'i kullanmanızdan veya
+                kullanamamanızdan doğan ya da bununla ilgili dolaylı, arızi, özel, sonuç niteliğindeki veya cezai
+                zararlardan ya da kâr, gelir, veri, itibar veya diğer maddi olmayan kayıplardan sorumlu değildir.</p>
+            <p>Hizmet'e ilişkin tüm talepler bakımından toplam sorumluluğumuz, (a) talebe yol açan olaydan önceki on iki
+                ayda Selfinity için bize veya uygulama mağazaları aracılığıyla fiilen ödediğiniz tutar ile (b) 50 avro
+                tutarından yüksek olanıyla sınırlıdır.</p>
+            <div class="highlight-box">
+                <p>Bu Koşullardaki hiçbir hüküm, hukuken sınırlandırılamayacak veya kaldırılamayacak sorumluluğu —
+                    ihmalden kaynaklanan ölüm veya bedensel zarar, hile veya hileli beyan ya da ağır ihmal ve kasıtlı
+                    davranıştan doğan sorumluluk dâhil — kaldırmaz veya sınırlamaz. Tüketiciyseniz, emredici yasal
+                    haklarınız saklıdır.</p>
+            </div>
 
             <h2>10. Tazminat</h2>
-            <p>
-                Mindoria Studio'yu, çalışanlarını ve bağlı kuruluşlarını aşağıdakilerden kaynaklanan
-                herhangi bir iddia, sorumluluk, zarar veya masraftan (yasal ücretler dahil) tazmin
-                etmeyi, savunmayı ve zararsız tutmayı kabul edersiniz:
-            </p>
+            <p>Bu Koşulları ihlal etmenizden, Hizmet'i kötüye kullanmanızdan, herhangi bir mevzuatı ihlal etmenizden
+                veya üçüncü kişilerin haklarına tecavüz etmenizden doğan her türlü talep, zarar, sorumluluk veya masrafa
+                (makul avukatlık ücretleri dâhil) karşı Mindoria Studio'yu ve yöneticilerini, çalışanlarını ve
+                temsilcilerini tazmin etmeyi ve zarardan korumayı kabul edersiniz. Bu hüküm, talebin bizim ihlalimizden,
+                ihmalimizden veya kasıtlı davranışımızdan kaynaklandığı ölçüde uygulanmaz.</p>
+
+            <h2>11. Askıya alma ve sona erdirme</h2>
+
+            <h3>11.1 Sizin sona erdirmeniz</h3>
             <ul>
-                <li>Bu Koşulları ihlal etmeniz</li>
-                <li>Uygulamayı kötüye kullanmanız</li>
-                <li>Üçüncü taraf haklarını ihlal etmeniz</li>
-                <li>Uygulamaya yüklediğiniz herhangi bir içerik</li>
+                <li>Selfinity'yi kullanmayı istediğiniz zaman bırakabilirsiniz.</li>
+                <li>Hesabınızı uygulama içinden silebilirsiniz: <strong>Ayarlar → Hesap → Hesabımı sil</strong>. Bu
+                    işlem hesabınızı ve verilerini sunucularımızdan kalıcı olarak kaldırır. Anında ve geri alınamaz;
+                    geri getiremeyiz.</li>
+                <li>Dilerseniz <a href="privacy-policy.html">Gizlilik Politikası</a>'nın 9. bölümünde anlatıldığı gibi
+                    e-postayla silme talebinde bulunabilirsiniz.</li>
+                <li>Hesabınızı silmek aboneliğinizi iptal etmez ve tek başına içinde bulunulan dönem için iade hakkı
+                    doğurmaz. Aboneliği App Store veya Google Play'den iptal edin — bölüm 5.2.</li>
             </ul>
 
-            <h2>11. Hesap Sonlandırma</h2>
+            <h3>11.2 Bizim askıya almamız veya sona erdirmemiz</h3>
+            <p>Bu Koşulları esaslı biçimde ihlal etmeniz, Hizmet'i hukuka aykırı veya kötüye kullanmanız, Hizmet'i ya da
+                diğer kullanıcıları korumak için gerekli olması veya hukuken zorunlu olmamız hâlinde erişiminizi —
+                makul olduğu ölçüde bildirimde bulunarak — askıya alabilir veya sona erdirebiliriz. Ayrıca Hizmet'i veya
+                bir özelliği makul bir süre önce bildirimde bulunarak durdurabiliriz; ödemesini yaptığınız ve henüz
+                dolmamış bir dönem varsa, mevzuatın gerektirdiği hâllerde o döneme ilişkin orantılı iade yapılır.</p>
+            <p>Sona erme hâlinde Hizmet'i kullanma hakkınız ortadan kalkar. 4.1, 6, 9, 10, 14 ve 16. bölümler
+                yürürlükte kalır.</p>
 
-            <h3>11.1 Kullanıcı Tarafından Sonlandırma</h3>
-            <p>
-                Hesabınızı istediğiniz zaman uygulama ayarlarından silebilirsiniz (Ayarlar → Hesap →
-                Hesabı Sil). Silme işlemi sonrasında:
-            </p>
+            <h2>12. Gizlilik ve kişisel verilerin korunması</h2>
+            <p><a href="privacy-policy.html">Gizlilik Politikamız</a>; neyi topladığımızı, neyi bilerek toplamadığımızı,
+                yapay zekâ özelliklerinin Google'a tam olarak neyi gönderdiğini, cihazınızdan hiç çıkmayanları ve
+                haklarınızı nasıl kullanacağınızı açıklar. Bu Koşulların ayrılmaz bir parçasıdır.</p>
+
+            <h2>13. Koşullardaki değişiklikler</h2>
+            <p>Hizmet veya mevzuat değiştikçe bu Koşulları güncelleyebiliriz. En üstteki yürürlük tarihini değiştirir
+                ve esaslı değişikliklerde, yürürlüğe girmeden önce sizi uygulama içinden veya e-postayla
+                bilgilendiririz. Bundan sonra Hizmet'i kullanmaya devam etmeniz güncellenmiş Koşulları kabul ettiğiniz
+                anlamına gelir. Kabul etmiyorsanız Hizmet'i kullanmayı bırakın ve dilerseniz hesabınızı silin.</p>
+
+            <h2>14. Uygulanacak hukuk ve uyuşmazlıklar</h2>
+            <p>Bu Koşullar Türkiye Cumhuriyeti hukukuna tabidir ve Türkiye mahkemeleri yetkilidir.</p>
+            <div class="highlight-box">
+                <p><strong>Tüketicinin korunması.</strong> Avrupa Birliği'nde, Birleşik Krallık'ta veya emredici
+                    tüketici koruma kuralları bulunan başka bir ülkede yerleşik bir tüketiciyseniz, bu hukuk seçimi sizi
+                    ikamet ettiğiniz ülke hukukunun emredici hükümlerinin sağladığı korumadan yoksun bırakmaz ve kendi
+                    ülkenizin mahkemelerinde dava açabilirsiniz. Türkiye'deki tüketiciler ayrıca Tüketici Hakem
+                    Heyetleri'ne veya Tüketici Mahkemeleri'ne başvurabilir.</p>
+            </div>
+            <p>Resmî bir süreç başlatmadan önce lütfen <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> adresinden bize ulaşın. Sorunların
+                çoğu hızlı ve gayriresmî biçimde çözülebiliyor.</p>
+
+            <h2>15. Bölünebilirlik ve feragat</h2>
+            <p>Bu Koşullardaki bir hükmün geçersiz veya uygulanamaz sayılması hâlinde, o hüküm gereken asgari ölçüde
+                sınırlandırılır veya çıkarılır; kalan hükümler tam olarak yürürlükte kalır. Bir hakkımızı kullanmamamız
+                o haktan feragat ettiğimiz anlamına gelmez.</p>
+
+            <h2>16. Genel hükümler</h2>
+            <p>Bu Koşullar, Gizlilik Politikası ile birlikte, Hizmet'e ilişkin olarak sizinle Mindoria Studio arasındaki
+                sözleşmenin tamamını oluşturur ve önceki tüm sürümlerin yerine geçer. Bu Koşullardan doğan haklarınızı
+                devredemezsiniz; biz haklarımızı birleşme, devralma veya varlık satışıyla bağlantılı olarak bir halefe
+                devredebiliriz. Bu Koşulların çevrilmiş bir sürümü ile İngilizce sürümü arasında çelişki olması hâlinde
+                İngilizce sürüm esas alınır.</p>
+
+            <h3>16.1 Apple App Store kullanıcıları için ek koşullar</h3>
+            <p>Aşağıdakiler, Selfinity'yi Apple App Store'dan edindiyseniz geçerlidir. Bu Koşulların geri kalanıyla
+                çeliştiği ölçüde, bu amaçla bu bölüm üstün tutulur.</p>
             <ul>
-                <li>Kişisel verileriniz 30 gün içinde kalıcı olarak silinecektir</li>
-                <li>Aktif abonelikler iptal edilecektir (kısmi dönemler için iade yoktur)</li>
-                <li>Yedek veriler 90 gün içinde kaldırılacaktır</li>
+                <li><strong>Kabul.</strong> Bu Koşullar yalnızca sizinle Mindoria Studio arasında akdedilmiştir, Apple
+                    ile değil. Selfinity ve içeriğinden Apple değil, yalnızca Mindoria Studio sorumludur.</li>
+                <li><strong>Lisansın kapsamı.</strong> Size verilen lisans, Apple Medya Hizmetleri Hüküm ve
+                    Koşullarındaki Kullanım Kurallarının izin verdiği ölçüde, sahibi olduğunuz veya kontrol ettiğiniz
+                    Apple markalı ürünlerde Selfinity'yi kullanmanız için devredilemez bir lisanstır.</li>
+                <li><strong>Bakım ve destek.</strong> Her türlü bakım ve destek hizmetinden yalnızca Mindoria Studio
+                    sorumludur. Apple'ın Selfinity için herhangi bir bakım veya destek sağlama yükümlülüğü yoktur.</li>
+                <li><strong>Garanti.</strong> Selfinity'nin yürürlükteki herhangi bir garantiye uygun olmaması hâlinde
+                    Apple'ı bilgilendirebilirsiniz; Apple varsa uygulamanın satın alma bedelini iade eder. Yasanın izin
+                    verdiği azami ölçüde Apple'ın Selfinity'ye ilişkin başka hiçbir garanti yükümlülüğü yoktur ve bir
+                    garantiye uygunsuzluktan doğan diğer tüm talep, kayıp, sorumluluk, zarar, masraf veya giderler
+                    yalnızca Mindoria Studio'nun sorumluluğundadır.</li>
+                <li><strong>Ürün talepleri.</strong> Selfinity'ye ya da onu bulundurmanıza ve kullanmanıza ilişkin
+                    olarak sizin veya bir üçüncü kişinin ileri süreceği talepleri — ürün sorumluluğu talepleri,
+                    Selfinity'nin yasal veya düzenleyici bir gerekliliği karşılamadığı iddiaları ve tüketicinin
+                    korunması, gizlilik veya benzeri mevzuattan doğan talepler dâhil — Apple değil, Mindoria Studio
+                    karşılamakla yükümlüdür.</li>
+                <li><strong>Fikrî mülkiyet talepleri.</strong> Bir üçüncü kişinin Selfinity'nin fikrî mülkiyet
+                    haklarını ihlal ettiğini iddia etmesi hâlinde, bu talebin soruşturulması, savunulması, sulh yoluyla
+                    çözülmesi ve ifasından yalnızca Mindoria Studio sorumludur.</li>
+                <li><strong>Yasal uygunluk.</strong> ABD hükûmetinin ambargo uyguladığı veya "terörizmi destekleyen"
+                    olarak nitelendirdiği bir ülkede bulunmadığınızı ve ABD hükûmetinin yasaklı ya da kısıtlı taraflar
+                    listelerinin hiçbirinde yer almadığınızı beyan edersiniz.</li>
+                <li><strong>Üçüncü taraf lehtar.</strong> Apple ve bağlı kuruluşları bu Koşulların üçüncü taraf
+                    lehtarıdır ve Koşulları kabul etmenizle birlikte, üçüncü taraf lehtar sıfatıyla bunları size karşı
+                    ileri sürme hakkına sahip olur.</li>
             </ul>
-
-            <h3>11.2 Şirket Tarafından Sonlandırma</h3>
-            <p>
-                Aşağıdaki durumlarda hesabınızı askıya alma veya sonlandırma hakkımızı saklı tutarız:
-            </p>
-            <ul>
-                <li>Bu Koşulları ihlal ederseniz</li>
-                <li>Dolandırıcılık faaliyetinden veya ödeme anlaşmazlıklarından şüpheleniyorsak</li>
-                <li>Yasaklı davranışlarda bulunursanız</li>
-                <li>Hesabınız 2 yıldan fazla süredir aktif değilse</li>
-            </ul>
-
-            <h2>12. Gizlilik ve Veri Koruması</h2>
-            <p>
-                Selfinity kullanımınız ayrıca, kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı
-                ve koruduğumuzu açıklayan <a href="privacy-policy.html">Gizlilik Politikamız</a> tarafından
-                yönetilir. Uygulamayı kullanarak, Gizlilik Politikası'nda açıklanan uygulamalara onay
-                vermiş olursunuz.
-            </p>
-
-            <h2>13. Koşullardaki Değişiklikler</h2>
-            <p>
-                Bu Koşulları zaman zaman güncelleyebiliriz. Değişiklikler yapıldığında:
-            </p>
-            <ul>
-                <li>Bu belgenin üst kısmındaki "Yürürlük Tarihi"ni güncelleyeceğiz</li>
-                <li>Önemli değişiklikler için uygulama içi bildirimle sizi bilgilendireceğiz</li>
-                <li>E-posta bildirimi göndereceğiz (geçerliyse)</li>
-            </ul>
-            <p>
-                Değişiklikler yayınlandıktan sonra uygulamayı kullanmaya devam etmeniz, revize edilmiş
-                Koşulları kabul ettiğiniz anlamına gelir. Yeni Koşulları kabul etmiyorsanız, lütfen
-                uygulamayı kullanmayı durdurun ve hesabınızı silin.
-            </p>
-
-            <h2>14. Geçerli Hukuk ve Uyuşmazlık Çözümü</h2>
-            <ul>
-                <li><strong>Geçerli Hukuk:</strong> Bu Koşullar Türkiye Cumhuriyeti yasalarına tabidir</li>
-                <li><strong>Yargı Yetkisi:</strong> Herhangi bir uyuşmazlık Türkiye mahkemelerinde çözülecektir</li>
-                <li><strong>Gayri Resmi Çözüm:</strong> Dava açmadan önce, lütfen gayri resmi çözüm denemek için
-                    hello@getselfinity.com adresinden bizimle iletişime geçin</li>
-            </ul>
-
-            <h2>15. Bölünebilirlik</h2>
-            <p>
-                Bu Koşulların herhangi bir hükmünün geçersiz veya uygulanamaz bulunması durumunda,
-                kalan hükümler tam olarak yürürlükte kalmaya devam edecektir.
-            </p>
-
-            <h2>16. Tam Anlaşma</h2>
-            <p>
-                Bu Koşullar, Gizlilik Politikamızla birlikte, Selfinity'nin kullanımıyla ilgili olarak
-                sizinle Mindoria Studio arasındaki tüm anlaşmayı oluşturur. Önceki tüm anlaşmaların veya
-                anlayışların yerini alır.
-            </p>
 
             <div class="contact-box">
-                <h2>17. İletişim Bilgileri</h2>
-                <p>
-                    Bu Kullanım Koşulları hakkında sorularınız, endişeleriniz veya geri bildirimleriniz
-                    varsa, lütfen bizimle iletişime geçin:
-                </p>
+                <h2>17. İletişim</h2>
                 <p>
                     <strong>Geliştirici:</strong> Mindoria Studio<br>
-                    <strong>Uygulama:</strong> Selfinity<br>
+                    <strong>Ülke:</strong> Türkiye<br>
+                    <strong>Uygulama:</strong> Selfinity — Zihin &amp; Gelişim<br>
                     <strong>E-posta:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
-                    <strong>Web Sitesi:</strong> <a href="https://getselfinity.com"
-                        target="_blank">https://getselfinity.com</a><br>
-                    <strong>Yanıt Süresi:</strong> 48 saat içinde
+                    <strong>Web sitesi:</strong> <a href="https://getselfinity.com">getselfinity.com</a>
                 </p>
+                <p>Genellikle 48 saat içinde yanıt veriyoruz.</p>
             </div>
 
             <div class="highlight-box">
-                <p><strong>Son Onay:</strong></p>
-                <p>
-                    Selfinity'yi kullanarak, bu Kullanım Koşullarını okuduğunuzu, anladığınızı ve
-                    bunlara bağlı olmayı kabul ettiğinizi beyan edersiniz. Kişisel gelişim yolculuğunuz
-                    için Selfinity'yi seçtiğiniz için teşekkür ederiz!
-                </p>
+                <p><strong>Selfinity'yi kullanarak bu Kullanım Koşullarını ve Gizlilik Politikamızı okuduğunuzu,
+                        anladığınızı ve kabul ettiğinizi teyit etmiş olursunuz.</strong></p>
             </div>
 
-            <a href="index-tr.html" class="back-link">← Ana Sayfaya Dön</a>
+            <div class="nav-links">
+                <a href="index-tr.html">← Ana Sayfa</a>
+                <a href="privacy-policy.html">Gizlilik Politikası →</a>
+                <a href="terms-of-use-en.html">English</a>
+                <a href="terms-of-use-es.html">Español</a>
+            </div>
         </div>
     </div>
 
     <script>
-        // Dark mode toggle
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
 
-        // Check for saved theme preference or default to 'light'
-        if (!localStorage.getItem('theme')) {
-            localStorage.setItem('theme', 'light');
-        }
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
         themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     </script>
 </body>

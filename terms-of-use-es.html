@@ -4,29 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selfinity - Términos de Uso</title>
+    <title>Selfinity - Condiciones de Uso</title>
+    <meta name="description"
+        content="Condiciones de Uso de Selfinity: cuentas, su contenido, suscripciones en la App Store y Google Play, funciones de inteligencia artificial, aviso médico y cancelación de la cuenta.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://getselfinity.com/terms-of-use-es.html">
+    <link rel="alternate" hreflang="tr" href="https://getselfinity.com/terms-of-use.html">
+    <link rel="alternate" hreflang="en" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="alternate" hreflang="es" href="https://getselfinity.com/terms-of-use-es.html">
+    <link rel="alternate" hreflang="x-default" href="https://getselfinity.com/terms-of-use-en.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="theme-color" content="#834CCA">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #FFFFFF;
-            --bg-secondary: #F8F9FA;
-            --text-primary: #1A1A1A;
-            --text-secondary: #6B7280;
-            --accent-start: #667eea;
-            --accent-end: #764ba2;
-            --border-color: #E5E7EB;
-            --highlight-bg: #FFF3CD;
-            --highlight-border: #FFC107;
+            --font-head: 'Manrope', 'Nunito', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            /* zemin & yüzeyler — hepsi OPAK, kartlarda rgba yasak */
+            --bg: #FFFFFF; --card: #F5F3FF; --chip-wash: #E9E0F6; --container: #BEA4E5; --border: #E9E0F6;
+            --primary: #834CCA; --secondary: #A680DB; --on-primary: #FFFFFF;
+            --text: #1A1921; --muted: #7D7A8A; --success: #52B788;   /* saf siyah yasak */
+            /* radius — Golden Shape Rule: yalnız bu üçü + 28px CTA istisnası */
+            --r-bento: 24px; --r-comp: 16px; --r-micro: 8px; --r-cta: 28px;
+            /* gölgeler — açık temada asla gri/siyah */
+            --shadow-card: 0 4px 12px rgba(131,76,202,.20), 0 2px 6px rgba(131,76,202,.10);
+            --shadow-card-hover: 0 8px 24px rgba(131,76,202,.25), 0 2px 6px rgba(131,76,202,.12);
+            --shadow-btn: 0 2px 6px rgba(131,76,202,.06);
+            --grad-hero: linear-gradient(180deg, #F8F5FF 0%, #EDE7F6 55%, #D1C4E9 100%);
+            --grad-twilight: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+            --grad-cta: linear-gradient(90deg, #8C52FF 0%, #9D92FF 100%);
+            --grad-celebration: linear-gradient(135deg, #9B6DFF 0%, #7C4DFF 55%, #6B3FA0 100%);
+            --grad-gold: linear-gradient(90deg, #FFD700 0%, #FFA500 100%);
         }
 
         [data-theme="dark"] {
-            --bg-primary: #0F172A;
-            --bg-secondary: #1E293B;
-            --text-primary: #F8FAFC;
-            --text-secondary: #E2E8F0;
-            /* Brighter, almost white for better readability in dark mode */
-            --border-color: #334155;
-            --highlight-bg: #422006;
-            --highlight-border: #FFC107;
+            --bg: #0C0A14; --card: #171426; --chip-wash: #231F3A; --container: #231F3A; --border: #231F3A;
+            --primary: #9D92FF; --secondary: #A680DB;
+            --on-primary: #1A1921;   /* lavanta üstünde koyu metin — beyaz AA'yı geçemez */
+            --text: #E6E4F2; --muted: #8B869C; --success: #52B788;   /* saf beyaz yasak */
+            /* karanlıkta siyah gölge yok — ton farkı + %4 lavanta glow */
+            --shadow-card: 0 0 0 1px rgba(157,146,255,.06), 0 6px 20px rgba(157,146,255,.04);
+            --shadow-card-hover: 0 0 0 1px rgba(157,146,255,.10), 0 8px 28px rgba(157,146,255,.06);
+            --shadow-btn: 0 0 0 1px rgba(157,146,255,.08);
+            --grad-hero: linear-gradient(160deg, #1A173B 0%, #2A2058 45%, #4A2E80 100%);
+        }
+
+        /* yasal sayfa ekleri: vurgu kutuları + uzun metin gövde rengi */
+        :root {
+            --highlight-bg: #FFF6DC;
+            --highlight-border: #F2A93B;
+            --good-bg: #E5F5EC;
+            --good-border: #52B788;
+            --text-body: #4A4655;
+        }
+
+        [data-theme="dark"] {
+            --highlight-bg: #2E2410;
+            --highlight-border: #F2A93B;
+            --good-bg: #12281C;
+            --good-border: #52B788;
+            --text-body: #C9C6D6;
         }
 
         * {
@@ -36,10 +77,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.8;
-            color: var(--text-primary);
-            background: var(--bg-secondary);
+            color: var(--text-body);
+            background: var(--bg);
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -51,55 +92,48 @@
 
         .header,
         header {
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
+            background: var(--grad-twilight);
+            color: #E6E4F2;
             padding: 60px 40px;
-            border-radius: 16px;
+            border-radius: var(--r-bento);
             margin-bottom: 40px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
         }
 
         h1 {
+            font-family: var(--font-head);
             font-size: 3em;
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 10px;
-            color: white;
+            color: #E6E4F2;
             background: none;
-            -webkit-text-fill-color: white;
+            -webkit-text-fill-color: #E6E4F2;
         }
 
         .subtitle {
             font-size: 1.2em;
             opacity: 0.95;
-            color: white;
-        }
-
-        header .last-updated {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9em;
-            margin-top: 10px;
-            background: transparent;
-            border: none;
-            padding: 0;
+            color: #E6E4F2;
         }
 
         .content {
-            background: var(--bg-primary);
+            background: var(--card);
             padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: var(--r-bento);
+            box-shadow: var(--shadow-card);
             transition: background-color 0.3s ease;
         }
 
         h2 {
-            color: var(--accent-start);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 50px;
             margin-bottom: 20px;
             font-size: 2em;
             font-weight: 700;
             padding-bottom: 10px;
-            border-bottom: 3px solid var(--accent-start);
+            border-bottom: 3px solid var(--primary);
         }
 
         h2:first-of-type {
@@ -107,7 +141,8 @@
         }
 
         h3 {
-            color: var(--accent-end);
+            font-family: var(--font-head);
+            color: var(--primary);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.5em;
@@ -116,18 +151,18 @@
 
         p {
             margin: 15px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         .last-updated {
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-style: italic;
             margin-bottom: 40px;
             padding: 20px;
-            background: var(--bg-secondary);
-            border-left: 5px solid var(--accent-start);
-            border-radius: 8px;
+            background: var(--chip-wash);
+            border-left: 5px solid var(--primary);
+            border-radius: var(--r-micro);
             font-size: 1.05em;
         }
 
@@ -138,37 +173,103 @@
 
         li {
             margin: 12px 0;
-            color: var(--text-secondary);
+            color: var(--text-body);
             font-size: 1.05em;
         }
 
         li strong {
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box {
             background: var(--highlight-bg);
             padding: 25px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin: 30px 0;
             border-left: 5px solid var(--highlight-border);
         }
 
-        .highlight-box p {
+        .highlight-box p,
+        .highlight-box li {
             margin: 10px 0;
-            color: var(--text-primary);
+            color: var(--text);
         }
 
         .highlight-box strong {
-            color: var(--text-primary);
+            color: var(--text);
+        }
+
+        .good-box {
+            background: var(--good-bg);
+            padding: 25px;
+            border-radius: var(--r-comp);
+            margin: 30px 0;
+            border-left: 5px solid var(--good-border);
+        }
+
+        .good-box p,
+        .good-box li {
+            margin: 10px 0;
+            color: var(--text);
+        }
+
+        .good-box strong {
+            color: var(--text);
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 25px 0;
+            border-radius: var(--r-comp);
+            border: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .table-scroll {
+            border-color: var(--chip-wash);
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1em;
+            min-width: 560px;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 14px 16px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-body);
+        }
+
+        [data-theme="dark"] .data-table th,
+        [data-theme="dark"] .data-table td {
+            border-bottom-color: var(--chip-wash);
+        }
+
+        .data-table th {
+            background: var(--chip-wash);
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .data-table td strong {
+            color: var(--text);
         }
 
         .contact-box {
-            background: var(--bg-secondary);
+            background: var(--chip-wash);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: var(--r-comp);
             margin-top: 50px;
-            border-left: 5px solid var(--accent-start);
+            border-left: 5px solid var(--primary);
         }
 
         .contact-box h2 {
@@ -177,7 +278,7 @@
         }
 
         a {
-            color: var(--accent-start);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             transition: opacity 0.3s ease;
@@ -192,18 +293,50 @@
             display: inline-block;
             margin-top: 40px;
             padding: 15px 40px;
-            background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
-            color: white;
-            border-radius: 50px;
+            background: var(--grad-cta);
+            color: #FFFFFF;
+            border-radius: var(--r-comp);
             text-decoration: none;
-            font-weight: 600;
+            font-family: var(--font-head);
+            font-weight: 700;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: var(--shadow-card);
         }
 
         .back-link:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card-hover);
+            text-decoration: none;
+            opacity: 1;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        [data-theme="dark"] .nav-links {
+            border-top-color: var(--chip-wash);
+        }
+
+        .nav-links a {
+            padding: 10px 22px;
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .nav-links a:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            text-decoration: none;
             opacity: 1;
         }
 
@@ -212,25 +345,36 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 6px;
         }
 
         .lang-switcher a {
             display: inline-block;
-            padding: 10px 24px;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            padding: 10px 16px;
+            background: var(--card);
+            color: var(--text);
             text-decoration: none;
-            border-radius: 25px;
+            border-radius: var(--r-comp);
+            font-family: var(--font-head);
             font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.9em;
+            box-shadow: var(--shadow-btn);
             transition: all 0.3s ease;
-            border: 2px solid var(--border-color);
+            border: 2px solid var(--border);
         }
 
         .lang-switcher a:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: var(--shadow-card);
             opacity: 1;
+            text-decoration: none;
+        }
+
+        .lang-switcher a.active {
+            background: var(--primary);
+            color: var(--on-primary);
+            border-color: transparent;
         }
 
         .theme-toggle {
@@ -238,9 +382,9 @@
             top: 20px;
             left: 20px;
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
@@ -249,39 +393,39 @@
             cursor: pointer;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .theme-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
-        /* Botón de retroceso fijo */
+        /* Fixed Back Button */
         .back-btn-fixed {
             position: fixed;
             top: 20px;
             left: 80px;
             /* offset from theme toggle */
             z-index: 1000;
-            background: var(--bg-primary);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: var(--r-comp);
             width: 50px;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-primary);
+            color: var(--text);
             text-decoration: none;
             font-size: 1.5em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-btn);
         }
 
         .back-btn-fixed:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+            box-shadow: var(--shadow-card);
         }
 
         @media (max-width: 768px) {
@@ -297,6 +441,7 @@
             .header,
             header {
                 padding: 40px 30px;
+                margin-top: 60px;
             }
 
             h1 {
@@ -331,6 +476,11 @@
             .lang-switcher {
                 right: 10px;
             }
+
+            .lang-switcher a {
+                padding: 8px 12px;
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -338,548 +488,458 @@
 <body>
     <a href="index-es.html" class="back-btn-fixed" aria-label="Volver">←</a>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema oscuro">
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
         <span id="themeIcon">🌙</span>
     </button>
 
     <div class="lang-switcher">
-        <a href="terms-of-use-en.html">English</a>
+        <a href="terms-of-use.html" hreflang="tr">TR</a>
+        <a href="terms-of-use-en.html" hreflang="en">EN</a>
+        <a href="terms-of-use-es.html" class="active" hreflang="es" aria-current="page">ES</a>
     </div>
 
     <div class="container">
         <div class="header">
-            <h1>Términos de Uso</h1>
-            <p class="subtitle">Lea estos términos detenidamente antes de usar Selfinity</p>
+            <h1>Condiciones de Uso</h1>
+            <p class="subtitle">Lea estas condiciones detenidamente antes de usar Selfinity</p>
         </div>
 
         <div class="content">
             <div class="last-updated">
-                <strong>Fecha de entrada en vigor:</strong> 9 de enero de 2025
+                <strong>Fecha de entrada en vigor:</strong> 29 de julio de 2026<br>
+                <strong>Ámbito:</strong> la aplicación Selfinity para Android e iOS y el sitio web getselfinity.com.
             </div>
 
-            <h2>1. Introducción y Aceptación</h2>
-            <p>
-                Bienvenido a <strong>Selfinity</strong>, una aplicación móvil de desarrollo personal desarrollada
-                por <strong>Mindoria Studio</strong>. Al descargar, instalar o utilizar Selfinity, acepta
-                sujetarse a estos Términos de Uso (los "Términos"). Si no está de acuerdo con estos Términos,
-                por favor no utilice la aplicación.
-            </p>
-            <p>
-                Estos Términos constituyen un acuerdo legal entre usted (el "Usuario") y Mindoria Studio
-                (la "Empresa", "nosotros", "nos" o "nuestro"). Nos reservamos el derecho de actualizar estos Términos en
-                cualquier momento, y el uso continuado de la aplicación una vez publicados los cambios constituye
-                la aceptación de los Términos modificados.
+            <h2>1. Introducción y aceptación</h2>
+            <p>Estas Condiciones de Uso ("Condiciones") constituyen un acuerdo legal entre usted y <strong>Mindoria
+                    Studio</strong> ("Mindoria Studio", "nosotros"), con sede en Türkiye, que regula el uso de la
+                aplicación móvil Selfinity para Android e iOS y del sitio getselfinity.com (conjuntamente, el
+                "Servicio").</p>
+            <p>Al crear una cuenta, continuar como invitado o utilizar el Servicio de cualquier otro modo, usted
+                confirma que ha leído, comprendido y aceptado estas Condiciones y nuestra <a
+                    href="privacy-policy-es.html">Política de Privacidad</a>. Si no las acepta, no utilice el Servicio.
             </p>
 
-            <h2>2. Descripción de los Servicios</h2>
-            <p>
-                Selfinity es una plataforma integral de desarrollo personal que ofrece las siguientes características:
-            </p>
+            <h2>2. Descripción del Servicio</h2>
+            <p>Selfinity es una aplicación de bienestar personal y desarrollo individual. Según su plan y su plataforma,
+                ofrece:</p>
             <ul>
-                <li><strong>Seguimiento de Hábitos:</strong> Controle y fomente hábitos diarios positivos con
-                    seguimiento de rachas y
-                    recordatorios</li>
-                <li><strong>Ejercicios de Bienestar Mental:</strong> Acceda a sesiones de meditación, ejercicios de
-                    respiración y
-                    actividades de mindfulness</li>
-                <li><strong>Diario y Registros de Pensamientos:</strong> Mantenga diarios privados, registros de estado
-                    de ánimo y registros de pensaminetos de
-                    terapia cognitivo conductual (TCC)</li>
-                <li><strong>Orientación Impulsada por IA:</strong> Obtenga percepciones personalizadas y mensajes
-                    motivadores
-                    impulsados por Google Gemini AI</li>
-                <li><strong>Funciones de Gamificación:</strong> Gane recompensas, desbloquee logros y suba de nivel
-                    mediante
-                    la interacción constante</li>
-                <li><strong>Tableros de Visión:</strong> Cree representaciones visuales de sus objetivos y aspiraciones
-                </li>
-                <li><strong>Seguimiento de Sueño y Agua:</strong> Monitorice la calidad del sueño y su hidratación
-                    diaria</li>
-                <li><strong>Integración con Google Health Connect:</strong> Sincronice de los datos de su recuento de
-                    pasos (opcional)</li>
-                <li><strong>Contenido Premium:</strong> Acceda a funciones exclusivas mediante suscripción</li>
+                <li>Seguimiento de hábitos, estado de ánimo, sueño, agua, nutrición, pasos y cuidado personal</li>
+                <li>Diario ("Páginas Mágicas"), entradas de gratitud y revisiones semanales</li>
+                <li>Herramientas inspiradas en la TCC: registros de pensamiento, inventario de pensamientos y buzón de
+                    preocupaciones</li>
+                <li>Meditaciones guiadas, ejercicios de respiración y paisajes sonoros</li>
+                <li>Guías, historias y contenido de inspiración diaria</li>
+                <li>Funciones opcionales de inteligencia artificial con Google Gemini: escaneo de comidas por foto,
+                    asistente Komorebi, análisis de pensamientos e informe semanal (sección 8.1)</li>
+                <li>Gamificación: puntos de experiencia, niveles, rachas, diamantes, logros, misiones, jardín y
+                    minijuegos</li>
+                <li>Tablero de visión, Registro de Vida, sesiones de enfoque y Pomodoro y cuestionarios de
+                    autoevaluación</li>
+                <li>Funciones sociales opcionales para conectar con amistades</li>
+                <li>Widgets para la pantalla de inicio y recordatorios programados en el dispositivo</li>
             </ul>
 
             <div class="highlight-box">
-                <p><strong>Aviso Médico Importante:</strong></p>
-                <p>
-                    Selfinity NO es un dispositivo médico y NO proporciona consejos, diagnósticos o tratamientos
-                    médicos o psicológicos profesionales. La aplicación tiene como objetivo promover el bienestar
-                    general y el
-                    desarrollo personal. Si experimenta problemas de salud mental graves,
-                    consulte a un profesional de la salud cualificado.
-                </p>
+                <p><strong>Aviso médico: léalo, por favor.</strong> Selfinity es un producto general de bienestar y
+                    desarrollo personal. <strong>No es un producto sanitario</strong>, no diagnostica, trata, cura ni
+                    previene ninguna enfermedad o afección, y no sustituye el consejo médico, psiquiátrico, psicológico,
+                    nutricional o terapéutico profesional.</p>
+                <p>Los ejercicios inspirados en la TCC, los cuestionarios de autoevaluación, las estimaciones
+                    nutricionales, las cifras de sueño y de pasos, las puntuaciones de bienestar y los textos generados
+                    por inteligencia artificial son informativos y pueden ser inexactos. Nunca ignore ni retrase la
+                    búsqueda de consejo profesional por algo que haya leído en Selfinity. Consulte siempre a un
+                    profesional cualificado ante cualquier preocupación médica o de salud mental.</p>
+                <p><strong>Selfinity no es un servicio de emergencia.</strong> No puede detectar una emergencia de forma
+                    fiable ni solicitar ayuda. Si está en crisis o en peligro, contacte de inmediato con el número de
+                    emergencias de su país o con una línea de ayuda en crisis.</p>
             </div>
 
-            <h2>3. Cuentas de Usuario</h2>
+            <h2>3. Cuentas de usuario</h2>
 
-            <h3>3.1 Creación de la Cuenta</h3>
-            <p>Para usar Selfinity, debe crear una cuenta mediante:</p>
+            <h3>3.1 Creación de la cuenta</h3>
+            <p>Puede usar Selfinity con una dirección de correo y contraseña, iniciando sesión con Google, iniciando
+                sesión con Apple o como invitado.</p>
             <ul>
-                <li>Un correo electrónico válido y una contraseña, O</li>
-                <li>Iniciando sesión con Google OAuth (Iniciar sesión con Google)</li>
+                <li>Debe facilitar información veraz y mantenerla actualizada.</li>
+                <li>Las <strong>cuentas de invitado</strong> le permiten usar la aplicación sin registrarse. Una cuenta
+                    de invitado no tiene dirección de correo, por lo que no puede recuperarse si desinstala la
+                    aplicación, pierde el dispositivo o cambia de dispositivo, y nosotros no podemos restaurarla. Puede
+                    convertirla en una cuenta completa en cualquier momento conservando sus datos.</li>
+                <li>Solo puede tener una cuenta por persona, salvo que acordemos otra cosa por escrito.</li>
             </ul>
 
-            <h3>3.2 Elegibilidad de la Cuenta</h3>
+            <h3>3.2 Requisitos de edad</h3>
             <ul>
-                <li>Debe tener al menos 13 años para crear una cuenta</li>
-                <li>Los usuarios menores de 18 años requieren autorización de sus padres o tutores</li>
-                <li>Debe proporcionar información precisa y veraz</li>
-                <li>Usted es responsable de mantener la confidencialidad de su contraseña</li>
+                <li>Debe tener al menos <strong>13 años</strong> para usar Selfinity.</li>
+                <li>Si es menor de 18 años, necesita el permiso de su madre, padre o tutor legal, quien acepta estas
+                    Condiciones en su nombre.</li>
+                <li>Si en su país la edad de consentimiento digital es superior a 13 años, se aplica esa edad superior
+                    salvo que un progenitor o tutor autorice su uso.</li>
+                <li>No debe tener prohibido el uso del Servicio conforme a la legislación de su país.</li>
             </ul>
 
-            <h3>3.3 Responsabilidad de la Cuenta</h3>
-            <p>
-                Usted es el único responsable de todas las actividades realizadas bajo su cuenta. Si sospecha
-                que hay un acceso no autorizado a su cuenta, debe notificarnos de inmediato a hello@getselfinity.com
-                y cambiar su contraseña.
-            </p>
-
-            <h2>4. Contenido Generado por el Usuario</h2>
-
-            <h3>4.1 Propiedad del Contenido</h3>
-            <p>
-                Usted conserva la plena propiedad de todo el contenido que crea dentro de la aplicación, incluyendo:
-            </p>
+            <h3>3.3 Su responsabilidad sobre la cuenta</h3>
             <ul>
-                <li>Entradas de diario y registros de pensamientos</li>
-                <li>Notas, afirmaciones y registros de gratitud</li>
-                <li>Imágenes y descripciones del tablero de visión</li>
-                <li>Metas personales y rastreadores de hábitos</li>
-                <li>Registros de estado de ánimo y datos de sueño</li>
-            </ul>
-
-            <h3>4.2 Concesión de Licencia a Selfinity</h3>
-            <p>
-                Al crear contenido en Selfinity, nos otorga una <strong>licencia mundial, no exclusiva, y libre de
-                    regalías</strong> para alojar, almacenar, procesar y exhibir su contenido con el único fin
-                de proporcionar los servicios de la aplicación. Esto incluye:
-            </p>
-            <ul>
-                <li>Almacenar sus datos en nuestros servidores (Supabase/AWS)</li>
-                <li>Procesar su contenido con servicios de IA (Google Gemini) para generar percepciones personalizadas
+                <li>Usted es responsable de mantener la confidencialidad de su contraseña y de toda la actividad
+                    realizada desde su cuenta.</li>
+                <li>Comuníquenos sin demora cualquier sospecha de uso no autorizado en <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>.</li>
+                <li>Usted es responsable de su dispositivo y de los cargos que apliquen su operador o su plataforma.
                 </li>
-                <li>Sincronizar sus datos en todos sus dispositivos</li>
-            </ul>
-            <p>
-                <strong>Esta licencia finalizará cuando usted elimine su contenido o cierre su cuenta.</strong>
-                No compartiremos su contenido personal con terceros para fines publicitarios o de marketing.
-            </p>
-
-            <h3>4.3 Normas de Contenido</h3>
-            <p>Aunque su contenido es privado, usted acepta no subir contenido que:</p>
-            <ul>
-                <li>Infrinja cualquier ley o regulación</li>
-                <li>Contenga malware, virus o código dañino</li>
-                <li>Infrinja los derechos de propiedad intelectual de otros</li>
-                <li>Contenga información personal de otros sin su consentimiento</li>
             </ul>
 
-            <h2>5. Suscripciones y Pagos</h2>
+            <h2>4. Su contenido</h2>
 
-            <h3>5.1 Planes Gratuito y Premium</h3>
-            <p>
-                Selfinity ofrece planes de suscripción gratuitos y premium (de pago):
-            </p>
+            <h3>4.1 El contenido es suyo</h3>
+            <p>Todo lo que escribe, registra o sube en Selfinity —entradas de diario, registros de estado de ánimo,
+                registros de pensamiento, notas de gratitud, fotos, tableros de visión y demás— sigue siendo suyo. No
+                reclamamos ninguna titularidad sobre ello.</p>
+
+            <h3>4.2 La licencia que nos concede</h3>
+            <p>Para que el Servicio pueda funcionar, usted concede a Mindoria Studio una licencia mundial, no exclusiva
+                y gratuita para alojar, almacenar, respaldar, reproducir, transmitir y mostrar su contenido, con la
+                única finalidad de prestarle el Servicio. En concreto, esto significa:</p>
             <ul>
-                <li><strong>Plan Gratuito:</strong> Acceso a funciones básicas con anuncios</li>
-                <li><strong>Plan Premium:</strong> Experiencia sin anuncios con funciones exclusivas (librerías de
-                    meditación,
-                    análisis avanzado, percepciones ilimitadas por IA)</li>
+                <li>almacenar su contenido en nuestra infraestructura (Supabase, alojado en Amazon Web Services) y
+                    sincronizarlo con sus dispositivos;</li>
+                <li><strong>cuando, y solo cuando, utilice una función de inteligencia artificial</strong>, transmitir
+                    el contenido correspondiente a la API Gemini de Google para su procesamiento, tal como se describe
+                    en la sección 8.1 y en la sección 5 de la <a href="privacy-policy-es.html">Política de
+                        Privacidad</a>;</li>
+                <li>generar sus estadísticas, su historial y sus informes semanales.</li>
+            </ul>
+            <p>Esta licencia se limita al funcionamiento del Servicio. No vendemos su contenido, no lo usamos con fines
+                publicitarios y no lo publicamos. Finaliza cuando elimina el contenido o su cuenta, salvo por las copias
+                que permanezcan brevemente en copias de seguridad cifradas según se describe en la Política de
+                Privacidad.</p>
+
+            <h3>4.3 Normas de contenido</h3>
+            <p>Selfinity es en su mayor parte un espacio privado, pero allí donde el contenido puede llegar a otras
+                personas —por ejemplo, un nombre visible o un perfil— no debe publicar contenido ilícito, infractor, que
+                incite al odio, acosador, sexualmente explícito o que suplante la identidad de otra persona.</p>
+
+            <h2>5. Suscripciones y pagos</h2>
+
+            <h3>5.1 Gratuito y Premium</h3>
+            <p>Selfinity ofrece un nivel gratuito y una suscripción de pago <strong>Premium</strong>. Premium desbloquea
+                contenidos y funciones adicionales y amplía o elimina los límites de uso de las funciones de
+                inteligencia artificial. El nivel gratuito <strong>no</strong> incluye publicidad. Podemos modificar lo
+                que incluye cada nivel, avisando con antelación razonable cuando un cambio reduzca de forma sustancial
+                aquello por lo que ha pagado.</p>
+
+            <h3>5.2 Facturación, renovación automática y cancelación</h3>
+            <p>Premium lo vende y factura <strong>Apple</strong> a través de la App Store en iOS y <strong>Google</strong>
+                a través de Google Play en Android. Utilizamos <strong>RevenueCat</strong> para gestionar el estado de
+                la suscripción entre sus dispositivos. Nunca recibimos ni almacenamos sus datos de pago.</p>
+            <ul>
+                <li>El pago se carga a su cuenta de la App Store o de Google Play al confirmar la compra.</li>
+                <li><strong>Las suscripciones se renuevan automáticamente</strong> al precio vigente salvo que las
+                    cancele al menos <strong>24 horas antes de que finalice el periodo en curso</strong>. El cargo de
+                    renovación se realiza en las 24 horas previas al final del periodo.</li>
+                <li><strong>Cancelar en iOS:</strong> Ajustes → su nombre → Suscripciones → Selfinity → Cancelar
+                    suscripción.</li>
+                <li><strong>Cancelar en Android:</strong> Google Play Store → Menú → Suscripciones → Selfinity →
+                    Cancelar.</li>
+                <li>La cancelación detiene la siguiente renovación. Conserva el acceso Premium hasta el final del
+                    periodo que ya ha pagado.</li>
+                <li>Eliminar su cuenta de Selfinity <strong>no</strong> cancela la suscripción. Cancélela también en la
+                    tienda.</li>
+                <li>Las compras realizadas en una plataforma no pueden transferirse a la otra. Una suscripción adquirida
+                    en Google Play no se traslada a un dispositivo iOS, y viceversa.</li>
             </ul>
 
-            <h3>5.2 Facturación de Suscripción</h3>
+            <h3>5.3 Prueba gratuita</h3>
+            <p>Cuando se ofrezca una prueba gratuita, la parte no utilizada se pierde si adquiere una suscripción
+                durante la prueba. Salvo que cancele al menos 24 horas antes de que termine, la prueba se convierte
+                automáticamente en una suscripción de pago. La elegibilidad para la prueba la determinan Apple o Google,
+                no nosotros.</p>
+
+            <h3>5.4 Reembolsos</h3>
             <ul>
-                <li>Las suscripciones a Premium se facturan mensual o anualmente a través de Google Play Billing</li>
-                <li><strong>Renovación Automática:</strong> Las suscripciones se renuevan automáticamente, a menos que
-                    sea cancelada al menos 24 horas antes de la fecha de renovación</li>
-                <li>Puede gestionar o cancelar su suscripción en cualquier momento en la configuración de la tienda de
-                    Google Play Store</li>
-                <li>La cancelación de una suscripción previene los cargos en el futuro, pero no implica el reembolso del
-                    periodo de facturación en curso</li>
-            </ul>
-
-            <h3>5.3 Prueba Gratuita</h3>
-            <p>
-                Es posible que podamos ofrecer pruebas gratuitas para las características de Premium. Si no cancela la
-                suscripción antes de que la prueba finalice,
-                su suscripción cambiará automáticamente a un plan de pago tomando el precio regular del servicio.
-            </p>
-
-            <h3>5.4 Política de Reembolso</h3>
-            <p>
-                Los pagos son <strong>generalmente no reembolsables</strong> a menos que fuera de otra procedencia y
-                requerido por la ley o las
-                políticas de la tienda de Google Play. Puede comunicarse directamente al correo
-                hello@getselfinity.com en no mas de 7 días luego de la compra.
-            </p>
-
-            <h3>5.5 Cambios de Precio</h3>
-            <p>
-                Reservamos todos nuestros derechos de poder modificar o cambiar los precios de las suscripciones. Se le
-                avisará
-                en un plazo aproximado de al menos 30 días de anticipación de dicha notificación para informar acerca
-                de este ajuste o aumento del costo. Continuar realizando el uso continuo del aplicativo luego de
-                notificarse la nueva tarifa establece
-                el consentimiento legal aplicable a la aceptación.
-            </p>
-
-            <h2>6. Derechos de Propiedad Intelectual</h2>
-
-            <h3>6.1 Contenido de Propiedad de la Empresa</h3>
-            <p>
-                Todo el material dispuesto dentro de Selfinity, en lo cual incluyen, entre otros; pero no estipulandose
-                sus limites tales al diseño exclusivo aplicativo, en todos
-                sus códigos, todo tipo de gráfico, logotipos, meditación de formato original en sistema audial/podcast o
-                archivos en video para uso del bienestar, la aplicación es propiedad reservada unicamente a la posesión
-                del
-                la sociedad originada como Mindoria Studio o el administrador propietario oficial aplicable y
-                salvaguardadas por medio del registro en ley
-                a los estatus comerciales de propiedad de marca registrada incluyendo otras leyes o en términos
-                paralelos.
-            </p>
-
-            <h3>6.2 Restricciones de Uso</h3>
-            <p>Usted NO debe:</p>
-            <ul>
-                <li>Copiar, divulgar con propositos empresariales los diseños de material original proporcionados en el
-                    aplicativo incluyendo el fin del uso para ventas publicas</li>
-                <li>Modificar o intentar acceder en contra a su seguridad intentando desarticular bajo ningún fin el
-                    código en origen original para beneficio en re programación o alteración del estatus de la App</li>
-                <li>Infiltrarse internamente quitando, alterando en omisión en alguna medida perjudicial ante la
-                    advertencia y notificación original propia de Selfinity como el medio central legal del distribuidor
-                    de las obras expuestas del copyright</li>
-                <li>Producir materiales basados alterando las marcas y estatus en derivativos originando en parte o todo
-                    uso en particular en favor propio sin derecho del trabajo final de Selfinity</li>
-                <li>Efectuar cualquier proceso automatizado programático de bots ni otras medidas externas informáticas
-                    buscando la extraccion de metadatos o variables a la matriz local en todo el servidor digital </li>
-            </ul>
-
-            <h2>7. Conducta Prohibida</h2>
-            <p>Al utilizar Selfinity, se compromete a NO:</p>
-            <ul>
-                <li><strong>Actividades Ilegales:</strong> Utilizar la herramienta para acciones perjudiciales fuera de
-                    jurisdicción o emplear servicios que incitan en pro de cometer actos en delito en todo rango penado
+                <li>Dado que Apple y Google son los vendedores de registro, <strong>todos los reembolsos los gestionan
+                        ellos</strong> conforme a sus propias políticas. No podemos conceder, forzar ni bloquear un
+                    reembolso de la tienda.</li>
+                <li>iOS: solicite el reembolso en reportaproblem.apple.com. Android: solicítelo a través de Google Play.
                 </li>
-                <li><strong>Acoso:</strong> Extorsionar ni efectuar una difamación hacia en las diferentes cuentas
-                    originadas en usurpación para un perjurio intencionado (bajo el margen en que las interacciones
-                    fuesen públicas de las funciones para red e integraciones sociales activas)</li>
-                <li><strong>Ataques al servidor o seguridad informatica alterada:</strong> Enviar, vulnerar intentando
-                    la invasión de registros fuera al que tiene derecho o usar software para infiltración al acceso del
-                    resto del portal digital publico al de la Empresa o vulnerando contraseñas para los accesos no
-                    requeridos ni autorizados al mismo o la filtración al registro en almacenamiento de Selfinity</li>
-                <li><strong>Propagación Perjudicial Virus / Contenido nocivo:</strong> Exponer e infundir para subir
-                    materiales o programación informatica corrupta de todo código perjudicial tal que impida dañar
-                    intencionalmente u hostigar una maquina del uso regular en funcionamiento del servicio </li>
-                <li><strong>Extracción Robada de Elementos base Datos o Explotacion de origen informático en Información
-                        confidencial:</strong> Crear metodos a partir de uso para un proceso automatizado con el diseño
-                    de desclasificar con métodos la acumulación por rastreadores que generen descargas automatizadas
-                    masivas ajenas de Selfinity</li>
-                <li><strong>Transpasos del la Confidencialidad sobre la Cuenta Creada Privada a un origen del Uso
-                        Indebido o Terceros Publicos:</strong> Distribuir cualquier dato clave propia generadas
-                    confidenciales o generar abusos creando reiterativamente perfiles distintos y falsos masivos
-                    originado una falsa identificación</li>
-            </ul>
-            <p>
-                La Empresa tomará directamente de parte total sus obligaciones penalizadoras tomando su estatus para
-                clausura de cualquier infracción o anulación total procediéndose con todo retiro al instante, inclusive
-                no devolviendo al demandante ante en algún proceso compensatorio que exigiera.
-            </p>
-
-            <h2>8. Integraciones de Terceros</h2>
-
-            <h3>8.1 Google Health Connect</h3>
-            <p>
-                Ante el otorgar los términos, el recuento de los niveles sobre pasos de caminata obtenidos a partir
-                originando sus registros los proporcionados para usar como parte y registro a traves del servicio Google
-                Health Connect. Puede denegarlo al tiempo deseado modificando e ignorando el término para la
-                desautorizacion. Jamás en este proceso generará archivos de cambios escritos externamente, modificaremos
-                o sobreescribiremos tales informaciones provenientes que nos transfiere desde el proceso original de
-                sincronización de datos provistas mediante los registros logrados internamente para usar desde de la app
-                Google Health Connect.
-            </p>
-
-            <h3>8.2 Google AI (Gemini API)</h3>
-            <p>
-                La plataforma integra capacidades adicionales y un algoritmo diseñado mediante las virtudes que nos
-                presta la tecnología lograda a la utilización y sincronía por el Google Gemini API de la cual su
-                análisis será capaz en todo caso originar interpretaciones útiles para aconsejarte por sí mismas. Estos
-                requerimientos informáticos operados de forma compartimentada sólo serán transferibles por la analítica
-                originada o enviadas como forma anónima a favor operativas a todas utilidades tecnológicas en parte a la
-                IA provista a traves de los recursos procedentes a nombre legal para las métricas e informes
-                provenientes por uso en uso para Google AI, la transferencia incluye resguardar íntegramente de todo
-                detalle que comprometen privadamente un riesgo los orígenes de las crónicas como un identificador único
-                por entrada e identidad íntima del registro jamás fuesen compartidas ni tomados hacia en modo en formato
-                natural para los motores analíticos para cualquier uso.
-            </p>
-
-            <h3>8.3 Enlaces de Terceros</h3>
-            <p>
-                Selfinity puede albergar accesos web o mostrar contenidos ajenos y ajenos al aplicativo. No generamos
-                implicaciones responsables del material compartido mediante en este tipo para o prácticas efectuadas
-                para todos estos vínculos sobre en contenido por terceros portales web para el proceso ni somos las
-                garantías oficiales representadas hacia a dichas informaciones exteriores ni responsabilizamos por su
-                práctica oficial en la administración legal ni políticas ni la confidencialidad.
-            </p>
-
-            <h2>9. Limitación de Responsabilidad</h2>
-
-            <h3>9.1 Servicios Dispuestos en Funciones Actuales ("Tal Cual" y "Según Disponibilidad".)</h3>
-            <p>
-                La función aplicativa general será siempre expuesta y prestada por Selfinity <strong>"tal cual"</strong>
-                y de naturaleza <strong>"como se presente al alcance garantizando estar disponibles
-                    continuamente"</strong> de esta parte sin ser responsables por todo imprevisto en donde en un todo
-                ni compromisos expresas de garantías explícitas que originan explícita como la posibilidad implícita.
-                Nosotros de esta forma somos libres y exceptuamos garantias hacia en la afirmación o promesa las que
-                implican si sucede lo siguiente expuesto de estas:
-            </p>
-            <ul>
-                <li>La disponibilidad constante libre de incidencias imprevistas del aplicación a un tiempo total sin
-                    estar libres interrupciones momentáneas eventuales a todos o cualquier hora sin advertencias ni
-                    notificaciones </li>
-                <li>Comprometermos obligatoriamente de proceder con todo o reparaciones sobre incidencias temporales a
-                    realizar al momento actual inmediato en posibles contratiempos temporales que obstaculicen
-                    imprevistamente una regular utilización</li>
-                <li>Que esta app en funciones logrará ser cien por ciento con adaptabilidad unificada para todas e
-                    imperiosas utilidades originadas con las expectativas e imposición particular o especificas
-                    personalizadas propias para sus requerimientos al del usuario individual</li>
-                <li>Nos negamos un aval en donde por una incidencia jamás sus perdidas resultaran exentas hacia una
-                    falla que borrare parte natural por la memoria aplicable sin eximir ninguna imposición la alteración
-                    o registro eliminando la información expuesta; de no ser todo un cien por ciento seguro para no
-                    alterarla. (si bien es factible con una constante generación logrando efectuar medidas bajo la
-                    práctica originada del proceso copia para los resguardos copias procediendo copias informáticas en
-                    sincronías automatizado que resguardamos constantemente en seguridad prevencional)</li>
+                <li>Nada de lo aquí dispuesto limita los derechos legales de reembolso o desistimiento que le
+                    correspondan como consumidor, incluido el derecho de desistimiento de 14 días para los consumidores
+                    de la Unión Europea y del Reino Unido.</li>
+                <li>Si un reembolso de la tienda no prospera por un motivo bajo nuestro control, escriba a <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a> y le ayudaremos.</li>
             </ul>
 
-            <h3>9.2 Limitaciones Generales sobre Compensaciones Efectuadas a los Daños Sufridos y Exigencias Demandas
-            </h3>
-            <p>
-                Bajo los límites legislativas competentes que permitan las previsiones regidas legal y formalidades
-                dispuestas a todo margen contempladas para esta jurisprudencia a traves del derecho con carácter para
-                todo lugar, de ahí Mindoria Studio por cualquier situación EXIMIRÁ TODA la RESPONSABILIDAD de asumir al
-                hacerse de obligar bajo ningún cargo o motivo con procedencias indemnizaciones bajo circunstancias y a
-                razón de no asumiendo para las de responsabilidades las que afecten de los motivos por los siguientes
-                cargos impuestos o reclamados:
-            </p>
+            <h3>5.5 Cambios de precio</h3>
+            <p>Podemos modificar los precios de la suscripción. Un cambio de precio le afecta únicamente a partir de la
+                siguiente renovación, y la tienda se lo notificará y, cuando sea preceptivo, le pedirá su consentimiento
+                antes de aplicarlo. Si no acepta el nuevo precio, cancele antes de la fecha de renovación.</p>
+
+            <h2>6. Propiedad intelectual</h2>
+
+            <h3>6.1 Lo que nos pertenece</h3>
+            <p>El Servicio —incluidos la aplicación, su código fuente, su diseño, la marca, el logotipo, las mascotas,
+                las ilustraciones, las guías escritas, las historias, el audio de meditación y respiración, los paisajes
+                sonoros y todo el demás contenido que proporcionamos— pertenece a Mindoria Studio o a sus licenciantes y
+                está protegido por la normativa de propiedad intelectual, de marcas y otras. Nada en estas Condiciones
+                le transfiere esos derechos.</p>
+            <p>Le concedemos una licencia personal, limitada, no exclusiva, intransferible y revocable para usar el
+                Servicio con fines propios y no comerciales, conforme a estas Condiciones.</p>
+
+            <h3>6.2 Lo que no puede hacer</h3>
             <ul>
-                <li>Todas afectaciones que procedieron desde cualquier uso provenientes derivados en forma general e uso
-                    para los daños que incluyeran indirectos o eventuales por algún contratiempo con incidentes
-                    originarios bajo al acceder perjudicial e uso particular para las interacciones con nuestras
-                    aplicaciones en donde el aplicativo sea responsable o por interrupción originaría por utilización
+                <li>Copiar, modificar, traducir o crear obras derivadas del Servicio</li>
+                <li>Aplicar ingeniería inversa, descompilar o desensamblar el Servicio, salvo en la medida en que la
+                    legislación aplicable lo permita expresamente pese a esta restricción</li>
+                <li>Eliminar o alterar cualquier aviso de derechos de autor, marca o titularidad</li>
+                <li>Alquilar, arrendar, vender, sublicenciar o explotar comercialmente de cualquier otro modo el
+                    Servicio o su contenido</li>
+                <li>Extraer, rastrear o descargar de forma masiva nuestras guías, historias, audios u otros contenidos
                 </li>
-                <li>Pérdidas económicas monetarias en todo alcance o interrupción empresarial y posibles ganancias de
-                    comercio causadas así de esta manera un registro sin una copia e informaciones guardadas borrados de
-                    datos, lucro cesante o todas estas perdidas </li>
-                <li>Compensaciones directas ni exigiencias bajo cualquier motivo al generarse accesos no requeridos que
-                    invadan informáticamente hackeando u obligando un incidente sobre los accesos y registros para el
-                    filtrado su propia cuenta por ataques en red de usuarios no contemplados hacia las identidades
-                    logradas intromisiones ilícitas originadas por la violación ajenas</li>
-                <li>Daños ocasionados ni las fallas temporales a los servidores originadas perjudicial e averías sobre
-                    por terceros a razón que incluyan errores por técnicos o mantenimientos ajeno en su funcionamiento
-                    temporal en la propia funcionalidad exterior que requiera un soporte para la aplicación al utilizar
-                    redes </li>
+                <li>Usar nuestro nombre, logotipo o elementos de marca sin autorización escrita</li>
             </ul>
-            <p>
-                Nos limitamos nuestro acuerdo como al origen general con esta exposición por cualquier o todas exigidas
-                penalizaciones impuestas de demandas a raíz reclamaciones por el compromiso que implicase la limitación
-                económica general en todo monto al valor en gasto asumida sobre cargos o costes para usar a sus
-                funciones completas pagadas de las suscripciones que ha correspondido efectuar como parte temporal un
-                costo pagado hasta dentro en el previo año natural durante o posterior en a un periodo máximo límite
-                exigido efectuándose retroactivamente como periodo que procediera hasta de 12 últimos meses precediendo
-                originadas su reclamos y limitándonos como costo límite
+
+            <h2>7. Conductas prohibidas</h2>
+            <p>Usted se compromete a no:</p>
+            <ul>
+                <li>Utilizar el Servicio con fines ilícitos o infringiendo cualquier ley o norma aplicable</li>
+                <li>Acosar, amenazar, difamar o suplantar a cualquier persona, incluso mediante nombres visibles o
+                    funciones sociales</li>
+                <li>Intentar acceder sin autorización a cualquier cuenta, servidor, base de datos o parte del Servicio,
+                    ni a los datos de otro usuario</li>
+                <li>Sondear, escanear o poner a prueba la vulnerabilidad de nuestros sistemas, ni vulnerar ninguna
+                    medida de seguridad o autenticación</li>
+                <li>Cargar o transmitir virus, software malicioso o cualquier código destinado a dañar o alterar el
+                    Servicio</li>
+                <li>Emplear bots, scripts, clientes modificados, emuladores o cualquier medio automatizado para
+                    interactuar con el Servicio, para acumular puntos de experiencia, diamantes, rachas, logros o
+                    recompensas, o para manipular de cualquier otro modo la economía de progreso de la aplicación</li>
+                <li>Interferir en el Servicio o su infraestructura o generar sobre ellos una carga desproporcionada</li>
+                <li>Eludir, desactivar o interferir en cualquier límite de uso, cuota, muro de pago o función de
+                    seguridad</li>
+                <li>Revender, redistribuir o facilitar el acceso a funciones Premium a personas que no las hayan pagado
+                </li>
+            </ul>
+            <p>Podemos suspender o cancelar las cuentas que incumplan esta sección y, cuando esté justificado, revertir
+                las recompensas obtenidas de forma fraudulenta.</p>
+
+            <h2>8. Servicios de terceros</h2>
+
+            <h3>8.1 Funciones de inteligencia artificial (Google Gemini)</h3>
+            <p>Las funciones opcionales de inteligencia artificial de Selfinity funcionan con la <strong>API Gemini de
+                    Google</strong>, invocada desde nuestro propio servidor. Cuando utiliza una de ellas, el contenido
+                correspondiente se envía a Google para su procesamiento:</p>
+            <ul>
+                <li><strong>Escaneo de comidas por foto:</strong> la foto de su comida y, si corrige el resultado, su
+                    nota de corrección.</li>
+                <li><strong>Asistente Komorebi:</strong> su conversación con el asistente y los nombres de sus propias
+                    tareas y rutinas de cuidado personal.</li>
+                <li><strong>Análisis de pensamientos:</strong> el pensamiento automático que escribió y las distorsiones
+                    cognitivas que seleccionó.</li>
+                <li><strong>Informe semanal:</strong> resúmenes factuales derivados de su semana y palabras clave de
+                    temas recurrentes, no el texto sin procesar de su diario o de sus pensamientos.</li>
+            </ul>
+            <p>La sección 5 de la <a href="privacy-policy-es.html">Política de Privacidad</a> lo detalla por completo.
+                Google actúa como encargado del tratamiento por cuenta nuestra y no utiliza este contenido para entrenar
+                sus modelos de propósito general. Si no desea que se envíe contenido a Google, no use estas funciones;
+                el resto de la aplicación funciona sin ellas.</p>
+            <div class="highlight-box">
+                <p><strong>El resultado de la IA es texto generado y puede ser incorrecto.</strong> Las estimaciones
+                    nutricionales a partir de una foto, las respuestas del asistente, los análisis de pensamientos y los
+                    informes semanales pueden ser inexactos, incompletos o inadecuados para su situación. Trátelos como
+                    sugerencias que valorar, nunca como consejo médico, psicológico o nutricional, y aplique su propio
+                    criterio.</p>
+            </div>
+
+            <h3>8.2 Datos nutricionales y reconocimiento de voz</h3>
+            <ul>
+                <li><strong>Open Food Facts:</strong> las búsquedas por código de barras y por nombre de alimento se
+                    resuelven con la base de datos Open Food Facts, un proyecto colaborativo de terceros. Los datos los
+                    aportan personas voluntarias y pueden estar incompletos, desactualizados o ser incorrectos.
+                    Compruebe siempre la etiqueta del propio producto, especialmente en lo relativo a alérgenos.</li>
+                <li><strong>Reconocimiento de voz:</strong> el dictado utiliza el reconocimiento de voz del sistema
+                    operativo de su dispositivo (Google en Android, Apple en iOS), sujeto a sus propias condiciones y
+                    políticas de privacidad.</li>
+            </ul>
+
+            <h3>8.3 Tiendas de aplicaciones y enlaces de terceros</h3>
+            <p>El uso que haga de la App Store o de Google Play se rige también por sus propias condiciones. El Servicio
+                puede enlazar a sitios o recursos de terceros que no controlamos ni respaldamos, y no somos responsables
+                de su contenido, sus prácticas ni su disponibilidad.</p>
+
+            <h2>9. Exención de garantías y limitación de responsabilidad</h2>
+
+            <h3>9.1 El Servicio se presta "tal cual"</h3>
+            <p>En la máxima medida permitida por la ley, el Servicio se presta <strong>"tal cual"</strong> y <strong>"según
+                    disponibilidad"</strong>, sin garantías de ningún tipo, expresas o implícitas, incluidas las
+                garantías implícitas de comerciabilidad, idoneidad para un fin determinado y no infracción.</p>
+            <p>No garantizamos que el Servicio vaya a ser ininterrumpido, puntual, seguro o libre de errores; que los
+                defectos se corrijan; que los datos que introduzca no vayan a perderse nunca; ni que cualquier
+                resultado, conclusión, estimación o texto generado por inteligencia artificial vaya a ser exacto o
+                adecuado para usted. Es responsabilidad suya conservar copias propias de aquello que no pueda permitirse
+                perder.</p>
+
+            <h3>9.2 Limitación de responsabilidad</h3>
+            <p>En la máxima medida permitida por la ley, Mindoria Studio no será responsable de daños indirectos,
+                incidentales, especiales, consecuentes o punitivos, ni de la pérdida de beneficios, ingresos, datos,
+                reputación u otras pérdidas intangibles derivadas del uso del Servicio o de la imposibilidad de usarlo.
             </p>
+            <p>Nuestra responsabilidad total acumulada por todas las reclamaciones relativas al Servicio se limita a la
+                mayor de estas dos cantidades: (a) el importe que efectivamente nos haya abonado, o haya abonado a
+                través de las tiendas de aplicaciones, por Selfinity en los doce meses anteriores al hecho que origine
+                la reclamación, o (b) 50 EUR.</p>
+            <div class="highlight-box">
+                <p>Nada en estas Condiciones excluye ni limita la responsabilidad que legalmente no pueda excluirse ni
+                    limitarse, incluida la derivada de fallecimiento o daños personales causados por negligencia, de
+                    dolo o declaración fraudulenta, o de negligencia grave o conducta dolosa. Si usted es consumidor,
+                    sus derechos legales imperativos permanecen intactos.</p>
+            </div>
 
             <h2>10. Indemnización</h2>
-            <p>
-                Usted bajo aceptación exime en todo, mantendrá para absolver con su acuerdo como también defenderá sin
-                comprometer exonerará íntegramente y compensará a razón defendiendo e incluyendo a favor salvaguardar
-                asumiendo bajo los acuerdos obligándose ante comprometer y responsabilizará libre sobre con esto hacia
-                perjurio alguno a Mindoria Studio, ni tampoco los correspondidos representantes o trabajadores u otros
-                entes filiales ante imposiciones a los procedimientos como procesos que nos implicasen con cargos
-                originadas gastos al generar reclamaciones jurídicos responsabiliad o responsabilidades, costas
-                indemnizaciones o procesos bajo requerimientos originarias y originadas frente a costas legales u
-                honorarios jurídicos demandados en exigencias procediendo a las procedentes en derivación ante las:
-            </p>
+            <p>Usted acepta indemnizar y mantener indemne a Mindoria Studio y a sus directivos, empleados y agentes
+                frente a cualquier reclamación, demanda, pérdida, responsabilidad o gasto (incluidos honorarios legales
+                razonables) que se derive del incumplimiento de estas Condiciones por su parte, del uso indebido del
+                Servicio, de la infracción de cualquier ley o de la vulneración de derechos de terceros. Esto no se
+                aplica en la medida en que la reclamación tenga su origen en nuestro propio incumplimiento, negligencia
+                o conducta dolosa.</p>
+
+            <h2>11. Suspensión y cancelación</h2>
+
+            <h3>11.1 Cancelación por su parte</h3>
             <ul>
-                <li>Vulneraciones ni su total y reiterado ni su originado u a sus posibles u las violaciones con al
-                    proceder bajo sobre a una falla u estos propios presentados por Estos documentados expuestos para
-                    sus propios o de todos Estos de los correspondidos como Términos expuestos aquí y reglamentos
-                    generales.</li>
-                <li>Abusos, agravios ni las originadas del uso originado efectuándose al utilizar su funcionamiento por
-                    mala fe originarios provenientes al darle procediendo al del inapropiado u un mal funcionamiento en
-                    originado al uso general aplicativo.</li>
-                <li>Perjuicios y al realizar las originadas al infringir con a lo perjudicial o de su correspondida su
-                    infracción vulneración o sobre infracción efectuando una irrupción por irrupciones contra al derecho
-                    los todos a los procediendo ante de los otros derechos exigidos originarias en terceros personas
-                    hacia por partes.</li>
-                <li>Subidas para incluir o al de proporcionar su contribución sobre un subir con todos los para a un de
-                    los a todos y sus cualquier formato hacia un del compartidos en los contenidos o proporcionado
-                    procedentes a lo todos informaciones que cargue la aplicación utilizando su usuario para su
-                    alojamiento originado aportado al y/o mediante o en el servicio.</li>
+                <li>Puede dejar de usar Selfinity en cualquier momento.</li>
+                <li>Puede eliminar su cuenta desde la aplicación: <strong>Ajustes → Cuenta → Eliminar mi
+                        cuenta</strong>. Esto elimina de forma permanente su cuenta y sus datos de nuestros servidores.
+                    Es inmediato e irreversible, y no podemos restaurarlos.</li>
+                <li>También puede solicitar la eliminación por correo electrónico, tal como se describe en la sección 9
+                    de la <a href="privacy-policy-es.html">Política de Privacidad</a>.</li>
+                <li>Eliminar la cuenta no cancela su suscripción ni da derecho por sí solo al reembolso del periodo en
+                    curso. Cancele la suscripción en la App Store o en Google Play — sección 5.2.</li>
             </ul>
 
-            <h2>11. Terminación de la Cuenta</h2>
+            <h3>11.2 Suspensión o cancelación por nuestra parte</h3>
+            <p>Podemos suspender o cancelar su acceso, notificándoselo cuando sea razonablemente posible, si incumple de
+                forma sustancial estas Condiciones, si usa el Servicio de manera ilícita o abusiva, si resulta necesario
+                para proteger el Servicio o a otras personas usuarias, o si la ley nos obliga a ello. También podemos
+                discontinuar el Servicio o alguna función, avisando con antelación razonable y, cuando haya pagado un
+                periodo aún no vencido, reembolsando la parte proporcional correspondiente si así lo exige la ley.</p>
+            <p>Al finalizar, su derecho a usar el Servicio se extingue. Las secciones 4.1, 6, 9, 10, 14 y 16 seguirán
+                vigentes.</p>
 
-            <h3>11.1 Cancelación originada u procedentes por la solicitantes originarias procediendo al propio desde y
-                al originar a razón del o la solicitud y provenientes bajo por del Usuario</h3>
-            <p>
-                Es a propia disposición que dispone a la libre cuenta como usted podría finalizar del a cuenta en cerrar
-                cancelar originadas u terminar la aplicación cancelando la que le eliminar eliminando a un a voluntad
-                procedentes o a originar sobre de para o en todo en o cualquier del su propia y su cuenta solicitando
-                procediendo y o momento a efectuadas desde que la decida usar la procedentes utilizando o originadas o
-                usar de la aplicación de configuración provista originadas al desde un o un momento a utilizando un para
-                la configuración interna u y la aplicación desde (usar u acceder a originando y ir y a Ajustes → Cuenta
-                y o u Configuración → Cuenta → Eliminar o Eliminar Cuenta y la cancelación). Por otro lado la, al
-                proceder para posterior a esto luego a de la misma u a una a la tras al y al concretarse al o a a
-                realizar luego a una eliminación de que de esto o eliminación de la después desde de esta:
-            </p>
+            <h2>12. Privacidad y protección de datos</h2>
+            <p>Nuestra <a href="privacy-policy-es.html">Política de Privacidad</a> explica qué recogemos, qué no
+                recogemos deliberadamente, qué envían exactamente las funciones de IA a Google, qué no sale nunca de su
+                dispositivo y cómo ejercer sus derechos. Forma parte de estas Condiciones.</p>
+
+            <h2>13. Cambios en estas Condiciones</h2>
+            <p>Podemos actualizar estas Condiciones cuando cambie el Servicio o la legislación. Modificaremos la fecha
+                de entrada en vigor que figura arriba y, ante cambios sustanciales, se lo notificaremos en la aplicación
+                o por correo electrónico antes de que surtan efecto. Seguir usando el Servicio después significa que
+                acepta las Condiciones actualizadas. Si no las acepta, deje de usar el Servicio y, si lo desea, elimine
+                su cuenta.</p>
+
+            <h2>14. Legislación aplicable y resolución de conflictos</h2>
+            <p>Estas Condiciones se rigen por la legislación de la República de Türkiye y los tribunales de Türkiye son
+                competentes.</p>
+            <div class="highlight-box">
+                <p><strong>Protección del consumidor.</strong> Si usted es un consumidor residente en la Unión Europea,
+                    el Reino Unido u otra jurisdicción con normas imperativas de protección al consumidor, esta elección
+                    de ley no le priva de la protección que le otorgan las disposiciones imperativas de la ley de su
+                    país de residencia, y puede iniciar acciones ante los tribunales de su propio país. Los consumidores
+                    de la Unión Europea también pueden recurrir a la plataforma de resolución de litigios en línea de la
+                    Comisión Europea.</p>
+            </div>
+            <p>Antes de iniciar un procedimiento formal, le rogamos que se ponga en contacto con nosotros en <a
+                    href="mailto:hello@getselfinity.com">hello@getselfinity.com</a>. La mayoría de los problemas se
+                resuelven rápido y de manera informal.</p>
+
+            <h2>15. Divisibilidad y renuncia</h2>
+            <p>Si alguna disposición de estas Condiciones se considera inválida o inaplicable, se limitará o suprimirá
+                en la medida mínima necesaria y el resto seguirá plenamente vigente. El hecho de que no ejerzamos un
+                derecho no supone renuncia al mismo.</p>
+
+            <h2>16. Disposiciones generales</h2>
+            <p>Estas Condiciones, junto con la Política de Privacidad, constituyen el acuerdo íntegro entre usted y
+                Mindoria Studio en relación con el Servicio y sustituyen cualquier versión anterior. Usted no puede
+                ceder sus derechos derivados de estas Condiciones; nosotros podemos ceder los nuestros a un sucesor en
+                el marco de una fusión, adquisición o venta de activos. Si una versión traducida de estas Condiciones
+                entra en conflicto con la versión en inglés, prevalecerá la versión en inglés.</p>
+
+            <h3>16.1 Condiciones adicionales para usuarios de la App Store de Apple</h3>
+            <p>Lo siguiente se aplica si obtuvo Selfinity en la App Store de Apple. Cuando entre en conflicto con el
+                resto de estas Condiciones, esta sección prevalecerá a esos efectos.</p>
             <ul>
-                <li>Los de forma para de y todos de todos y de cada la el su de los el u u los registros originadas y
-                    procediendo o todas informaciones los procedentes o cada datos propios datos personales serán se
-                    eliminados y de o se manera procediendo la permanentemente originadas de eliminan la forma
-                    eliminadas de de para de y la en originadas permanentemente a serán forma o modo procediendo dentro
-                    borrados que y borrados procediendo se originadas con de forma permanente que de permanentemente su
-                    originándose al y eliminados originar manera u a originadas y durante a borrar de un a la y modo
-                    permanente procediendo proceder plazo origen a en de un a para con en que será de a la vez
-                    procediendo o la dentro plazo en que en no posterior el y procediendo originándose plazo de unos
-                    originadas transcurso al origen de u a que dentro un u plazo de procediendo para la de 30 días en
-                    días originadas transcurso de 30 para días procediéndose de días a será el o días transcurrido de
-                    días el originadas o al en originándose la que los durante el al dentro el de o de transcurso de el.
-                </li>
-                <li>Suscripciones o todo a procediendo se o pagos la aquellas cancelarán efectuándose originadas para
-                    suscripciones y o activos cancelados procediendo o al procedentes o todo los suscritos a activas
-                    procediendo que y suscripciones se estarán a la momento que a activas procediendo del cancelando u o
-                    se o suscripciones a las cancelarán y para originadas de suscrito se o activas estarán y o o para
-                    aquellos o aquellas procediéndose y y activas las procediendo la que o a serán pagos u suscritas y
-                    cancelarán originadas y se que originar (o originadas procediendo sin originadas la para en
-                    originadas el o sin originadas devolución efectuada y efectuar originadas de el al reembolsos por la
-                    reembolsos de originar devoluciones o reembolsos ni no pagos y devolución de sin para ni la por
-                    originando originando y para de devolución reembolsos efectuados de reembolso o periodos u
-                    proporcionales o parciales de de ni de en al efectuados o parciales originar ni parciales
-                    proporcionales y por u del originando originar por periodo sobre a los o reembolso por u
-                    proporcionales o para prorrateos periodos los proporcionales originando transcurridos y
-                    proporcionales o de devoluciones parciales a la por parciales las o periodos proporcionales por
-                    originando proporcionales o periodos tiempo o transcurrido los originadas originadas y o
-                    proporcionales o sobre proporcionales reembolso los originando de periodos)</li>
-                <li>La procediendo o originadas u del todas aquellas copias y o todos u respaldo los se a originadas el
-                    procediendo la para y las seguridad o seguridad originadas del u o o procediéndose datos procediendo
-                    procediendo proceder del la proceder eliminadas u originadas y de o copias o y en respaldo las y o
-                    datos en la originadas datos datos que y copias copia originadas originadas serán y seguridad su de
-                    por u respaldo para de y copias seguridad borrados de se los la datos o copia procedentes eliminando
-                    o y respaldo de y las para de datos originadas apoyo o apoyo respaldo originando eliminando se o del
-                    de o y borrados procediéndose copias y de a el o o a seguridad apoyo las originando eliminaran de u
-                    que borrarán originando eliminaran y originar de originando originando las datos y o aquellos para
-                    originadas apoyo y las removerán de las se que procediente en en de a procediendo plazo la borrarán
-                    dentro el originadas la apoyo u eliminados seguridad removerán en originar un borrarán un originadas
-                    o para dentro que a del u o y un o máximo a se será la originar o un u a en en dentro y a originar
-                    un máximo procediendo de o de y de de 90 originando del 90 días los 90 días en 90 u los 90
-                    originando la de de los en días la en los originando tiempo procediendo días días de originándose
-                    plazo u o a a los un plazo de 90 de y procediendo 90 de días)</li>
+                <li><strong>Reconocimiento.</strong> Estas Condiciones se celebran únicamente entre usted y Mindoria
+                    Studio, y no con Apple. Mindoria Studio, y no Apple, es el único responsable de Selfinity y de su
+                    contenido.</li>
+                <li><strong>Alcance de la licencia.</strong> La licencia que se le concede es intransferible y le
+                    permite usar Selfinity en cualquier producto de la marca Apple que posea o controle, según lo
+                    permitido por las Normas de Uso de los Términos y Condiciones de Apple Media Services.</li>
+                <li><strong>Mantenimiento y soporte.</strong> Mindoria Studio es el único responsable de los servicios
+                    de mantenimiento y soporte. Apple no tiene obligación alguna de prestar mantenimiento ni soporte
+                    para Selfinity.</li>
+                <li><strong>Garantía.</strong> En caso de que Selfinity no se ajuste a alguna garantía aplicable, puede
+                    notificarlo a Apple, y Apple le reembolsará el precio de compra (si lo hubiera) de la aplicación. En
+                    la máxima medida permitida por la ley, Apple no tendrá ninguna otra obligación de garantía respecto
+                    de Selfinity, y cualesquiera otras reclamaciones, pérdidas, responsabilidades, daños, costes o
+                    gastos atribuibles al incumplimiento de una garantía serán responsabilidad exclusiva de Mindoria
+                    Studio.</li>
+                <li><strong>Reclamaciones sobre el producto.</strong> Mindoria Studio, y no Apple, es responsable de
+                    atender cualquier reclamación suya o de un tercero relativa a Selfinity o a su posesión y uso,
+                    incluidas las reclamaciones por responsabilidad del producto, las que aleguen que Selfinity no
+                    cumple un requisito legal o reglamentario y las derivadas de la normativa de protección del
+                    consumidor, de privacidad o similar.</li>
+                <li><strong>Reclamaciones de propiedad intelectual.</strong> Si un tercero alega que Selfinity infringe
+                    sus derechos de propiedad intelectual, Mindoria Studio será el único responsable de la
+                    investigación, la defensa, la transacción y el cumplimiento de dicha reclamación.</li>
+                <li><strong>Cumplimiento legal.</strong> Usted declara que no se encuentra en un país sometido a embargo
+                    del Gobierno de EE. UU. o designado como país "que apoya el terrorismo", y que no figura en ninguna
+                    lista del Gobierno de EE. UU. de partes prohibidas o restringidas.</li>
+                <li><strong>Tercero beneficiario.</strong> Apple y sus filiales son terceros beneficiarios de estas
+                    Condiciones y, una vez que usted las acepte, tendrán derecho a hacerlas valer frente a usted en su
+                    condición de terceros beneficiarios.</li>
             </ul>
-
-            <h3>11.2 Terminación por parte de la Empresa</h3>
-            <p>
-                Nos reservamos el derecho de suspender o cancelar su cuenta si:
-            </p>
-            <ul>
-                <li>Usted viola estos Términos</li>
-                <li>Sospechamos de actividades fraudulentas o disputas de pago</li>
-                <li>Se involucra en conductas prohibidas</li>
-                <li>Su cuenta ha estado inactiva por más de 2 años</li>
-            </ul>
-
-            <h2>12. Privacidad y Protección de Datos</h2>
-            <p>
-                El uso que haga de Selfinity también se rige por nuestra <a href="privacy-policy-es.html">Política de
-                    Privacidad</a>,
-                que explica cómo recopilamos, utilizamos y protegemos su información personal. Al usar la aplicación,
-                usted acepta las prácticas descritas en la Política de Privacidad.
-            </p>
-
-            <h2>13. Cambios en los Términos</h2>
-            <p>
-                Podemos actualizar estos Términos ocasionalmente. Al realizar cambios, procederemos a:
-            </p>
-            <ul>
-                <li>Actualizar la "Fecha de entrada en vigor" en la parte superior de este documento</li>
-                <li>Notificarle a través de una notificación dentro de la aplicación ante cambios significativos</li>
-                <li>Enviar una notificación por correo electrónico (si corresponde)</li>
-            </ul>
-            <p>
-                El uso continuado de la aplicación después de la publicación de los cambios implica la aceptación de los
-                Términos revisados.
-                Si no está de acuerdo con los nuevos Términos, por favor deje de usar la aplicación y elimine su cuenta.
-            </p>
-
-            <h2>14. Ley Aplicable y Resolución de Disputas</h2>
-            <ul>
-                <li><strong>Ley Aplicable:</strong> Estos Términos se rigen por las leyes de la República de Turquía
-                </li>
-                <li><strong>Jurisdicción:</strong> Cualquier disputa se resolverá en los tribunales de Turquía</li>
-                <li><strong>Resolución Informal:</strong> Antes de presentar una demanda, comuníquese con nosotros a
-                    hello@getselfinity.com para intentar una resolución informal</li>
-            </ul>
-
-            <h2>15. Divisibilidad</h2>
-            <p>
-                Si se determina que alguna disposición de estos Términos es inválida o inaplicable, las disposiciones
-                restantes seguirán en pleno vigor y efecto.
-            </p>
-
-            <h2>16. Acuerdo Completo</h2>
-            <p>
-                Estos Términos, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre usted
-                y Mindoria Studio con respecto al uso de Selfinity. Reemplazan cualquier acuerdo o
-                entendimiento previo.
-            </p>
 
             <div class="contact-box">
-                <h2>17. Información de Contacto</h2>
-                <p>
-                    Si tiene preguntas, inquietudes o comentarios sobre estos Términos de Uso, póngase en contacto con
-                    nosotros:
-                </p>
+                <h2>17. Contacto</h2>
                 <p>
                     <strong>Desarrollador:</strong> Mindoria Studio<br>
-                    <strong>Aplicación:</strong> Selfinity<br>
-                    <strong>Email:</strong> <a href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
-                    <strong>Sitio Web:</strong> <a href="https://getselfinity.com"
-                        target="_blank">https://getselfinity.com</a><br>
-                    <strong>Tiempo de Respuesta:</strong> Dentro de 48 horas
+                    <strong>País:</strong> Türkiye<br>
+                    <strong>Aplicación:</strong> Selfinity — Mente y Desarrollo<br>
+                    <strong>Correo electrónico:</strong> <a
+                        href="mailto:hello@getselfinity.com">hello@getselfinity.com</a><br>
+                    <strong>Sitio web:</strong> <a href="https://getselfinity.com">getselfinity.com</a>
                 </p>
+                <p>Normalmente respondemos en un plazo de 48 horas.</p>
             </div>
 
             <div class="highlight-box">
-                <p><strong>Reconocimiento Final:</strong></p>
-                <p>
-                    Al utilizar Selfinity, reconoce que ha leído, comprendido y acepta estar sujeto
-                    por estos Términos de Uso. ¡Gracias por elegir Selfinity para su viaje de desarrollo personal!
-                </p>
+                <p><strong>Al usar Selfinity, usted confirma que ha leído y comprendido estas Condiciones de Uso y
+                        nuestra Política de Privacidad, y que las acepta.</strong></p>
             </div>
 
-            <a href="index-es.html" class="back-link">← Volver al Inicio</a>
+            <div class="nav-links">
+                <a href="index-es.html">← Inicio</a>
+                <a href="privacy-policy-es.html">Política de Privacidad →</a>
+                <a href="terms-of-use.html">Türkçe</a>
+                <a href="terms-of-use-en.html">English</a>
+            </div>
         </div>
     </div>
 
     <script>
-        // Toggle de modo oscuro
         const themeToggle = document.getElementById('themeToggle');
         const themeIcon = document.getElementById('themeIcon');
-        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 'light';
 
-        // Comprobar la preferencia guardada o el valor por defecto a 'light'
-        if (!localStorage.getItem('theme')) {
-            localStorage.setItem('theme', 'light');
-        }
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        themeIcon.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeIcon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
 
         themeToggle.addEventListener('click', () => {
-            const theme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeIcon.textContent = newTheme === 'dark' ? '☀️' : '🌙';
         });
     </script>
 </body>
